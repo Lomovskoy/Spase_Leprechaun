@@ -479,8 +479,9 @@ if global.zero == true and global.shop == true//Если начата кнока
           <argument>
             <kind>1</kind>
             <string>y = global.lazerY-2;//Коректировка отображения лазера
+x = global.lazerX+17
 if global.aimed_shot = true {//Если куплен прицел
-    draw_line(69,y,1366,y)
+    draw_line(x,y,1366,y)
 }
 </string>
           </argument>

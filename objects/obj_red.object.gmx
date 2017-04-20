@@ -29,7 +29,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>global.Speed</string>
+            <string>global.Speed1</string>
           </argument>
         </arguments>
       </action>
