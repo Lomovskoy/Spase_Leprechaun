@@ -132,7 +132,7 @@ global.bullet = true
 image_speed = 13/room_speed;
 
 global.frequent_shot = true;// Быстрый выстрел
-global.aimed_shot = true;// Прицел
+global.aimed_shot = false;// Прицел
 global.triple_shot = true;// Тройной выстрел
 global.speed_shot = true;// Быстра скорость
 global.speed_lepricon = true;// Увеличенная скорость липрикона
