@@ -18,12 +18,10 @@
       <sound>sound\appearance_ball</sound>
     </sounds>
     <sounds name="Music">
-      <sound>sound\Game_Over_Music</sound>
       <sound>sound\Start_Musik</sound>
       <sound>sound\sountrack_music_1</sound>
       <sound>sound\sountrack_music_2</sound>
-      <sound>sound\sountrack_music_3</sound>
-      <sound>sound\sountrack_music_4</sound>
+      <sound>sound\Game_Over_Music</sound>
     </sounds>
   </sounds>
   <sprites name="sprites">
@@ -121,14 +119,14 @@
       <object>objects\obj_bask_paused</object>
     </objects>
     <objects name="Control">
-      <object>objects\obj_cat</object>
       <object>objects\obj_start</object>
-      <object>objects\obj_stor</object>
-      <object>objects\obj_generate</object>
-      <object>objects\obj_control</object>
       <object>objects\obj_reg_start_room</object>
+      <object>objects\obj_control</object>
+      <object>objects\obj_generate</object>
+      <object>objects\obj_stor</object>
       <object>objects\obj_paused</object>
       <object>objects\obj_music_control</object>
+      <object>objects\obj_cat</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_background1</object>
