@@ -731,9 +731,18 @@ else
             <string>//Если купленна прокачка скорости
 if (global.speed_lepricon == true)
 {
-    if (y &gt; 100)
+    if (global.gan_shot = true){
+        if (y &gt; 150)
+        {
+            y-=12
+        }
+    }
+    else
     {
-        y-=12
+        if (y &gt; 100)
+        {
+            y-=12
+        }
     }
 }
 else
