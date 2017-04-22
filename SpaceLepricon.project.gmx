@@ -32,6 +32,7 @@
     <sprite>sprites\spr_cat</sprite>
     <sprite>sprites\spr_curs</sprite>
     <sprite>sprites\spr_paused</sprite>
+    <sprite>sprites\spr_gif</sprite>
     <sprite>sprites\spr_menu</sprite>
     <sprite>sprites\spr_shope</sprite>
     <sprites name="basck">
@@ -92,7 +93,6 @@
   </sprites>
   <backgrounds name="background">
     <background>background\back_stor</background>
-    <background>background\back_logo</background>
     <background>background\background2</background>
     <background>background\bac_Game_Over</background>
   </backgrounds>
@@ -108,6 +108,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_space_ship</object>
+    <object>objects\obj_logo</object>
     <objects name="Botton">
       <object>objects\obj_New_Game</object>
       <object>objects\obj_Load_Game</object>
