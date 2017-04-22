@@ -47,6 +47,7 @@
       <sprite>sprites\spr_cre_beckground</sprite>
       <sprite>sprites\spr_rec_beckground</sprite>
       <sprite>sprites\spr_load_beckground</sprite>
+      <sprite>sprites\background</sprite>
       <sprite>sprites\spr_bask_paus</sprite>
     </sprites>
     <sprites name="boll">
@@ -91,7 +92,6 @@
   </sprites>
   <backgrounds name="background">
     <background>background\back_stor</background>
-    <background>background\background</background>
     <background>background\back_logo</background>
     <background>background\background2</background>
     <background>background\bac_Game_Over</background>
@@ -108,7 +108,6 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_space_ship</object>
-    <object>objects\obj_menu_screen</object>
     <objects name="Botton">
       <object>objects\obj_New_Game</object>
       <object>objects\obj_Load_Game</object>
@@ -137,6 +136,8 @@
       <object>objects\obj_background6</object>
       <object>objects\obj_background7</object>
       <object>objects\obj_menu</object>
+      <object>objects\background_start</object>
+      <object>objects\obj_menu_screen</object>
     </objects>
     <objects name="Bullet">
       <object>objects\obj_red</object>
