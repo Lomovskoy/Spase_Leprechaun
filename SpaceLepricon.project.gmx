@@ -99,6 +99,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\hs_submit.gml</script>
+    <script>scripts\shot.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\main_fond</font>
