@@ -123,7 +123,7 @@ if(global.gan_shot == true){//Если пуля тру
     
     shot(x,y,catX,catY)
 
-    alarm[1]= 30//Перезапустить таймер
+    alarm[1]= 1//Перезапустить таймер
 }else{alarm[1]= 1;}//Перезапустить таймер
 </string>
           </argument>
