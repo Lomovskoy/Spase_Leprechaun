@@ -48,14 +48,14 @@
             <string>
 //Переменные всех пуль обнуляем
 
-global.red = 10
-global.orange = 10
-global.yellow = 10
-global.green = 10
-global.blue = 10
-global.darkBlue = 10
-global.purple = 10
-/*
+global.red = 0
+global.orange = 0
+global.yellow = 0
+global.green = 0
+global.blue = 0
+global.darkBlue = 0
+global.purple = 0
+
 //Случайная генерация патрон от секунд
 ReOrYeGrBlDaPu = current_second
 ReOrYeGrBlDaPu %= 7
@@ -73,7 +73,7 @@ if ReOrYeGrBlDaPu == 5
     {global.darkBlue = 2}
 if ReOrYeGrBlDaPu == 6
     {global.purple = 2}
-*/
+
 //Определяем положеине иконки выбора цвета
 global.one = true
 global.two = false
@@ -323,6 +323,7 @@ draw_text(600,10,"Score: " + string(score));//Очки
 draw_set_color(c_white)
 draw_text(1100,10,"Accuracy:");// + string(global.missed));//Попадание
 draw_text(1250,10,string(100-(global.missed/(score/100))) + "%");//Процент точности
+//draw_text(1250,10,string(((score*100)/global.missed) + "%"));//Исправленный процент
 
 //Отрисовка патрон цвета
 draw_set_color(c_red);
