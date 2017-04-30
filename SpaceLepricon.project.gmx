@@ -35,6 +35,7 @@
     <sprite>sprites\spr_gif</sprite>
     <sprite>sprites\spr_menu</sprite>
     <sprite>sprites\spr_shope</sprite>
+    <sprite>sprites\spr_boss1_logo</sprite>
     <sprites name="basck">
       <sprite>sprites\spr_background1</sprite>
       <sprite>sprites\spr_background2</sprite>

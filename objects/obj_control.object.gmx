@@ -83,13 +83,17 @@ global.five = false
 global.six = false
 global.seven = false
 global.zero = false
+
 //глобальные магазины ложь
 global.shop = false
 collor = c_white;
 iter = 1;
 alarm[4] = 4;
+
 //Определение комнаты
 global.room_control = false;
+
+//таймер босса
 </string>
           </argument>
         </arguments>
@@ -134,6 +138,26 @@ global.room_control = false;
           </argument>
           <argument>
             <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>721</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_health</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
             <string>0</string>
           </argument>
         </arguments>
@@ -184,6 +208,26 @@ if global.room_control == false
     
 alarm[4] = 4;
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>721</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_health</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>0.01</string>
           </argument>
         </arguments>
       </action>
@@ -589,6 +633,78 @@ if global.purple &gt; 0
 }
 
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>723</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_health</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>850</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>745</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1100</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>750</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>14</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>10</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>501</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_sprite</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>5</kind>
+            <sprite>spr_boss1_logo</sprite>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1120</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>720</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>-1</string>
           </argument>
         </arguments>
       </action>
