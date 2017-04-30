@@ -115,16 +115,14 @@ alarm[1]=30;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-
-if(global.gan_shot == true){//Если пуля тру
+            <string>if(global.gan_shot == true){//Если пуля тру
     catX = 50;//Коректировка выстрела для попадания
     catY = 120;//Директория
     
     shot(x,y,catX,catY)
 
-    alarm[1]= 1//Перезапустить таймер
-}else{alarm[1]= 1;}//Перезапустить таймер
+    alarm[1]= 30//Перезапустить таймер
+}else{alarm[1]= 30;}//Перезапустить таймер
 </string>
           </argument>
         </arguments>
