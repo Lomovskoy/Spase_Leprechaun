@@ -60,6 +60,7 @@
           <argument>
             <kind>1</kind>
             <string>global.bullet = true
+global.missed +=1
 </string>
           </argument>
         </arguments>
@@ -397,6 +398,7 @@
           <argument>
             <kind>1</kind>
             <string>global.bullet = true
+global.missed +=1
 </string>
           </argument>
         </arguments>
@@ -734,6 +736,7 @@
           <argument>
             <kind>1</kind>
             <string>global.bullet = true
+global.missed +=1
 </string>
           </argument>
         </arguments>
@@ -1071,6 +1074,7 @@
           <argument>
             <kind>1</kind>
             <string>global.bullet = true
+global.missed +=1
 </string>
           </argument>
         </arguments>
@@ -1408,6 +1412,7 @@
           <argument>
             <kind>1</kind>
             <string>global.bullet = true
+global.missed +=1
 </string>
           </argument>
         </arguments>
