@@ -55,7 +55,7 @@ global.green = 10
 global.blue = 10
 global.darkBlue = 10
 global.purple = 10
-/*
+
 //Случайная генерация патрон от секунд
 ReOrYeGrBlDaPu = current_second
 ReOrYeGrBlDaPu %= 7
@@ -73,7 +73,7 @@ if ReOrYeGrBlDaPu == 5
     {global.darkBlue = 2}
 if ReOrYeGrBlDaPu == 6
     {global.purple = 2}
-*/
+
 //Определяем положеине иконки выбора цвета
 global.one = true
 global.two = false
@@ -2282,8 +2282,13 @@ audio_pause_all()
         user_name = file_text_open_write('user_name.txt')
         file_text_write_string(user_name,name)// Записывает имя игрока.
         file_text_writeln(user_name)// Начинает записывать данные с новой строчки).
-        data = date_current_datetime()
-        file_text_write_real(user_name,data)// Записывает дату и время.
+        year = string(current_year)//Создаём переменные времени и года
+        mouth = string(current_month)//Создаём переменные времени и года
+        day = string(current_day)//Создаём переменные времени и года
+        hour = string(current_hour)//Создаём переменные времени и года
+        minute = string(current_minute)//Создаём переменные времени и года
+        second = string(current_second)//Создаём переменные времени и года
+        file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
         file_text_writeln(user_name)// Начинает записывать данные с новой
         h = string(global.h)//Часы
         m = string(global.m)//Минуты

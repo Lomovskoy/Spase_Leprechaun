@@ -227,21 +227,23 @@ name = keyboard_string;//а потом записываем в переменн�
                 user_name = file_text_open_read('user_name.txt')//Открывает для чтения
                 name_user = file_text_read_string(user_name)//Считывает и возвращает
                 file_text_readln(user_name)// Переходит на новую строку
-                data_tyme = file_text_read_real(user_name)//Считывает и возвращает
+                /*data_tyme = file_text_read_real(user_name)//Считывает и возвращает
                 year = date_year_span(data_tyme,date_current_datetime())
                 month = date_month_span(data_tyme,date_current_datetime())
                 day = date_day_span(data_tyme,date_current_datetime())
                 hour = date_hour_span(data_tyme,date_current_datetime())
                 minute = date_minute_span(data_tyme,date_current_datetime())
-                second = date_second_span(data_tyme,date_current_datetime())
+                second = date_second_span(data_tyme,date_current_datetime())*/
+                data = file_text_read_string(user_name)
                 file_text_readln(user_name)// Переходит на новую строку
-                data = file_text_read_string(user_name)//Считывает и возвращает       
+                time = file_text_read_string(user_name)//Считывает и возвращает       
                 file_text_close(user_name)//Сохраняет и закрывает документ
-                rezult = string(floor(year mod 365))+"/"+string(floor(month mod 12))+"/"+string(floor(day mod 31))+"/ "+
-                    string(floor(hour mod 24))+":"+string(floor(minute mod 60))+":"+string(floor(second mod 60))
+                /*rezult = string(floor(year mod 365))+"/"+string(floor(month mod 12))+"/"+string(floor(day mod 31))+"/ "+
+                    string(floor(hour mod 24))+":"+string(floor(minute mod 60))+":"+string(floor(second mod 60))*/
                 draw_set_font(main_fond)// Выбор шрифта
                 draw_text(480,445,name_user)//Отрисовка в позиции 
-                draw_text(680,445,data)//Отрисовка в позиции
+                draw_text(680,450,time)//Отрисовка в позиции
+                draw_text(680,435,data)//Отрисовка в позиции
                 
             }
         }
@@ -284,8 +286,13 @@ name = keyboard_string;//а потом записываем в переменн�
         User_name = file_text_open_write('user_name.txt')//Открывает для записи файл с заданным именем fname. Если файла не существует, то создаётся новый.
         file_text_write_string(User_name,name)// Записывает имя игрока.
         file_text_writeln(User_name)// Начинает записывать данные с новой строчки).
-        data = date_current_datetime()
-        file_text_write_real(User_name,data)// Записывает дату и время.
+        year = string(current_year)//Создаём переменные времени и года
+        mouth = string(current_month)//Создаём переменные времени и года
+        day = string(current_day)//Создаём переменные времени и года
+        hour = string(current_hour)//Создаём переменные времени и года
+        minute = string(current_minute)//Создаём переменные времени и года
+        second = string(current_second)//Создаём переменные времени и года
+        file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
         file_text_writeln(User_name)// Начинает записывать данные с новой строчки).
         file_text_write_string(User_name,string('0h 0:0'))// Записывает время в игре.
         file_text_close(User_name)//Сохраняет и закрывает документ

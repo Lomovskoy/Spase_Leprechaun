@@ -142,7 +142,7 @@
     global.blue = 10
     global.darkBlue = 10
     global.purple = 10
-    /*
+    
     //Случайная генерация патрон от секунд
     ReOrYeGrBlDaPu = current_second
     ReOrYeGrBlDaPu %= 7
@@ -160,7 +160,7 @@
         {global.darkBlue = 2}
     if ReOrYeGrBlDaPu == 6
         {global.purple = 2}
-    */
+    
     //Определяем положеине иконки выбора цвета
     global.one = true
     global.two = false
@@ -222,67 +222,121 @@ if mouse_x&gt;=368 {if mouse_x&lt;=528 {if mouse_y&gt;=261 {if mouse_y&lt;=336 {
     if global.frequent_shot == false{
             global.frequent_shot = true;global.shop = false;clearance = true;game_save("savegame");
             user_name = file_text_open_write('user_name.txt')
-                file_text_writeln(user_name)
-                file_text_writeln(user_name)
-                h = string(global.h)//Часы
-                m = string(global.m)//Минуты
-                s = string(global.s)//Секунды
-                file_text_write_string(user_name,string(h+'h '+m+':'+s))}}}}}//Частый выстрел
+            file_text_write_string(user_name,name)// Записывает имя игрока.
+            file_text_writeln(user_name)// Начинает записывать данные с новой строчки).
+            year = string(current_year)//Создаём переменные времени и года
+            mouth = string(current_month)//Создаём переменные времени и года
+            day = string(current_day)//Создаём переменные времени и года
+            hour = string(current_hour)//Создаём переменные времени и года
+            minute = string(current_minute)//Создаём переменные времени и года
+            second = string(current_second)//Создаём переменные времени и года
+            file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
+            file_text_writeln(user_name)// Начинает записывать данные с новой
+            h = string(global.h)//Часы
+            m = string(global.m)//Минуты
+            s = string(global.s)//Секунды
+            file_text_write_string(user_name,string(h+'h '+m+':'+s))
+            file_text_close(user_name)}}}}}//Частый выстрел
 
 if mouse_x&gt;=608 {if mouse_x&lt;=768 {if mouse_y&gt;=261 {if mouse_y&lt;=337 {
     if global.frequent_shot == true {
         if global.shop == true {global.aimed_shot = true;global.shop = false;clearance = true;game_save("savegame");
-        user_name = file_text_open_write('user_name.txt')
-            file_text_writeln(user_name)
-            file_text_writeln(user_name)
+            user_name = file_text_open_write('user_name.txt')
+            file_text_write_string(user_name,name)// Записывает имя игрока.
+            file_text_writeln(user_name)// Начинает записывать данные с новой строчки).
+            year = string(current_year)//Создаём переменные времени и года
+            mouth = string(current_month)//Создаём переменные времени и года
+            day = string(current_day)//Создаём переменные времени и года
+            hour = string(current_hour)//Создаём переменные времени и года
+            minute = string(current_minute)//Создаём переменные времени и года
+            second = string(current_second)//Создаём переменные времени и года
+            file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
+            file_text_writeln(user_name)// Начинает записывать данные с новой
             h = string(global.h)//Часы
             m = string(global.m)//Минуты
             s = string(global.s)//Секунды
-            file_text_write_string(user_name,string(h+'h '+m+':'+s))}}}}}}//Прицел для выстрела
+            file_text_write_string(user_name,string(h+'h '+m+':'+s))
+            file_text_close(user_name)}}}}}}//Прицел для выстрела
     
 if mouse_x&gt;=874 {if mouse_x&lt;=1040 {if mouse_y&gt;=260 {if mouse_y&lt;=337 {
     if global.aimed_shot == true {
         if global.shop == true {global.triple_shot = true;global.shop = false;clearance = true;game_save("savegame");
-        user_name = file_text_open_write('user_name.txt')
-            file_text_writeln(user_name)
-            file_text_writeln(user_name)
+            user_name = file_text_open_write('user_name.txt')
+            file_text_write_string(user_name,name)// Записывает имя игрока.
+            file_text_writeln(user_name)// Начинает записывать данные с новой строчки).
+            year = string(current_year)//Создаём переменные времени и года
+            mouth = string(current_month)//Создаём переменные времени и года
+            day = string(current_day)//Создаём переменные времени и года
+            hour = string(current_hour)//Создаём переменные времени и года
+            minute = string(current_minute)//Создаём переменные времени и года
+            second = string(current_second)//Создаём переменные времени и года
+            file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
+            file_text_writeln(user_name)// Начинает записывать данные с новой
             h = string(global.h)//Часы
             m = string(global.m)//Минуты
             s = string(global.s)//Секунды
-            file_text_write_string(user_name,string(h+'h '+m+':'+s))}}}}}}//Тройной выстрел
+            file_text_write_string(user_name,string(h+'h '+m+':'+s))
+            file_text_close(user_name)}}}}}}//Тройной выстрел
 
 if mouse_x&gt;=367 {if mouse_x&lt;=532 {if mouse_y&gt;=416 {if mouse_y&lt;=494 {
     if global.triple_shot == true {
         if global.shop == true {global.speed_shot = true;global.shop = false;clearance = true;game_save("savegame");
-        user_name = file_text_open_write('user_name.txt')
-            file_text_writeln(user_name)
-            file_text_writeln(user_name)
+            user_name = file_text_open_write('user_name.txt')
+            file_text_write_string(user_name,name)// Записывает имя игрока.
+            file_text_writeln(user_name)// Начинает записывать данные с новой строчки).
+            year = string(current_year)//Создаём переменные времени и года
+            mouth = string(current_month)//Создаём переменные времени и года
+            day = string(current_day)//Создаём переменные времени и года
+            hour = string(current_hour)//Создаём переменные времени и года
+            minute = string(current_minute)//Создаём переменные времени и года
+            second = string(current_second)//Создаём переменные времени и года
+            file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
+            file_text_writeln(user_name)// Начинает записывать данные с новой
             h = string(global.h)//Часы
             m = string(global.m)//Минуты
             s = string(global.s)//Секунды
-            file_text_write_string(user_name,string(h+'h '+m+':'+s))}}}}}}//Быстрый выстрел
+            file_text_write_string(user_name,string(h+'h '+m+':'+s))
+            file_text_close(user_name)}}}}}}//Быстрый выстрел
 
 if mouse_x&gt;=624 {if mouse_x&lt;=788 {if mouse_y&gt;=416 {if mouse_y&lt;=494 {
     if global.speed_shot == true {
         if global.shop == true {global.speed_lepricon = true;global.shop = false;clearance = true;game_save("savegame");
-        user_name = file_text_open_write('user_name.txt')
-            file_text_writeln(user_name)
-            file_text_writeln(user_name)
+            user_name = file_text_open_write('user_name.txt')
+            file_text_write_string(user_name,name)// Записывает имя игрока.
+            file_text_writeln(user_name)// Начинает записывать данные с новой строчки).
+            year = string(current_year)//Создаём переменные времени и года
+            mouth = string(current_month)//Создаём переменные времени и года
+            day = string(current_day)//Создаём переменные времени и года
+            hour = string(current_hour)//Создаём переменные времени и года
+            minute = string(current_minute)//Создаём переменные времени и года
+            second = string(current_second)//Создаём переменные времени и года
+            file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
+            file_text_writeln(user_name)// Начинает записывать данные с новой
             h = string(global.h)//Часы
             m = string(global.m)//Минуты
             s = string(global.s)//Секунды
-            file_text_write_string(user_name,string(h+'h '+m+':'+s))}}}}}}//Быстрый липрикон.
+            file_text_write_string(user_name,string(h+'h '+m+':'+s))
+            file_text_close(user_name)}}}}}}//Быстрый липрикон.
 
 if mouse_x&gt;=874 {if mouse_x&lt;=1040 {if mouse_y&gt;=416 {if mouse_y&lt;=494 {
     if global.speed_lepricon == true {
         if global.shop == true {global.gan_shot = true;global.shop = false;clearance = true;game_save("savegame");
-        user_name = file_text_open_write('user_name.txt')
-            file_text_writeln(user_name)
-            file_text_writeln(user_name)
+            user_name = file_text_open_write('user_name.txt')
+            file_text_write_string(user_name,name)// Записывает имя игрока.
+            file_text_writeln(user_name)// Начинает записывать данные с новой строчки).
+            year = string(current_year)//Создаём переменные времени и года
+            mouth = string(current_month)//Создаём переменные времени и года
+            day = string(current_day)//Создаём переменные времени и года
+            hour = string(current_hour)//Создаём переменные времени и года
+            minute = string(current_minute)//Создаём переменные времени и года
+            second = string(current_second)//Создаём переменные времени и года
+            file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
+            file_text_writeln(user_name)// Начинает записывать данные с новой
             h = string(global.h)//Часы
             m = string(global.m)//Минуты
             s = string(global.s)//Секунды
-            file_text_write_string(user_name,string(h+'h '+m+':'+s))}}}}}}//Дополнительная шутка
+            file_text_write_string(user_name,string(h+'h '+m+':'+s))
+            file_text_close(user_name)}}}}}}//Дополнительная шутка
 </string>
           </argument>
         </arguments>
