@@ -21,5 +21,32 @@
   <height>768</height>
   <frames>
     <frame index="0">images\spr_background7_0.png</frame>
+    <frame index="1">images\spr_background7_1.png</frame>
+    <frame index="2">images\spr_background7_2.png</frame>
+    <frame index="3">images\spr_background7_3.png</frame>
+    <frame index="4">images\spr_background7_4.png</frame>
+    <frame index="5">images\spr_background7_5.png</frame>
+    <frame index="6">images\spr_background7_6.png</frame>
+    <frame index="7">images\spr_background7_7.png</frame>
+    <frame index="8">images\spr_background7_8.png</frame>
+    <frame index="9">images\spr_background7_9.png</frame>
+    <frame index="10">images\spr_background7_10.png</frame>
+    <frame index="11">images\spr_background7_11.png</frame>
+    <frame index="12">images\spr_background7_12.png</frame>
+    <frame index="13">images\spr_background7_13.png</frame>
+    <frame index="14">images\spr_background7_14.png</frame>
+    <frame index="15">images\spr_background7_15.png</frame>
+    <frame index="16">images\spr_background7_16.png</frame>
+    <frame index="17">images\spr_background7_17.png</frame>
+    <frame index="18">images\spr_background7_18.png</frame>
+    <frame index="19">images\spr_background7_19.png</frame>
+    <frame index="20">images\spr_background7_20.png</frame>
+    <frame index="21">images\spr_background7_21.png</frame>
+    <frame index="22">images\spr_background7_22.png</frame>
+    <frame index="23">images\spr_background7_23.png</frame>
+    <frame index="24">images\spr_background7_24.png</frame>
+    <frame index="25">images\spr_background7_25.png</frame>
+    <frame index="26">images\spr_background7_26.png</frame>
+    <frame index="27">images\spr_background7_27.png</frame>
   </frames>
 </sprite>
