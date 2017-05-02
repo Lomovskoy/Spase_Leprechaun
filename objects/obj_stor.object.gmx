@@ -135,13 +135,13 @@
             <string>if clearance == true 
 {
     //Переменные всех пуль обнуляем
-    global.red = 10
-    global.orange = 10
-    global.yellow = 10
-    global.green = 10
-    global.blue = 10
-    global.darkBlue = 10
-    global.purple = 10
+    global.red = 0
+    global.orange = 0
+    global.yellow = 0
+    global.green = 0
+    global.blue = 0
+    global.darkBlue = 0
+    global.purple = 0
     
     //Случайная генерация патрон от секунд
     ReOrYeGrBlDaPu = current_second
