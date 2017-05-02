@@ -193,12 +193,16 @@ name = keyboard_string;//а потом записываем в переменн�
                 missed_txt = file_text_read_string(rekord_list)//Считывает и возвращает
                 file_text_readln(rekord_list)// Переходит на новую строку
                 time_txt = file_text_read_string(rekord_list)//Считывает и возвращает 
+                file_text_readln(rekord_list)// Переходит на новую строку
+                time2_txt = file_text_read_string(rekord_list)//Считывает и возвращает 
                 file_text_close(rekord_list)//Сохраняет и закрывает документ
+                
                 draw_set_font(main_fond)// Выбор шрифта
                 draw_text(500,340,"User name: "+name_txt)//Отрисовка в позиции 
-                draw_text(500,380,"User score: "+score_txt)//Отрисовка в позиции 
-                draw_text(500,420,"User exact: "+string(100-(real(missed_txt)/(real(score_txt)/100))) + "%");
-                draw_text(500,460,"Record time: "+time_txt)//Отрисовка в позиции 
+                draw_text(500,365,"User score: "+score_txt)//Отрисовка в позиции 
+                draw_text(500,390,"User exact: "+string(100-(real(missed_txt)/(real(score_txt)/100))) + "%");
+                draw_text(500,415,"Record time: "+time_txt)//Отрисовка в позиции 
+                draw_text(500,440,"Game time: "+time2_txt)//Отрисовка в позиции 
             }
         else
             {
@@ -229,12 +233,16 @@ name = keyboard_string;//а потом записываем в переменн�
                 day = date_day_span(data_tyme,date_current_datetime())
                 hour = date_hour_span(data_tyme,date_current_datetime())
                 minute = date_minute_span(data_tyme,date_current_datetime())
-                second = date_second_span(data_tyme,date_current_datetime())       
+                second = date_second_span(data_tyme,date_current_datetime())
+                file_text_readln(user_name)// Переходит на новую строку
+                data = file_text_read_string(user_name)//Считывает и возвращает       
                 file_text_close(user_name)//Сохраняет и закрывает документ
                 rezult = string(floor(year mod 365))+"/"+string(floor(month mod 12))+"/"+string(floor(day mod 31))+"/ "+
                     string(floor(hour mod 24))+":"+string(floor(minute mod 60))+":"+string(floor(second mod 60))
                 draw_set_font(main_fond)// Выбор шрифта
                 draw_text(480,445,name_user)//Отрисовка в позиции 
+                draw_text(680,445,data)//Отрисовка в позиции
+                
             }
         }
 </string>
@@ -272,11 +280,13 @@ name = keyboard_string;//а потом записываем в переменн�
         global.new_reg = 0;
         room_goto(PlayRoom);
         game_save("savegame");
-        User_name = file_text_open_write('user_name.txt')////Открывает для записи файл с заданным именем fname. Если файла не существует, то создаётся новый.
+        User_name = file_text_open_write('user_name.txt')//Открывает для записи файл с заданным именем fname. Если файла не существует, то создаётся новый.
         file_text_write_string(User_name,name)// Записывает имя игрока.
         file_text_writeln(User_name)// Начинает записывать данные с новой строчки).
         data = date_current_datetime()
         file_text_write_real(User_name,data)// Записывает дату и время.
+        file_text_writeln(User_name)// Начинает записывать данные с новой строчки).
+        file_text_write_string(User_name,string('0h 0:0'))// Записывает время в игре.
         file_text_close(User_name)//Сохраняет и закрывает документ
         audio_play_sound(sound_pause, 0, false);
     }

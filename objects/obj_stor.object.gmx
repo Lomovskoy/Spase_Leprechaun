@@ -220,27 +220,69 @@ if global.room_control == true
             <string>//Хитрая хрень которая позволяет купить товары только по очереди
 if mouse_x&gt;=368 {if mouse_x&lt;=528 {if mouse_y&gt;=261 {if mouse_y&lt;=336 { 
     if global.frequent_shot == false{
-            global.frequent_shot = true;global.shop = false;clearance = true;game_save("savegame")}}}}}//Частый выстрел
+            global.frequent_shot = true;global.shop = false;clearance = true;game_save("savegame");
+            user_name = file_text_open_write('user_name.txt')
+                file_text_writeln(user_name)
+                file_text_writeln(user_name)
+                h = string(global.h)//Часы
+                m = string(global.m)//Минуты
+                s = string(global.s)//Секунды
+                file_text_write_string(user_name,string(h+'h '+m+':'+s))}}}}}//Частый выстрел
 
 if mouse_x&gt;=608 {if mouse_x&lt;=768 {if mouse_y&gt;=261 {if mouse_y&lt;=337 {
     if global.frequent_shot == true {
-        if global.shop == true {global.aimed_shot = true;global.shop = false;clearance = true;game_save("savegame")}}}}}}//Прицел для выстрела
-
+        if global.shop == true {global.aimed_shot = true;global.shop = false;clearance = true;game_save("savegame");
+        user_name = file_text_open_write('user_name.txt')
+            file_text_writeln(user_name)
+            file_text_writeln(user_name)
+            h = string(global.h)//Часы
+            m = string(global.m)//Минуты
+            s = string(global.s)//Секунды
+            file_text_write_string(user_name,string(h+'h '+m+':'+s))}}}}}}//Прицел для выстрела
+    
 if mouse_x&gt;=874 {if mouse_x&lt;=1040 {if mouse_y&gt;=260 {if mouse_y&lt;=337 {
     if global.aimed_shot == true {
-        if global.shop == true {global.triple_shot = true;global.shop = false;clearance = true;game_save("savegame")}}}}}}//Тройной выстрел
+        if global.shop == true {global.triple_shot = true;global.shop = false;clearance = true;game_save("savegame");
+        user_name = file_text_open_write('user_name.txt')
+            file_text_writeln(user_name)
+            file_text_writeln(user_name)
+            h = string(global.h)//Часы
+            m = string(global.m)//Минуты
+            s = string(global.s)//Секунды
+            file_text_write_string(user_name,string(h+'h '+m+':'+s))}}}}}}//Тройной выстрел
 
 if mouse_x&gt;=367 {if mouse_x&lt;=532 {if mouse_y&gt;=416 {if mouse_y&lt;=494 {
     if global.triple_shot == true {
-        if global.shop == true {global.speed_shot = true;global.shop = false;clearance = true;game_save("savegame")}}}}}}//Быстрый выстрел
+        if global.shop == true {global.speed_shot = true;global.shop = false;clearance = true;game_save("savegame");
+        user_name = file_text_open_write('user_name.txt')
+            file_text_writeln(user_name)
+            file_text_writeln(user_name)
+            h = string(global.h)//Часы
+            m = string(global.m)//Минуты
+            s = string(global.s)//Секунды
+            file_text_write_string(user_name,string(h+'h '+m+':'+s))}}}}}}//Быстрый выстрел
 
 if mouse_x&gt;=624 {if mouse_x&lt;=788 {if mouse_y&gt;=416 {if mouse_y&lt;=494 {
     if global.speed_shot == true {
-        if global.shop == true {global.speed_lepricon = true;global.shop = false;clearance = true;game_save("savegame")}}}}}}//Быстрый липрикон.
+        if global.shop == true {global.speed_lepricon = true;global.shop = false;clearance = true;game_save("savegame");
+        user_name = file_text_open_write('user_name.txt')
+            file_text_writeln(user_name)
+            file_text_writeln(user_name)
+            h = string(global.h)//Часы
+            m = string(global.m)//Минуты
+            s = string(global.s)//Секунды
+            file_text_write_string(user_name,string(h+'h '+m+':'+s))}}}}}}//Быстрый липрикон.
 
 if mouse_x&gt;=874 {if mouse_x&lt;=1040 {if mouse_y&gt;=416 {if mouse_y&lt;=494 {
     if global.speed_lepricon == true {
-        if global.shop == true {global.gan_shot = true;global.shop = false;clearance = true;game_save("savegame")}}}}}}//Дополнительная шутка
+        if global.shop == true {global.gan_shot = true;global.shop = false;clearance = true;game_save("savegame");
+        user_name = file_text_open_write('user_name.txt')
+            file_text_writeln(user_name)
+            file_text_writeln(user_name)
+            h = string(global.h)//Часы
+            m = string(global.m)//Минуты
+            s = string(global.s)//Секунды
+            file_text_write_string(user_name,string(h+'h '+m+':'+s))}}}}}}//Дополнительная шутка
 </string>
           </argument>
         </arguments>
@@ -451,6 +493,33 @@ else{draw_text(600,540,"Click product")}
           <argument>
             <kind>2</kind>
             <string>savegame</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>user_name = file_text_open_write('user_name.txt')
+file_text_writeln(user_name)
+file_text_writeln(user_name)
+h = string(global.h)//Часы
+m = string(global.m)//Минуты
+s = string(global.s)//Секунды
+file_text_write_string(user_name,string(h+'h '+m+':'+s))
+</string>
           </argument>
         </arguments>
       </action>

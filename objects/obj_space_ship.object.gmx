@@ -902,8 +902,12 @@ else
         hour = string(current_hour)//Создаём переменные времени и года
         minute = string(current_minute)//Создаём переменные времени и года
         second = string(current_second)//Создаём переменные времени и года
+        h = string(global.h)//Часы
+        m = string(global.m)//Минуты
+        s = string(global.s)//Секунды
         file_text_write_string(rekord_list,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
-        //file_text_writeln(rekord_list)// Начинает записывать данные с новой строчки).
+        file_text_writeln(rekord_list)// Начинает записывать данные с новой строчки).
+        file_text_write_string(rekord_list,string(h+'h '+m+':'+s))// Начинает записывать данные с новой строчки).
         file_text_close(rekord_list)//Сохраняет и закрывает документ
 }}
 else{
@@ -926,8 +930,12 @@ else{
         hour = string(current_hour)//Создаём переменные времени и года
         minute = string(current_minute)//Создаём переменные времени и года
         second = string(current_second)//Создаём переменные времени и года
+        h = string(global.h)//Часы
+        m = string(global.m)//Минуты
+        s = string(global.s)//Секунды
         file_text_write_string(rekord_list,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
-        //file_text_writeln(rekord_list)// Начинает записывать данные с новой строчки).
+        file_text_writeln(rekord_list)// Начинает записывать данные с новой строчки).
+        file_text_write_string(rekord_list,string(h+'h '+m+':'+s))// Начинает записывать данные с новой строчки).
         file_text_close(rekord_list)//Сохраняет и закрывает документ
 }}
 </string>
