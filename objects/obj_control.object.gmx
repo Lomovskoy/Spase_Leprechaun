@@ -383,9 +383,13 @@ draw_text(700,10,"Score: " + string(score));//Очки
 draw_set_color(c_fuchsia)
 draw_text(1100,10,"Accuracy:");// + string(global.missed));//Попадание
 
-draw_text(1250,10,string(100-(global.missed/(score/100))) + "%");//Процент точности
+if (100-(global.missed/(score/100)) &lt; 0){
+    draw_text(1250,10,"0%")}
+else if (100-(global.missed/(score/100)) &gt; 100){
+    draw_text(1250,10,"100%")}
+else{
+    draw_text(1250,10,string(100-(global.missed/(score/100))) + "%")}//Процент точности
 //draw_text(1250,10,string(((score*100)/global.missed) + "%"));//Исправленный процент
-
 
 //Отрисовка патрон цвета
 draw_set_color(c_red);
