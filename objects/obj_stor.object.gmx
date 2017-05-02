@@ -514,13 +514,21 @@ else{draw_text(600,540,"Click product")}
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>user_name = file_text_open_write('user_name.txt')
-file_text_writeln(user_name)
-file_text_writeln(user_name)
+            <string>room_goto(StoreRoom)//Перейти в магаз
+game_save("savegame")//Сохранить игру
+        
+user_name = file_text_open_write('user_name.txt')
+file_text_write_string(user_name,name)// Записывает имя игрока.
+file_text_writeln(user_name)// Начинает записывать данные с новой строчки).
+data = date_current_datetime()
+file_text_write_real(user_name,data)// Записывает дату и время.
+file_text_writeln(user_name)// Начинает записывать данные с новой
 h = string(global.h)//Часы
 m = string(global.m)//Минуты
 s = string(global.s)//Секунды
 file_text_write_string(user_name,string(h+'h '+m+':'+s))
+file_text_close(user_name)//Сохраняет и закрывает документ
+
 </string>
           </argument>
         </arguments>
