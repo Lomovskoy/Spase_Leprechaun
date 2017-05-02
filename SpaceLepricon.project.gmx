@@ -129,6 +129,7 @@
       <object>objects\obj_paused</object>
       <object>objects\obj_music_control</object>
       <object>objects\obj_cat</object>
+      <object>objects\obj_timer</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_background1</object>

@@ -97,6 +97,13 @@ global.room_control = false;
 alarm[6] = 30;
 time = 0
 maxtime = 600;
+
+//Отсчёт времени
+global.s = 0 ///  секунда (глобальная)
+global.m = 0 /// минута(глобальная)
+global.h = 0 ///  час (глобальная)
+global.d = 0 /// день (глобальная)
+
 </string>
           </argument>
         </arguments>
@@ -185,6 +192,7 @@ maxtime = 600;
             <kind>1</kind>
             <string>time += 1
 alarm[6] = 30;
+
 </string>
           </argument>
         </arguments>
@@ -368,13 +376,16 @@ alarm[4] = 4;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>draw_set_color(c_aqua)
+draw_text(400,10,string(global.h)+"h "+string(global.m)+":"+string(global.s));//Таймер
 draw_set_color(c_yellow)//Цвет шрифта
-draw_text(600,10,"Score: " + string(score));//Очки
-draw_set_color(c_white)
+draw_text(700,10,"Score: " + string(score));//Очки
+draw_set_color(c_fuchsia)
 draw_text(1100,10,"Accuracy:");// + string(global.missed));//Попадание
+
 draw_text(1250,10,string(100-(global.missed/(score/100))) + "%");//Процент точности
 //draw_text(1250,10,string(((score*100)/global.missed) + "%"));//Исправленный процент
+
 
 //Отрисовка патрон цвета
 draw_set_color(c_red);
