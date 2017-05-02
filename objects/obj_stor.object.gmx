@@ -135,14 +135,14 @@
             <string>if clearance == true 
 {
     //Переменные всех пуль обнуляем
-    global.red = 0
-    global.orange = 0
-    global.yellow = 0
-    global.green = 0
-    global.blue = 0
-    global.darkBlue = 0
-    global.purple = 0
-    
+    global.red = 10
+    global.orange = 10
+    global.yellow = 10
+    global.green = 10
+    global.blue = 10
+    global.darkBlue = 10
+    global.purple = 10
+    /*
     //Случайная генерация патрон от секунд
     ReOrYeGrBlDaPu = current_second
     ReOrYeGrBlDaPu %= 7
@@ -160,7 +160,7 @@
         {global.darkBlue = 2}
     if ReOrYeGrBlDaPu == 6
         {global.purple = 2}
-    
+    */
     //Определяем положеине иконки выбора цвета
     global.one = true
     global.two = false
@@ -389,7 +389,8 @@ if mouse_x&gt;=874 {if mouse_x&lt;=1040 {if mouse_y&gt;=416 {if mouse_y&lt;=494 
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.frequent_shot == true){// Быстрый выстрел
+            <string>
+if (global.frequent_shot == true){// Быстрый выстрел
     draw_line(368, 261, 528, 336)
     draw_line(368, 262, 528, 337)
     draw_line(368, 263, 528, 338)
@@ -399,8 +400,8 @@ if mouse_x&gt;=874 {if mouse_x&lt;=1040 {if mouse_y&gt;=416 {if mouse_y&lt;=494 
 }
 if (global.frequent_shot != true){// Быстрый выстрел не куплен
     if (global.aimed_shot == true){// Прицел
-        draw_line(608, 261, 768, 337)
-        draw_line(608, 337, 768, 261)
+        //draw_line(608, 261, 768, 337)
+        //draw_line(608, 337, 768, 261)
     }else{
         draw_sprite(spr_lock,0,688,210 )}}
 if (global.frequent_shot == true){  // Быстрый выстрел куплен
@@ -414,8 +415,8 @@ if (global.frequent_shot == true){  // Быстрый выстрел купле�
         }}
 if (global.aimed_shot != true){     // Прицел не куплен
     if (global.triple_shot == true){// Тройной выстрел
-        draw_line(874, 261, 1040, 337)
-        draw_line(874, 339, 1040, 261)
+        //draw_line(874, 261, 1040, 337)
+        //draw_line(874, 339, 1040, 261)
     } else{draw_sprite(spr_lock,0,940,210 )}}
 if (global.aimed_shot == true){     // Прицел куплен
     if (global.triple_shot == true){// Тройной выстрел
@@ -428,8 +429,8 @@ if (global.aimed_shot == true){     // Прицел куплен
         }}
 if (global.triple_shot != true){    // Тройной выстрел не куплен
     if (global.speed_shot == true){// Быстрая скорость
-        draw_line(367, 416, 532, 495)
-        draw_line(367, 495, 532, 415)
+        //draw_line(367, 416, 532, 495)
+        //draw_line(367, 495, 532, 415)
     } else{draw_sprite(spr_lock,0,430,360 )}}
 if (global.triple_shot == true){    // Тройной выстрел куплен
     if (global.speed_shot == true){// Быстра скорость
@@ -442,8 +443,8 @@ if (global.triple_shot == true){    // Тройной выстрел купле�
         }}
 if (global.speed_shot != true){         // Быстра скорость не куплен
     if (global.speed_lepricon == true){// Увеличенная скорость липрикона
-        draw_line(550, 450, 800, 680)
-        draw_line(800, 450, 550, 680)
+        //draw_line(550, 450, 800, 680)
+        //draw_line(800, 450, 550, 680)
     } else{draw_sprite(spr_lock,0,688,360 )}}
 if (global.speed_shot == true){         // Быстра скорость куплен
     if (global.speed_lepricon == true){// Увеличенная скорость липрикона
@@ -456,8 +457,8 @@ if (global.speed_shot == true){         // Быстра скорость куп�
         }}
 if (global.speed_lepricon != true){     // Увеличенная скорость липрикона не куплен
     if (global.gan_shot == true){       // Автопушка
-        draw_line(940, 450, 1180, 680)
-        draw_line(1180, 450, 940, 680)
+        //draw_line(940, 450, 1180, 680)
+        //draw_line(1180, 450, 940, 680)
     } else{draw_sprite(spr_lock,0,940,360 )}}
 if (global.speed_lepricon == true){     // Увеличенная скорость липрикона куплен
         if (global.gan_shot == true){// Автопушка
@@ -470,6 +471,7 @@ if (global.speed_lepricon == true){     // Увеличенная скорост
         }}
 if global.shop == 0 {draw_text(600,540,"Enter backspace")}
 else{draw_text(600,540,"Click product")}
+
 </string>
           </argument>
         </arguments>
