@@ -172,12 +172,12 @@ global.Speed1 = irandom_range(1,10)
 instance_create(1360,height,collor)
 audio_play_sound(appearance_ball, 0, false);
 //если минимальное время и максимальное время = 1 или 2
-if tmin1 &gt; 1 {
+/*if tmin1 &gt; 1 {
         tmin1 = tmin1 - 1
     }
 if tmax1 &gt; 2 {
         tmax1 = tmax1 - 1
-    }
+    }*/
 //Рекурсируем таймер
 alarm[0]= time1
 
