@@ -36,6 +36,7 @@
     <sprite>sprites\spr_menu</sprite>
     <sprite>sprites\spr_shope</sprite>
     <sprite>sprites\spr_boss1_logo</sprite>
+    <sprite>sprites\spr_boss1</sprite>
     <sprites name="basck">
       <sprite>sprites\spr_background1</sprite>
       <sprite>sprites\spr_background2</sprite>
@@ -97,7 +98,9 @@
     <background>background\background2</background>
     <background>background\bac_Game_Over</background>
   </backgrounds>
-  <paths name="paths"/>
+  <paths name="paths">
+    <path>paths\path2</path>
+  </paths>
   <scripts name="scripts">
     <script>scripts\hs_submit.gml</script>
     <script>scripts\shot.gml</script>
@@ -111,6 +114,7 @@
   <objects name="objects">
     <object>objects\obj_space_ship</object>
     <object>objects\obj_logo</object>
+    <object>objects\obj_boss1</object>
     <objects name="Botton">
       <object>objects\obj_New_Game</object>
       <object>objects\obj_Load_Game</object>
