@@ -96,7 +96,7 @@ global.room_control = false;
 //таймер босса
 alarm[6] = 30;
 time = 0
-maxtime = 60;
+maxtime = 10;
 global.boss = 0
 
 //Отсчёт времени
