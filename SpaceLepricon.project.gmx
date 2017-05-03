@@ -184,6 +184,7 @@
       <object>objects\obj_boss1</object>
     </objects>
   </objects>
+  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\StartRoom</room>
     <room>rooms\PlayRoom</room>
