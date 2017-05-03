@@ -99,7 +99,7 @@
     <background>background\bac_Game_Over</background>
   </backgrounds>
   <paths name="paths">
-    <path>paths\path2</path>
+    <path>paths\path1</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\hs_submit.gml</script>

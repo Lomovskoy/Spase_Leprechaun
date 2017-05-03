@@ -115,26 +115,28 @@ alarm[2]=time2//Инициализация таймера метиоритов
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-//Выбор цвета шарика рандомно
-meteorite = choose(obj_meteorite_1,obj_meteorite_2,obj_meteorite_3,obj_meteorite_4,obj_meteorite_5)
-//Выбор промежутка меду появлением рандомно
-time2 = irandom_range(tmin2,tmax2)
-//Выбор высоты появления
-height = irandom_range(170,500)
-//Скорость
-global.Speed2 = irandom_range(1,10)
-//Генерация обьекта
-instance_create(1360,height,meteorite)
-//Звук
-//audio_play_sound(appearance_ball, 0, false);
-//если минимальное время и максимальное время = 1 или 2
-//if tmin2 &gt; 1 {
-//        tmin2 = tmin2 - 1
-//    }
-//if tmax2 &gt; 2 {
-//        tmax2 = tmax2 - 1
-//    }
+            <string>if global.boss == 0 {
+    //Выбор цвета шарика рандомно
+    meteorite = choose(obj_meteorite_1,obj_meteorite_2,obj_meteorite_3,obj_meteorite_4,obj_meteorite_5)
+    //Выбор промежутка меду появлением рандомно
+    time2 = irandom_range(tmin2,tmax2)
+    //Выбор высоты появления
+    height = irandom_range(170,500)
+    //Скорость
+    global.Speed2 = irandom_range(1,10)
+    //Генерация обьекта
+    instance_create(1360,height,meteorite)
+    //Звук
+    //audio_play_sound(appearance_ball, 0, false);
+    //если минимальное время и максимальное время = 1 или 2
+    //if tmin2 &gt; 1 {
+    //        tmin2 = tmin2 - 1
+    //    }
+    //if tmax2 &gt; 2 {
+    //        tmax2 = tmax2 - 1
+    //    }
+
+}
 //Рекурсируем таймер
 alarm[2]= time2
 </string>
@@ -159,25 +161,26 @@ alarm[2]= time2
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-//Выбор цвета шарика рандомно
-collor = choose(obj_red,obj_orange,obj_yellow,obj_green,obj_blue,obj_dark_blue,obj_purple)
-//Выбор промежутка меду появлением рандомно
-time1 = irandom_range(tmin1,tmax1)
-//Выбор высоты появления
-height = irandom_range(170,500)
-//Скорость
-global.Speed1 = irandom_range(1,10)
-//Генерация обьекта
-instance_create(1360,height,collor)
-audio_play_sound(appearance_ball, 0, false);
-//если минимальное время и максимальное время = 1 или 2
-/*if tmin1 &gt; 1 {
-        tmin1 = tmin1 - 1
-    }
-if tmax1 &gt; 2 {
-        tmax1 = tmax1 - 1
-    }*/
+            <string>if global.boss == 0 {
+    //Выбор цвета шарика рандомно
+    collor = choose(obj_red,obj_orange,obj_yellow,obj_green,obj_blue,obj_dark_blue,obj_purple)
+    //Выбор промежутка меду появлением рандомно
+    time1 = irandom_range(tmin1,tmax1)
+    //Выбор высоты появления
+    height = irandom_range(170,500)
+    //Скорость
+    global.Speed1 = irandom_range(1,10)
+    //Генерация обьекта
+    instance_create(1360,height,collor)
+    audio_play_sound(appearance_ball, 0, false);
+    //если минимальное время и максимальное время = 1 или 2
+    /*if tmin1 &gt; 1 {
+            tmin1 = tmin1 - 1
+        }
+    if tmax1 &gt; 2 {
+            tmax1 = tmax1 - 1
+        }*/
+}
 //Рекурсируем таймер
 alarm[0]= time1
 
@@ -210,6 +213,7 @@ alarm[0]= time1
 //draw_text(1050,25,"tmax1: " + string(tmax))
 //draw_set_color(c_aqua);
 //draw_text(30,40,"fps: " + string(fps))
+
 </string>
           </argument>
         </arguments>

@@ -96,7 +96,8 @@ global.room_control = false;
 //таймер босса
 alarm[6] = 30;
 time = 0
-maxtime = 600;
+maxtime = 60;
+global.boss = 0
 
 //Отсчёт времени
 global.s = 0 ///  секунда (глобальная)
@@ -191,6 +192,14 @@ global.d = 0 /// день (глобальная)
           <argument>
             <kind>1</kind>
             <string>time += 1
+
+if time == maxtime and global.boss == 0 {
+    global.boss = 1
+}    
+    
+if global.boss == 1 and time == maxtime{
+    instance_create(1300,450,obj_boss1)}
+
 alarm[6] = 30;
 
 </string>

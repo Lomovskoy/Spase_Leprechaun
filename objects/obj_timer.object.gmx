@@ -26,12 +26,34 @@
           <argument>
             <kind>1</kind>
             <string>alarm[7] = 30
+
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="2" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Часы + создание Боссов</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -58,7 +80,7 @@ if global.s &lt; 59{
 if global.m &gt;= 59{
     global.h += 1
     global.m = 0}
-    
+
 alarm[7] = 30
 </string>
           </argument>
