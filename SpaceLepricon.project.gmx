@@ -21,6 +21,9 @@
       <sound>sound\sound_menu_down</sound>
       <sound>sound\boss_noise</sound>
       <sound>sound\shop_noise</sound>
+      <sound>sound\shop_bleep</sound>
+      <sound>sound\explosion1</sound>
+      <sound>sound\explosion2</sound>
     </sounds>
     <sounds name="Music">
       <sound>sound\Start_Musik</sound>
@@ -97,6 +100,7 @@
     </sprites>
     <sprites name="boss_spr">
       <sprite>sprites\spr_boss1</sprite>
+      <sprite>sprites\spr_boss1_dead</sprite>
       <sprite>sprites\spr_boss1_logo</sprite>
       <sprite>sprites\spr_boss_red</sprite>
       <sprite>sprites\spr_boss_red2</sprite>

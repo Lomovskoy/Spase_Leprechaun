@@ -49,12 +49,12 @@
 //Переменные всех пуль обнуляем
 
 global.red = 10
-global.orange = 10
+global.orange = 0
 global.yellow = 10
 global.green = 10
-global.blue = 10
-global.darkBlue = 10
-global.purple = 10
+global.blue = 0
+global.darkBlue = 0
+global.purple = 0
 /*
 //Случайная генерация патрон от секунд
 ReOrYeGrBlDaPu = current_second
@@ -423,6 +423,9 @@ if (global.red&gt;=10 and global.orange&gt;=10 and global.yellow&gt;=10 and glob
 {draw_set_color(c_white);
 draw_text(1263,665," Shop ")
 draw_text(1255,725,"0")
+//Звук активации магазина
+if !audio_is_playing(shop_bleep){
+    audio_play_sound(shop_bleep,0,true)}
 draw_sprite(spr_shope,-1,1280,700);global.shop = true}
 else{global.shop = false}//Если нет то магазин ложь
 //Отрисока тестовой информации
@@ -2481,6 +2484,7 @@ audio_pause_all()
     {
         room_goto(StoreRoom)//Перейти в магаз
         game_save("savegame")//Сохранить игру
+        audio_stop_sound(shop_bleep)
         
         user_name = file_text_open_write('user_name.txt')
         file_text_write_string(user_name,name)// Записывает имя игрока.
