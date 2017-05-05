@@ -230,13 +230,14 @@ if mouse_x&gt;=368 {if mouse_x&lt;=528 {if mouse_y&gt;=261 {if mouse_y&lt;=336 {
             hour = string(current_hour)//Создаём переменные времени и года
             minute = string(current_minute)//Создаём переменные времени и года
             second = string(current_second)//Создаём переменные времени и года
-            file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
+            file_text_write_string(user_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
             file_text_writeln(user_name)// Начинает записывать данные с новой
             h = string(global.h)//Часы
             m = string(global.m)//Минуты
             s = string(global.s)//Секунды
             file_text_write_string(user_name,string(h+'h '+m+':'+s))
-            file_text_close(user_name)}}}}}//Частый выстрел
+            file_text_close(user_name)
+            audio_play_sound(shop_noise, 0, false)}}}}}//Частый выстрел
 
 if mouse_x&gt;=608 {if mouse_x&lt;=768 {if mouse_y&gt;=261 {if mouse_y&lt;=337 {
     if global.frequent_shot == true {
@@ -250,13 +251,14 @@ if mouse_x&gt;=608 {if mouse_x&lt;=768 {if mouse_y&gt;=261 {if mouse_y&lt;=337 {
             hour = string(current_hour)//Создаём переменные времени и года
             minute = string(current_minute)//Создаём переменные времени и года
             second = string(current_second)//Создаём переменные времени и года
-            file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
+            file_text_write_string(user_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
             file_text_writeln(user_name)// Начинает записывать данные с новой
             h = string(global.h)//Часы
             m = string(global.m)//Минуты
             s = string(global.s)//Секунды
             file_text_write_string(user_name,string(h+'h '+m+':'+s))
-            file_text_close(user_name)}}}}}}//Прицел для выстрела
+            file_text_close(user_name)
+            audio_play_sound(shop_noise, 0, false)}}}}}}//Прицел для выстрела
     
 if mouse_x&gt;=874 {if mouse_x&lt;=1040 {if mouse_y&gt;=260 {if mouse_y&lt;=337 {
     if global.aimed_shot == true {
@@ -270,13 +272,14 @@ if mouse_x&gt;=874 {if mouse_x&lt;=1040 {if mouse_y&gt;=260 {if mouse_y&lt;=337 
             hour = string(current_hour)//Создаём переменные времени и года
             minute = string(current_minute)//Создаём переменные времени и года
             second = string(current_second)//Создаём переменные времени и года
-            file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
+            file_text_write_string(user_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
             file_text_writeln(user_name)// Начинает записывать данные с новой
             h = string(global.h)//Часы
             m = string(global.m)//Минуты
             s = string(global.s)//Секунды
             file_text_write_string(user_name,string(h+'h '+m+':'+s))
-            file_text_close(user_name)}}}}}}//Тройной выстрел
+            file_text_close(user_name)
+            audio_play_sound(shop_noise, 0, false)}}}}}}//Тройной выстрел
 
 if mouse_x&gt;=367 {if mouse_x&lt;=532 {if mouse_y&gt;=416 {if mouse_y&lt;=494 {
     if global.triple_shot == true {
@@ -290,13 +293,14 @@ if mouse_x&gt;=367 {if mouse_x&lt;=532 {if mouse_y&gt;=416 {if mouse_y&lt;=494 {
             hour = string(current_hour)//Создаём переменные времени и года
             minute = string(current_minute)//Создаём переменные времени и года
             second = string(current_second)//Создаём переменные времени и года
-            file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
+            file_text_write_string(user_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
             file_text_writeln(user_name)// Начинает записывать данные с новой
             h = string(global.h)//Часы
             m = string(global.m)//Минуты
             s = string(global.s)//Секунды
             file_text_write_string(user_name,string(h+'h '+m+':'+s))
-            file_text_close(user_name)}}}}}}//Быстрый выстрел
+            file_text_close(user_name)
+            audio_play_sound(shop_noise, 0, false)}}}}}}//Быстрый выстрел
 
 if mouse_x&gt;=624 {if mouse_x&lt;=788 {if mouse_y&gt;=416 {if mouse_y&lt;=494 {
     if global.speed_shot == true {
@@ -310,13 +314,14 @@ if mouse_x&gt;=624 {if mouse_x&lt;=788 {if mouse_y&gt;=416 {if mouse_y&lt;=494 {
             hour = string(current_hour)//Создаём переменные времени и года
             minute = string(current_minute)//Создаём переменные времени и года
             second = string(current_second)//Создаём переменные времени и года
-            file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
+            file_text_write_string(user_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
             file_text_writeln(user_name)// Начинает записывать данные с новой
             h = string(global.h)//Часы
             m = string(global.m)//Минуты
             s = string(global.s)//Секунды
             file_text_write_string(user_name,string(h+'h '+m+':'+s))
-            file_text_close(user_name)}}}}}}//Быстрый липрикон.
+            file_text_close(user_name)
+            audio_play_sound(shop_noise, 0, false)}}}}}}//Быстрый липрикон.
 
 if mouse_x&gt;=874 {if mouse_x&lt;=1040 {if mouse_y&gt;=416 {if mouse_y&lt;=494 {
     if global.speed_lepricon == true {
@@ -330,13 +335,14 @@ if mouse_x&gt;=874 {if mouse_x&lt;=1040 {if mouse_y&gt;=416 {if mouse_y&lt;=494 
             hour = string(current_hour)//Создаём переменные времени и года
             minute = string(current_minute)//Создаём переменные времени и года
             second = string(current_second)//Создаём переменные времени и года
-            file_text_write_string(User_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
+            file_text_write_string(user_name,string(day+'.'+mouth+'.'+year+' '+hour+':'+minute+':'+second))//Запишем ещё и дату это число дней, прошедших с 12/30/1899
             file_text_writeln(user_name)// Начинает записывать данные с новой
             h = string(global.h)//Часы
             m = string(global.m)//Минуты
             s = string(global.s)//Секунды
             file_text_write_string(user_name,string(h+'h '+m+':'+s))
-            file_text_close(user_name)}}}}}}//Дополнительная шутка
+            file_text_close(user_name)
+            audio_play_sound(shop_noise, 0, false)}}}}}}//Дополнительная шутка
 </string>
           </argument>
         </arguments>

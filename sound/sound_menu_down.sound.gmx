@@ -2,14 +2,14 @@
 <sound>
   <kind>0</kind>
   <extension>.wav</extension>
-  <origname>sound\audio\shot_1.wav</origname>
+  <origname>sound\audio\sound_menu_down.wav</origname>
   <effects>0</effects>
   <volume>
-    <volume>0.5</volume>
+    <volume>1</volume>
   </volume>
   <pan>0</pan>
   <bitRates>
-    <bitRate>192</bitRate>
+    <bitRate>64</bitRate>
   </bitRates>
   <sampleRates>
     <sampleRate>44100</sampleRate>
@@ -21,7 +21,7 @@
     <bitDepth>16</bitDepth>
   </bitDepths>
   <preload>-1</preload>
-  <data>shot_1.wav</data>
+  <data>sound_menu_down.wav</data>
   <compressed>0</compressed>
   <streamed>0</streamed>
   <uncompressOnLoad>0</uncompressOnLoad>
