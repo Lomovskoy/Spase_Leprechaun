@@ -16,6 +16,8 @@
       <sound>sound\motion</sound>
       <sound>sound\motion_end</sound>
       <sound>sound\appearance_ball</sound>
+      <sound>sound\glass1</sound>
+      <sound>sound\glass2</sound>
     </sounds>
     <sounds name="Music">
       <sound>sound\Start_Musik</sound>
