@@ -134,6 +134,7 @@
     <font>fonts\user_fond</font>
     <font>fonts\game_fond</font>
     <font>fonts\logo_font</font>
+    <font>fonts\game_over_fond</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_space_ship</object>
@@ -157,6 +158,7 @@
       <object>objects\obj_music_control</object>
       <object>objects\obj_cat</object>
       <object>objects\obj_timer</object>
+      <object>objects\obj_game_over</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_background1</object>
