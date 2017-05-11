@@ -119,7 +119,6 @@
   <backgrounds name="background">
     <background>background\back_stor</background>
     <background>background\background2</background>
-    <background>background\bac_Game_Over</background>
   </backgrounds>
   <paths name="paths">
     <path>paths\path1</path>
