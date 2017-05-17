@@ -29,6 +29,8 @@
       <sound>sound\Start_Musik</sound>
       <sound>sound\sountrack_music_1</sound>
       <sound>sound\sountrack_music_2</sound>
+      <sound>sound\sountrack_music_3</sound>
+      <sound>sound\sountrack_music_4</sound>
       <sound>sound\Game_Over_Music</sound>
     </sounds>
   </sounds>
