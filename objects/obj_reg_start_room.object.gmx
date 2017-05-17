@@ -89,15 +89,17 @@ alarm[3] = 15;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (string_length(keyboard_string)&gt;length)//если набираемый текст превышает заданную длину,
-    { 
-        keyboard_string = string_copy(keyboard_string, 1, length);//мы его обрезаем
+            <string>if newgame == 1{
+    if (string_length(keyboard_string)&gt;length)//если набираемый текст превышает заданную длину,
+        { 
+            keyboard_string = string_copy(keyboard_string, 1, length);//мы его обрезаем
+        }
+    if (name != keyboard_string)
+    {
+        audio_play_sound(appearance_letters, 0, false);
     }
-if (name != keyboard_string)
-{
-    audio_play_sound(appearance_letters, 0, false);
-}
-name = keyboard_string;//а потом записываем в переменную для отправки в таблицу рекордов
+    name = keyboard_string;//а потом записываем в переменную для отправки в таблицу рекордов
+}else{keyboard_string='';}
 </string>
           </argument>
         </arguments>
