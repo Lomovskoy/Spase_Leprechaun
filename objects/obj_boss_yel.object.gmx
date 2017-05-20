@@ -469,6 +469,26 @@ obj_boss_yel.y = obj_boss1.y
       </action>
       <action>
         <libid>1</libid>
+        <id>701</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_score</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>10</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>424</id>
         <kind>2</kind>
         <userelative>0</userelative>
@@ -512,10 +532,12 @@ obj_boss_yel.y = obj_boss1.y
           <argument>
             <kind>1</kind>
             <string>//Скорость
-global.Speed1 = irandom_range(1,10)
-instance_create(obj_boss_yel.x,obj_boss_yel.y,obj_yellow)
-
-audio_play_sound(appearance_ball, 0, false);
+if global.yellow == 0{
+    global.Speed1 = irandom_range(1,10)
+    instance_create(obj_boss_yel.x,obj_boss_yel.y,obj_yellow)
+    
+    audio_play_sound(appearance_ball, 0, false);
+}
 </string>
           </argument>
         </arguments>
