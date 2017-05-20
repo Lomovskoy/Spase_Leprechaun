@@ -113,7 +113,7 @@ obj_boss_gre.y = obj_boss1.y
           </argument>
           <argument>
             <kind>0</kind>
-            <string>-10</string>
+            <string>-100</string>
           </argument>
         </arguments>
       </action>
