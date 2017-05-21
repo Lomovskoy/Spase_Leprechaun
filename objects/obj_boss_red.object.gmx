@@ -52,6 +52,7 @@
             <string>boss_res_shot = 0;
 cycle = 6;
 alarm[9] = 150;
+shoot=0;
 
 </string>
           </argument>
@@ -115,7 +116,9 @@ if cycle &gt;0{
             <kind>1</kind>
             <string>obj_boss_red.x = obj_boss1.x
 obj_boss_red.y = obj_boss1.y
-
+if (shoot&gt;0) {
+    shoot-=1;
+}
 </string>
           </argument>
         </arguments>
@@ -1109,6 +1112,67 @@ if cycle &gt;0{
           <argument>
             <kind>1</kind>
             <string>global.bullet = true
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="76">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if shoot=0 {
+  var mindist,maxdist,itr,i,op_num,wid;
+  shoot=12; 
+  with instance_create(x,y,obj_laser_red) {
+    dir=(0); 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    mindist=0; 
+    maxdist=view_hview; 
+    itr=maxdist; 
+    op_num=0; 
+    while(itr&gt;1) { 
+      for(i=mindist;i&lt;maxdist;i+=itr) {
+        op_num+=1; 
+        wid=collision_line(x+lengthdir_x(i,dir),y+lengthdir_y(i,dir),x+lengthdir_x(i+itr,dir),y+lengthdir_y(i+itr,dir),obj_space_ship,1,0); 
+        if wid!=noone { 
+          wall=wid;
+          mindist=i; 
+          maxdist=i+itr; 
+          itr/=2; 
+          break; 
+        }
+        else {
+          if op_num=1 { 
+            wall=noone; 
+            itr=0; 
+            break; 
+          }
+        }
+      }
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    dist=maxdist;
+    if wall!=noone {
+      wall.hp-=30;
+      effect_create_above(ef_spark,x+lengthdir_x(dist,dir),y+lengthdir_y(dist,dir),3,c_red);
+    }
+  }
+}
 </string>
           </argument>
         </arguments>

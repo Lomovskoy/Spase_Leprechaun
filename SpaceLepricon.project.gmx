@@ -116,6 +116,7 @@
       <sprite>sprites\spr_boss_gre2</sprite>
       <sprite>sprites\spr_boss_gre3</sprite>
       <sprite>sprites\spr_boss_gre4</sprite>
+      <sprite>sprites\spr_laser_red</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -129,6 +130,7 @@
     <script>scripts\hs_submit.gml</script>
     <script>scripts\shot.gml</script>
     <script>scripts\seconds_time.gml</script>
+    <script>scripts\time_live_laser_red.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\main_fond</font>
@@ -195,6 +197,7 @@
       <object>objects\obj_boss_yel</object>
       <object>objects\obj_boss_gre</object>
       <object>objects\obj_boss1</object>
+      <object>objects\obj_laser_red</object>
     </objects>
   </objects>
   <rooms name="rooms">
