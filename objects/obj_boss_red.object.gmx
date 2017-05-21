@@ -50,7 +50,7 @@
           <argument>
             <kind>1</kind>
             <string>boss_res_shot = 0;
-cycle = 3;
+cycle = 6;
 alarm[9] = 150;
 
 </string>
@@ -78,16 +78,16 @@ alarm[9] = 150;
             <string>if boss_res_shot == 0{
     boss_res_shot = 1;
 }
-else{
-    boss_res_shot= 0
+else if boss_res_shot == 1{
+    boss_res_shot = 0
 }
 
 if cycle &gt;0{
     cycle -= 1;
-    alarm[9]=15;
+    alarm[9]=4;
 }else{
     boss_res_shot= 0
-    cycle = 3;
+    cycle = 6;
     alarm[9]=150;
 }
 
@@ -119,6 +119,48 @@ obj_boss_red.y = obj_boss1.y
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>global.live_red</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>2</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -386,6 +428,106 @@ obj_boss_red.y = obj_boss1.y
       </action>
       <action>
         <libid>1</libid>
+        <id>543</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sprite_color</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>13</kind>
+            <string>255</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>123</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_path_speed</functionname>
+        <codestring></codestring>
+        <whoName>obj_boss1</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>8</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>421</id>
+        <kind>3</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>123</id>
         <kind>0</kind>
         <userelative>-1</userelative>
@@ -474,7 +616,7 @@ obj_boss_red.y = obj_boss1.y
           </argument>
           <argument>
             <kind>0</kind>
-            <string>-100</string>
+            <string>-10</string>
           </argument>
         </arguments>
       </action>
@@ -892,12 +1034,22 @@ obj_boss_red.y = obj_boss1.y
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Скорость
-if global.red == 0{
-    global.Speed1 = irandom_range(1,10)
-    instance_create(obj_boss_red.x,obj_boss_red.y-20,obj_red)
-    audio_play_sound(appearance_ball, 0, false);
+            <string>if boss_res_shot == 0{
+    boss_res_shot = 1;
 }
+else{
+    boss_res_shot= 0
+}
+
+if cycle &gt;0{
+    cycle -= 1;
+    //alarm[9]=15;
+}else{
+    boss_res_shot= 0
+    cycle = 3;
+    alarm[9]=150;
+}
+
 </string>
           </argument>
         </arguments>
