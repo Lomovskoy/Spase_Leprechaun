@@ -133,7 +133,7 @@ effect_create_above(ef_explosion,obj_boss1.x+x1,obj_boss1.y+y1,size,color)
 audio_play_sound(explosion1,0,false)
 
 //if (boss1_ded mod 2) == 0{
-    sprite_index = (spr_boss1_dead)
+//    sprite_index = (spr_boss1_dead)
 //}
 //else if (boss1_ded mod 2) == 1{
 //    sprite_index = (spr_boss1)
@@ -504,30 +504,6 @@ alarm[8] = 7;
           <argument>
             <kind>0</kind>
             <string>-1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>115</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_bounce</functionname>
-        <codestring></codestring>
-        <whoName>obj_space_ship</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
