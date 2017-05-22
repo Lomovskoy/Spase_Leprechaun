@@ -24,6 +24,11 @@
       <sound>sound\shop_bleep</sound>
       <sound>sound\explosion1</sound>
       <sound>sound\explosion2</sound>
+      <sound>sound\shot_boss_1</sound>
+      <sound>sound\bleep_boss_1</sound>
+      <sound>sound\hit_the_player</sound>
+      <sound>sound\sound_boss_move</sound>
+      <sound>sound\sound_boss_move_end</sound>
     </sounds>
     <sounds name="Music">
       <sound>sound\Start_Musik</sound>
@@ -117,6 +122,8 @@
       <sprite>sprites\spr_boss_gre3</sprite>
       <sprite>sprites\spr_boss_gre4</sprite>
       <sprite>sprites\spr_laser_red</sprite>
+      <sprite>sprites\spr_laser_yel</sprite>
+      <sprite>sprites\spr_laser_gre</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -198,6 +205,8 @@
       <object>objects\obj_boss_gre</object>
       <object>objects\obj_boss1</object>
       <object>objects\obj_laser_red</object>
+      <object>objects\obj_laser_yel</object>
+      <object>objects\obj_laser_gre</object>
     </objects>
   </objects>
   <rooms name="rooms">

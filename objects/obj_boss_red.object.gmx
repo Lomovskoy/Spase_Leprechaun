@@ -250,6 +250,30 @@ if (shoot&gt;0) {
       </action>
       <action>
         <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>bleep_boss_1</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>543</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -491,7 +515,7 @@ if (shoot&gt;0) {
             <string>if shoot=0 {
   var mindist,maxdist,itr,i,op_num,wid;
   shoot=12; //шагов до повторной стрельбы
-  with instance_create(x+0,y-110,obj_laser_red) {
+  with instance_create(x,y-110,obj_laser_red) {
     dir=180; //вперед dir=0 назад dir=180
     //////////////////////////////////////////////////////////////////////////////////////////////////////////
     //оптимальное вычисление точного расстояния до препятствия с минимальным к-вом итераций
@@ -528,6 +552,7 @@ if (shoot&gt;0) {
       effect_create_above(ef_firework,x+lengthdir_x(dist,dir),y+lengthdir_y(dist,dir),1,c_orange);
       effect_create_above(ef_smokeup,x+lengthdir_x(dist,dir),y+lengthdir_y(dist,dir),2,c_gray);
       //effect_create_above(kind,x,y,size,color) 0 – маленький, 1 – средний, 2 – большой.
+      audio_play_sound(hit_the_player,0,false)
     }
   }
 }
@@ -572,6 +597,30 @@ if (shoot&gt;0) {
           </argument>
           <argument>
             <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>shot_boss_1</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
             <string>0</string>
           </argument>
         </arguments>
@@ -1149,7 +1198,6 @@ else{
 
 if cycle &gt;0{
     cycle -= 1;
-    //alarm[9]=15;
 }else{
     boss_res_shot= 0
     cycle = 3;

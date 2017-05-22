@@ -51,6 +51,7 @@
             <kind>1</kind>
             <string>boss_yel_shot = 0;
 cycle = 6;
+shoot=0;
 alarm[10] = 250;
 
 </string>
@@ -114,6 +115,9 @@ if cycle &gt;0{
             <kind>1</kind>
             <string>obj_boss_yel.x = obj_boss1.x
 obj_boss_yel.y = obj_boss1.y
+if (shoot&gt;0) {
+    shoot-=1;
+}
 </string>
           </argument>
         </arguments>
@@ -243,6 +247,30 @@ obj_boss_yel.y = obj_boss1.y
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>bleep_boss_1</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
       </action>
       <action>
         <libid>1</libid>
@@ -465,6 +493,135 @@ obj_boss_yel.y = obj_boss1.y
           <argument>
             <kind>0</kind>
             <string>8</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if shoot=0 {
+  var mindist,maxdist,itr,i,op_num,wid;
+  shoot=12; //шагов до повторной стрельбы
+  with instance_create(x,y,obj_laser_yel) {
+    dir=180; //вперед dir=0 назад dir=180
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //оптимальное вычисление точного расстояния до препятствия с минимальным к-вом итераций
+    mindist=0; //начальное расстояние
+    //maxdist=view_wview; //конечное
+    maxdist=x;
+    itr=maxdist; //прибавление
+    op_num=0; //к-во операций (для отладки и для выхода из цикла если на всей дистанции свободно)
+    while(itr&gt;1) { //пока прибавление больше одного пикселя
+      for(i=mindist;i&lt;maxdist;i+=itr) {
+        op_num+=1; //считаем к-во операций
+        wid=collision_line(x+lengthdir_x(i,dir),y+lengthdir_y(i,dir),x+lengthdir_x(i+itr,dir),y+lengthdir_y(i+itr,dir),obj_space_ship,1,0); //wall id
+        if wid!=noone { //есть столкновение с кемто
+          wall=wid;
+          mindist=i; //мин дистанция
+          maxdist=i+itr; //макс
+          itr/=2; //делим прибавление на 2 (таким образом в след витке while в for будет 2 итерации)
+          break; //прервать for
+        }
+        else {
+          if op_num=1 { //если первая операция, значит по всей длине препятствий нет
+            wall=noone; //стен нет
+            itr=0; //чтобы больше не заводился цикл while
+            break; //прервать for
+          }
+        }
+      }
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    dist=maxdist;
+    if wall!=noone {
+      lives-=1;
+      effect_create_above(ef_spark,x+lengthdir_x(dist,dir),y+lengthdir_y(dist,dir),2,c_yellow);
+      effect_create_above(ef_firework,x+lengthdir_x(dist,dir),y+lengthdir_y(dist,dir),1,c_orange);
+      effect_create_above(ef_smokeup,x+lengthdir_x(dist,dir),y+lengthdir_y(dist,dir),2,c_gray);
+      //effect_create_above(kind,x,y,size,color) 0 – маленький, 1 – средний, 2 – большой.
+      audio_play_sound(hit_the_player,0,false)
+    }
+  }
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>532</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_effect</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>13</kind>
+            <string>65535</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>shot_boss_1</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
