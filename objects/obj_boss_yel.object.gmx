@@ -771,7 +771,7 @@ if (shoot&gt;0) {
           </argument>
           <argument>
             <kind>0</kind>
-            <string>-100</string>
+            <string>-10</string>
           </argument>
         </arguments>
       </action>
@@ -1155,7 +1155,7 @@ if (shoot&gt;0) {
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>10</string>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
