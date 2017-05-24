@@ -1055,7 +1055,7 @@ if (shoot&gt;0) {
           </argument>
           <argument>
             <kind>4</kind>
-            <string>0</string>
+            <string>3</string>
           </argument>
         </arguments>
       </action>

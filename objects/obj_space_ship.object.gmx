@@ -889,48 +889,6 @@ if global.Boss_1 == false{
       </action>
       <action>
         <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>room</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>PlayRoom</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -978,20 +936,6 @@ else
         <relative>0</relative>
         <isnot>0</isnot>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
     </event>
     <event eventtype="5" enumb="39">
       <action>
@@ -1011,48 +955,6 @@ else
           <argument>
             <kind>0</kind>
             <string>global.Boss_1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>room</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>PlayRoom</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -1119,20 +1021,6 @@ else
         <relative>0</relative>
         <isnot>0</isnot>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
     </event>
     <event eventtype="5" enumb="38">
       <action>
@@ -1152,48 +1040,6 @@ else
           <argument>
             <kind>0</kind>
             <string>global.Boss_1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>room</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>PlayRoom</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -1269,20 +1115,6 @@ else
         <relative>0</relative>
         <isnot>0</isnot>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
     </event>
     <event eventtype="5" enumb="37">
       <action>
@@ -1302,48 +1134,6 @@ else
           <argument>
             <kind>0</kind>
             <string>global.Boss_1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>room</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>PlayRoom</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -1395,20 +1185,6 @@ else
 </string>
           </argument>
         </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -1661,7 +1437,31 @@ else{
         <arguments>
           <argument>
             <kind>11</kind>
-            <room>GameOverRoom</room>
+            <room>PlayRoom2</room>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.Boss_1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>true</string>
           </argument>
         </arguments>
       </action>
@@ -1701,7 +1501,7 @@ else{
         <arguments>
           <argument>
             <kind>6</kind>
-            <sound>Game_Over_Music</sound>
+            <sound>sountrack_music_3</sound>
           </argument>
           <argument>
             <kind>3</kind>

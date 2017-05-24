@@ -373,7 +373,7 @@ alarm[8] = 7;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>global.live_red == 0 and global.live_yel  == 0 and global.live_gre  == 0</string>
+            <string>global.live_red &lt;= 0 and global.live_yel  &lt;= 0 and global.live_gre  &lt;= 0</string>
           </argument>
         </arguments>
       </action>
@@ -552,6 +552,35 @@ alarm[8] = 7;
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Новый звуковой дижок, пользуйтесь audio_play_music(index, loop);
+
+if ((obj_boss1.speed == 0) and (not(audio_is_playing(sound_boss_move_end)))){
+    audio_stop_sound(sound_boss_move);
+    audio_play_sound(sound_boss_move_end,10,false);
+}
+if((obj_boss1.speed != 0)){// and (not(audio_is_playing(sound_boss_move_end))) and (not(audio_is_playing(sound_boss_move)))){
+    audio_play_sound(sound_boss_move,10,true);
+}
+</string>
+          </argument>
+        </arguments>
       </action>
     </event>
     <event eventtype="4" ename="obj_space_ship">
@@ -755,7 +784,7 @@ alarm[8] = 7;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>global.live_red == 0</string>
+            <string>global.live_red &lt;= 0</string>
           </argument>
         </arguments>
       </action>
@@ -843,7 +872,7 @@ alarm[8] = 7;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>global.live_yel  == 0 </string>
+            <string>global.live_yel  &lt;= 0 </string>
           </argument>
         </arguments>
       </action>
@@ -931,7 +960,7 @@ alarm[8] = 7;
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>global.live_gre  == 0</string>
+            <string>global.live_gre  &lt;= 0</string>
           </argument>
         </arguments>
       </action>

@@ -45,35 +45,35 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-//Переменные всех пуль обнуляем
-
-global.red = 0
-global.orange = 0
-global.yellow = 0
-global.green = 0
-global.blue = 0
-global.darkBlue = 0
-global.purple = 0
-
-//Случайная генерация патрон от секунд
-ReOrYeGrBlDaPu = current_second
-ReOrYeGrBlDaPu %= 7
-if ReOrYeGrBlDaPu == 0
-    {global.red = 2}
-if ReOrYeGrBlDaPu == 1
-    {global.orange = 2}
-if ReOrYeGrBlDaPu == 2
-    {global.yellow = 2}
-if ReOrYeGrBlDaPu == 3
-    {global.green = 2}
-if ReOrYeGrBlDaPu == 4
-    {global.blue = 2}
-if ReOrYeGrBlDaPu == 5
-    {global.darkBlue = 2}
-if ReOrYeGrBlDaPu == 6
-    {global.purple = 2}
-
+            <string>if room == PlayRoom{
+    //Переменные всех пуль обнуляем
+    
+    global.red = 0
+    global.orange = 0
+    global.yellow = 0
+    global.green = 0
+    global.blue = 0
+    global.darkBlue = 0
+    global.purple = 0
+    
+    //Случайная генерация патрон от секунд
+    ReOrYeGrBlDaPu = current_second
+    ReOrYeGrBlDaPu %= 7
+    if ReOrYeGrBlDaPu == 0
+        {global.red = 2}
+    if ReOrYeGrBlDaPu == 1
+        {global.orange = 2}
+    if ReOrYeGrBlDaPu == 2
+        {global.yellow = 2}
+    if ReOrYeGrBlDaPu == 3
+        {global.green = 2}
+    if ReOrYeGrBlDaPu == 4
+        {global.blue = 2}
+    if ReOrYeGrBlDaPu == 5
+        {global.darkBlue = 2}
+    if ReOrYeGrBlDaPu == 6
+        {global.purple = 2}
+}
 //Определяем положеине иконки выбора цвета
 global.one = true
 global.two = false
@@ -96,7 +96,8 @@ global.room_control = false;
 //таймер босса
 alarm[6] = 30;
 time = 0
-maxtime = 750;
+if room == PlayRoom{maxtime = 750;}//750
+if room == PlayRoom2{maxtime = 855;}
 global.boss = 0
 
 //Отсчёт времени
@@ -741,6 +742,7 @@ if global.purple &gt; 0
           <argument>
             <kind>1</kind>
             <string>draw_healthbar(850,745,1100,750,(time/maxtime)*100,c_purple,c_blue,c_aqua,0,1,1);
+//draw_text(850,710,string("global.Boss_1 = "+string(global.Boss_1)))
 </string>
           </argument>
         </arguments>
