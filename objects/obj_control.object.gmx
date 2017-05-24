@@ -48,14 +48,14 @@
             <string>if room == PlayRoom{
     //Переменные всех пуль обнуляем
     
-    global.red = 0
-    global.orange = 0
-    global.yellow = 0
-    global.green = 0
-    global.blue = 0
-    global.darkBlue = 0
-    global.purple = 0
-    
+    global.red = 10
+    global.orange = 10
+    global.yellow = 10
+    global.green = 10
+    global.blue = 10
+    global.darkBlue = 10
+    global.purple = 10
+    /*
     //Случайная генерация патрон от секунд
     ReOrYeGrBlDaPu = current_second
     ReOrYeGrBlDaPu %= 7
@@ -72,7 +72,7 @@
     if ReOrYeGrBlDaPu == 5
         {global.darkBlue = 2}
     if ReOrYeGrBlDaPu == 6
-        {global.purple = 2}
+        {global.purple = 2}*/
 }
 //Определяем положеине иконки выбора цвета
 global.one = true
@@ -96,16 +96,16 @@ global.room_control = false;
 //таймер босса
 alarm[6] = 30;
 time = 0
-if room == PlayRoom{maxtime = 750;}//750
-if room == PlayRoom2{maxtime = 855;}
+if room == PlayRoom{maxtime = 5;}//750
+if room == PlayRoom2{maxtime = 750;}
 global.boss = 0
-
-//Отсчёт времени
-global.s = 0 ///  секунда (глобальная)
-global.m = 0 /// минута(глобальная)
-global.h = 0 ///  час (глобальная)
-global.d = 0 /// день (глобальная)
-
+if room == PlayRoom{
+    //Отсчёт времени
+    global.s = 0 ///  секунда (глобальная)
+    global.m = 0 /// минута(глобальная)
+    global.h = 0 ///  час (глобальная)
+    global.d = 0 /// день (глобальная)
+}
 </string>
           </argument>
         </arguments>
@@ -428,7 +428,8 @@ draw_text(1255,725,"0")
 if !audio_is_playing(shop_bleep){
     audio_play_sound(shop_bleep,0,true)}
 draw_sprite(spr_shope,-1,1280,700);global.shop = true}
-else{global.shop = false}//Если нет то магазин ложь
+else{global.shop = false;
+audio_stop_sound(shop_bleep)}//Если нет то магазин ложь
 //Отрисока тестовой информации
 //if global.shop == false {draw_text(1261,700,"Shop - false")}
 //if global.shop == true {draw_text(1261,700,"Shop - true")}
@@ -743,6 +744,7 @@ if global.purple &gt; 0
             <kind>1</kind>
             <string>draw_healthbar(850,745,1100,750,(time/maxtime)*100,c_purple,c_blue,c_aqua,0,1,1);
 //draw_text(850,710,string("global.Boss_1 = "+string(global.Boss_1)))
+//draw_text(850,710,string(lives))
 </string>
           </argument>
         </arguments>

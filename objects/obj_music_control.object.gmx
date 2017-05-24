@@ -27,7 +27,11 @@
             <kind>1</kind>
             <string>//Переменные воспроизведения музыки
 Music_Namber = 1;
-audio_play_sound(sountrack_music_1, 0, true);
+if room == PlayRoom {
+    audio_play_sound(sountrack_music_1, 0, true);}
+else if room == PlayRoom2 {
+    audio_stop_sound(sountrack_music_1);
+    audio_play_sound(sountrack_music_3, 0, true);}
 </string>
           </argument>
         </arguments>

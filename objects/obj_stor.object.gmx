@@ -135,14 +135,14 @@
             <string>if clearance == true 
 {
     //Переменные всех пуль обнуляем
-    global.red = 0
-    global.orange = 0
-    global.yellow = 0
-    global.green = 0
-    global.blue = 0
-    global.darkBlue = 0
-    global.purple = 0
-    
+    global.red = 10
+    global.orange = 10
+    global.yellow = 10
+    global.green = 10
+    global.blue = 10
+    global.darkBlue = 10
+    global.purple = 10
+    /*
     //Случайная генерация патрон от секунд
     ReOrYeGrBlDaPu = current_second
     ReOrYeGrBlDaPu %= 7
@@ -160,7 +160,7 @@
         {global.darkBlue = 2}
     if ReOrYeGrBlDaPu == 6
         {global.purple = 2}
-    
+    */
     //Определяем положеине иконки выбора цвета
     global.one = true
     global.two = false
