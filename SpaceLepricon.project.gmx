@@ -40,16 +40,18 @@
     </sounds>
   </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_space_ship</sprite>
-    <sprite>sprites\spr_bullet</sprite>
-    <sprite>sprites\spr_live</sprite>
-    <sprite>sprites\spr_lock</sprite>
-    <sprite>sprites\spr_cat</sprite>
-    <sprite>sprites\spr_curs</sprite>
-    <sprite>sprites\spr_paused</sprite>
-    <sprite>sprites\spr_gif</sprite>
-    <sprite>sprites\spr_menu</sprite>
-    <sprite>sprites\spr_shope</sprite>
+    <sprites name="the_others">
+      <sprite>sprites\spr_space_ship</sprite>
+      <sprite>sprites\spr_curs</sprite>
+      <sprite>sprites\spr_shope</sprite>
+      <sprite>sprites\spr_paused</sprite>
+      <sprite>sprites\spr_gif</sprite>
+      <sprite>sprites\spr_menu</sprite>
+      <sprite>sprites\spr_bullet</sprite>
+      <sprite>sprites\spr_live</sprite>
+      <sprite>sprites\spr_cat</sprite>
+      <sprite>sprites\spr_lock</sprite>
+    </sprites>
     <sprites name="basck">
       <sprite>sprites\spr_background1</sprite>
       <sprite>sprites\spr_background2</sprite>
