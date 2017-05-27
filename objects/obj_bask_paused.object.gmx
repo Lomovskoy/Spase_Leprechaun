@@ -49,10 +49,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.room_control == true
+            <string>/*if global.room_control == true
     room_goto(PlayRoom)
 else
-    room_goto(StoreRoom)
+    room_goto(StoreRoom)*/
+room_goto(global.Name_Room)
 
 if audio_is_paused(sountrack_music_1)
     {
@@ -62,7 +63,14 @@ if audio_is_paused(sountrack_music_2)
     {
         audio_resume_sound(sountrack_music_2);
     }
-
+if audio_is_paused(sountrack_music_3)
+    {
+        audio_resume_sound(sountrack_music_3);
+    }
+if audio_is_paused(sountrack_music_4)
+    {
+        audio_resume_sound(sountrack_music_4);
+    }
 </string>
           </argument>
         </arguments>
@@ -109,10 +117,11 @@ if audio_is_paused(sountrack_music_2)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.room_control == true
+            <string>/*if global.room_control == true
     room_goto(PlayRoom)
 else
-    room_goto(StoreRoom)
+    room_goto(StoreRoom)*/
+room_goto(global.Name_Room)
 
 if audio_is_paused(sountrack_music_1)
     {
@@ -121,6 +130,14 @@ if audio_is_paused(sountrack_music_1)
 if audio_is_paused(sountrack_music_2)
     {
         audio_resume_sound(sountrack_music_2);
+    }
+if audio_is_paused(sountrack_music_3)
+    {
+        audio_resume_sound(sountrack_music_3);
+    }
+if audio_is_paused(sountrack_music_4)
+    {
+        audio_resume_sound(sountrack_music_4);
     }
 </string>
           </argument>
