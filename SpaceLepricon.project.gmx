@@ -93,6 +93,7 @@
       <sprite>sprites\spr_credits_Game2</sprite>
       <sprite>sprites\spr_bask</sprite>
       <sprite>sprites\spr_bask_paused</sprite>
+      <sprite>sprites\spr_how_to_play</sprite>
     </sprites>
     <sprites name="collor">
       <sprite>sprites\spr_red_one</sprite>
@@ -153,7 +154,6 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_space_ship</object>
-    <object>objects\obj_logo</object>
     <objects name="Botton">
       <object>objects\obj_New_Game</object>
       <object>objects\obj_Load_Game</object>
@@ -162,6 +162,7 @@
       <object>objects\obj_Exid</object>
       <object>objects\obj_bask</object>
       <object>objects\obj_bask_paused</object>
+      <object>objects\obj_how_to_play</object>
     </objects>
     <objects name="Control">
       <object>objects\obj_start</object>
@@ -174,6 +175,7 @@
       <object>objects\obj_cat</object>
       <object>objects\obj_timer</object>
       <object>objects\obj_game_over</object>
+      <object>objects\obj_instruction</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_background1</object>
@@ -189,6 +191,7 @@
       <object>objects\obj_menu</object>
       <object>objects\background_start</object>
       <object>objects\obj_menu_screen</object>
+      <object>objects\obj_logo</object>
     </objects>
     <objects name="Bullet">
       <object>objects\obj_red</object>
@@ -224,6 +227,7 @@
     <room>rooms\StoreRoom</room>
     <room>rooms\PauseRoom</room>
     <room>rooms\GameOverRoom</room>
+    <room>rooms\InstructionRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
