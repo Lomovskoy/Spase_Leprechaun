@@ -56,10 +56,13 @@
       <sprite>sprites\spr_background1</sprite>
       <sprite>sprites\spr_background2</sprite>
       <sprite>sprites\spr_background2_2</sprite>
+      <sprite>sprites\spr_background2_3</sprite>
       <sprite>sprites\spr_background3</sprite>
       <sprite>sprites\spr_background3_2</sprite>
+      <sprite>sprites\spr_background3_3</sprite>
       <sprite>sprites\spr_background4</sprite>
       <sprite>sprites\spr_background4_2</sprite>
+      <sprite>sprites\spr_background4_3</sprite>
       <sprite>sprites\spr_background5</sprite>
       <sprite>sprites\spr_background6</sprite>
       <sprite>sprites\spr_background7</sprite>
@@ -184,10 +187,13 @@
       <object>objects\obj_background4</object>
       <object>objects\obj_background5</object>
       <object>objects\obj_background5_2</object>
+      <object>objects\obj_background5_3</object>
       <object>objects\obj_background6</object>
       <object>objects\obj_background6_2</object>
+      <object>objects\obj_background6_3</object>
       <object>objects\obj_background7</object>
       <object>objects\obj_background7_2</object>
+      <object>objects\obj_background7_3</object>
       <object>objects\obj_menu</object>
       <object>objects\background_start</object>
       <object>objects\obj_menu_screen</object>
@@ -224,6 +230,7 @@
     <room>rooms\StartRoom</room>
     <room>rooms\PlayRoom</room>
     <room>rooms\PlayRoom2</room>
+    <room>rooms\PlayRoom3</room>
     <room>rooms\StoreRoom</room>
     <room>rooms\PauseRoom</room>
     <room>rooms\GameOverRoom</room>

@@ -97,7 +97,8 @@ global.room_control = false;
 alarm[6] = 30;
 time = 0
 if room == PlayRoom{maxtime = 5;}//750
-if room == PlayRoom2{maxtime = 750;}
+if room == PlayRoom2{maxtime = 5;}//800
+if room == PlayRoom3{maxtime = 5;}//850
 global.boss = 0
 if room == PlayRoom{
     //Отсчёт времени
@@ -193,14 +194,22 @@ if room == PlayRoom{
           <argument>
             <kind>1</kind>
             <string>time += 1
-
+//Условие запуска музывки босса
 if time == maxtime and global.boss == 0 {
     global.boss = 1
     audio_play_sound(boss_noise, 0, false)
 }    
-    
+//Условие запуска босса   
 if global.boss == 1 and time == maxtime {
-    instance_create(1300,450,obj_boss1)
+    if (room == PlayRoom){
+        instance_create(1300,450,obj_boss1)
+    }
+    if (room == PlayRoom2){
+        instance_create(1300,450,obj_boss1)
+    }
+    if (room == PlayRoom3){
+        instance_create(1300,450,obj_boss1)
+    }
 }
 
 alarm[6] = 30;
@@ -676,38 +685,6 @@ if global.purple &gt; 0
       </action>
       <action>
         <libid>1</libid>
-        <id>501</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_draw_sprite</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>5</kind>
-            <sprite>spr_boss1_logo</sprite>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1120</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>720</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>-1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>605</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -722,7 +699,7 @@ if global.purple &gt; 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>таймер</string>
+            <string>таймер + лого босса</string>
           </argument>
         </arguments>
       </action>
@@ -745,6 +722,14 @@ if global.purple &gt; 0
             <string>draw_healthbar(850,745,1100,750,(time/maxtime)*100,c_purple,c_blue,c_aqua,0,1,1);
 //draw_text(850,710,string("global.Boss_1 = "+string(global.Boss_1)))
 //draw_text(850,710,string(lives))
+//-------------------------------------------------------------------------------
+//Отрисовка логотипа Босса
+if (room == PlayRoom) {
+    draw_sprite(spr_boss1_logo,-1,1120,720)}
+if (room == PlayRoom2) {
+    draw_sprite(spr_boss1_logo,-1,1120,720)}
+if (room == PlayRoom3) {
+    draw_sprite(spr_boss1_logo,-1,1120,720)}
 </string>
           </argument>
         </arguments>
