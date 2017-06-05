@@ -202,7 +202,12 @@ alarm[3] = 15;
                 file_text_readln(rekord_list)// Переходит на новую строку
                 time_txt = file_text_read_string(rekord_list)//Считывает и возвращает 
                 file_text_readln(rekord_list)// Переходит на новую строку
-                time2_txt = file_text_read_string(rekord_list)//Считывает и возвращает 
+                time2_txt = file_text_read_string(rekord_list)//Считывает и возвращает
+                if (global.language == "Ru"){
+                //Возвращает строку str с первой встретившейся подстрокой substr, замененной на подстроку newstr. 
+                substr = "h"
+                newstr = "ч"
+                    time2_txt = string_replace(time2_txt,substr,newstr)}
                 file_text_close(rekord_list)//Сохраняет и закрывает документ
                 
                 draw_set_font(main_fond)// Выбор шрифта

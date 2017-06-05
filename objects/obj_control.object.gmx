@@ -398,12 +398,20 @@ alarm[4] = 4;
           <argument>
             <kind>1</kind>
             <string>draw_set_color(c_aqua)
-draw_text(400,10,string(global.h)+"h "+string(global.m)+":"+string(global.s));//Таймер
+if (global.language == "En"){
+    draw_text(400,10,string(global.h)+"h "+string(global.m)+":"+string(global.s));}//Таймер
+if (global.language == "Ru"){
+        draw_text(400,10,string(global.h)+"ч "+string(global.m)+":"+string(global.s));}//Таймер
 draw_set_color(c_yellow)//Цвет шрифта
-draw_text(700,10,"Score: " + string(score));//Очки
-draw_set_color(c_fuchsia)
-draw_text(1100,10,"Accuracy:");// + string(global.missed));//Попадание
-
+if (global.language == "En"){
+    draw_text(700,10,"Score: " + string(score));//Очки
+    draw_set_color(c_fuchsia)
+    draw_text(1100,10,"Accuracy:");// + string(global.missed));//Попадание
+}if (global.language == "Ru"){
+    draw_text(700,10,"Очки: " + string(score));//Очки
+    draw_set_color(c_fuchsia)
+    draw_text(1100,10,"Точность:");// + string(global.missed));//Попадание
+}
 if (100-(global.missed/(score/100)) &lt; 0){
     draw_text(1250,10,"0%")}
 else if (100-(global.missed/(score/100)) &gt; 100){
@@ -431,7 +439,10 @@ draw_text(700,722,"7 ");
 //Если каждого цвета собранно 10 то можно отрисовать магазин
 if (global.red&gt;=10 and global.orange&gt;=10 and global.yellow&gt;=10 and global.green&gt;=10 and global.blue&gt;=10 and global.darkBlue&gt;=10 and global.purple&gt;=10)
 {draw_set_color(c_white);
-draw_text(1263,665," Shop ")
+if (global.language == "En"){
+    draw_text(1263,665," Shop ")}
+if (global.language == "Ru"){
+    draw_text(1230,665,"Магазин")}
 draw_text(1255,725,"0")
 //Звук активации магазина
 if !audio_is_playing(shop_bleep){
@@ -508,7 +519,11 @@ if global.seven == true//Если начата кнока7
 if global.zero == true and global.shop == true//Если начата кнока0 и магазин правда
     {draw_rectangle(1270,695,1350,765,true);//Рисокать прямогуголиник на ней
     draw_rectangle(1271,696,1351,766,true);
-    draw_text(1090,690,"Press Enter")}//Просить нажать энтер
+    if (global.language == "En"){
+        draw_text(1090,690,"Press Enter")}
+    if (global.language == "Ru"){
+        draw_text(1085,690,"Нажми Ввод")}
+}//Просить нажать энтер
 
 </string>
           </argument>

@@ -529,9 +529,18 @@ if (global.speed_lepricon == true){     // Увеличенная скорост
         draw_line(874, 495, 1040, 415)
         draw_line(874, 496, 1040, 416)
         }}
-if global.shop == 0 {draw_text(600,540,"Enter backspace")}
-else{draw_text(600,540,"Click product")}
-
+if global.shop == 0 {
+    if (global.language == "En"){
+        draw_text(600,540,"Enter backspace")}
+    if (global.language == "Ru"){
+        draw_text(575,540,"Нажмите backspace")}
+}
+else{
+    if (global.language == "En"){
+        draw_text(600,540,"Click product")}
+    if (global.language == "Ru"){
+        draw_text(600,540,"Купите прокачку")}
+}
 </string>
           </argument>
         </arguments>
