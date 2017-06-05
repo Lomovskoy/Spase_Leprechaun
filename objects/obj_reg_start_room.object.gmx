@@ -173,13 +173,19 @@ alarm[3] = 15;
             if (name != '')
             {
                 draw_set_font(main_fond);
-                draw_text(830,290, 'Press Enter')
+                if (global.language == "En"){
+                    draw_text(830,290, 'Press Enter')}
+                if (global.language == "Ru"){
+                    draw_text(815,290, 'Нажмите Ввод')}
             }
         }
     if credits == 1
         {
             draw_set_font(main_fond);
-            draw_text(820,350, 'Press Enter')
+            if (global.language == "En"){
+                draw_text(820,350, 'Press Enter')}
+            if (global.language == "Ru"){
+                draw_text(805,350, 'Нажмите Ввод')}
             
         }
     if recordlist == 1
@@ -200,30 +206,54 @@ alarm[3] = 15;
                 file_text_close(rekord_list)//Сохраняет и закрывает документ
                 
                 draw_set_font(main_fond)// Выбор шрифта
-                draw_text(500,340,"User name: "+name_txt)//Отрисовка в позиции 
-                draw_text(500,365,"User score: "+score_txt)//Отрисовка в позиции 
-                draw_text(500,390,"User exact: "+string(100-(real(missed_txt)/(real(score_txt)/100))) + "%");
-                draw_text(500,415,"Record time: "+time_txt)//Отрисовка в позиции 
-                draw_text(500,440,"Game time: "+time2_txt)//Отрисовка в позиции 
+                if (global.language == "En"){
+                    draw_text(500,340,"User name: "+name_txt)//Отрисовка в позиции 
+                    draw_text(500,365,"User score: "+score_txt)//Отрисовка в позиции 
+                    draw_text(500,390,"User exact: "+string(100-(real(missed_txt)/(real(score_txt)/100))) + "%");
+                    draw_text(500,415,"Record time: "+time_txt)//Отрисовка в позиции 
+                    draw_text(500,440,"Game time: "+time2_txt)//Отрисовка в позиции 
+                }if (global.language == "Ru"){
+                    draw_text(500,340,"Имя: "+name_txt)//Отрисовка в позиции 
+                    draw_text(500,365,"Очки: "+score_txt)//Отрисовка в позиции 
+                    draw_text(500,390,"Точность: "+string(100-(real(missed_txt)/(real(score_txt)/100))) + "%");
+                    draw_text(500,415,"Время рекорда: "+time_txt)//Отрисовка в позиции 
+                    draw_text(500,440,"Время в игре: "+time2_txt)//Отрисовка в позиции 
+                }
             }
         else
             {
-                draw_set_font(user_fond)
-                draw_text(700,450, 'Not Reckords')
+                if (global.language == "En"){
+                    draw_set_font(user_fond)
+                    draw_text(700,450, 'Not Reckords')}
+                if (global.language == "Ru"){
+                    draw_set_font(user_fond)
+                    draw_text(700,450, 'Нет Рекорда')}
             }
-            draw_set_font(main_fond)
-            draw_text(800,300, 'Press Enter')
+            if (global.language == "En"){
+                draw_set_font(main_fond)
+                draw_text(800,300, 'Press Enter')}
+            if (global.language == "Ru"){
+                draw_set_font(main_fond)
+                draw_text(790,300, 'Нажмите Ввод')}
         }
         
     if exid == 1
         {
             draw_set_font(main_fond);
-            draw_text(480,480, 'Press Enter to Exid')
+            if (global.language == "En"){
+                draw_text(480,480, 'Press Enter to Exid')}
+            if (global.language == "Ru"){
+                draw_text(480,480, 'Нажмите Ввод для Выхода')}
         }
     if loadgame == 1
         {
-            draw_set_font(main_fond);
-            draw_text(470,475, 'Press Enter to Load Game')
+            if (global.language == "En"){
+                draw_set_font(main_fond);
+                draw_text(470,475, 'Press Enter to Load Game')}
+            if (global.language == "Ru"){
+                draw_set_font(main_fond);
+                draw_text(470,475, 'Нажмите Ввод для Загрузки Игры')}
+                
             if (file_exists('user_name.txt') == true)//Если файл существует
             {
                 user_name = file_text_open_read('user_name.txt')//Открывает для чтения

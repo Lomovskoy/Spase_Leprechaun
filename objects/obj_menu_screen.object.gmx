@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
+    <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
         <id>605</id>
@@ -31,6 +31,26 @@
       </action>
       <action>
         <libid>1</libid>
+        <id>524</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_color</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>13</kind>
+            <string>1579032</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -47,24 +67,61 @@
             <kind>1</kind>
             <string>if (newgame == 1)
     {
-        sprite_index = spr_reg_beckground;
+        draw_sprite(spr_reg_beckground,-1,obj_menu_screen.x,obj_menu_screen.y);
+        draw_set_font(local_fond)
+        if (global.language == "En"){
+            draw_text(obj_menu_screen.x+45,obj_menu_screen.y+105, 'Enter yor name')}
+        if (global.language == "Ru"){
+            draw_text(obj_menu_screen.x+45,obj_menu_screen.y+105, 'Введите имя')}    
     }
-if (loadgame == 1)
+else if (loadgame == 1)
     {
-        sprite_index = spr_load_beckground;
+        draw_sprite(spr_load_beckground,-1,obj_menu_screen.x,obj_menu_screen.y);
+        draw_set_font(local_fond)
+        if (global.language == "En"){
+            draw_text(obj_menu_screen.x+35,obj_menu_screen.y+105, 'Loading')}
+        if (global.language == "Ru"){
+            draw_text(obj_menu_screen.x+30,obj_menu_screen.y+115, 'Загрузить')}
     }
-if (recordlist == 1)
+else if (recordlist == 1)
     {
-        sprite_index=spr_rec_beckground;
+        draw_sprite(spr_rec_beckground,-1,obj_menu_screen.x,obj_menu_screen.y);
+        draw_set_font(local_fond)
+        if (global.language == "En"){
+            draw_text(obj_menu_screen.x+135,obj_menu_screen.y+15, 'Record')}
+        if (global.language == "Ru"){
+            draw_text(obj_menu_screen.x+135,obj_menu_screen.y+15, 'Рекорд')}
     }
-if (credits == 1)
+else if (credits == 1)
     {
-        sprite_index = spr_cre_beckground;
+        draw_sprite(spr_cre_beckground,-1,obj_menu_screen.x,obj_menu_screen.y);
+        draw_set_font(local_fond)
+        if (global.language == "En"){
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+10, 'Credits')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+40, 'Programmer')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+70, 'Kirill Lomovskoy')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+100, 'Designer')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+130, 'Viktoria Lomovskoya')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+160, 'Composer')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+190, 'Dmitry Kapiti')
+        }
+        if (global.language == "Ru"){
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+10, 'Создатели:')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+40, 'Прогаммист')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+70, 'Кирилл Ломовской')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+100, 'Дизайнер')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+130, 'Витория Ломовская')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+160, 'Композитор')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+190, 'Дмитрий Капетий')
+        }
     }
-if (exid == 1)
+else if (exid == 1)
     {
-        sprite_index = spr_menu_beckground;
+        draw_sprite(spr_menu_beckground,-1,obj_menu_screen.x,obj_menu_screen.y);
     }
+else{
+    draw_sprite(spr_menu_beckground,-1,obj_menu_screen.x,obj_menu_screen.y);
+}
 </string>
           </argument>
         </arguments>
