@@ -85,15 +85,9 @@
     </sprites>
     <sprites name="botton_spr">
       <sprite>sprites\sp_exid</sprite>
-      <sprite>sprites\sp_exid2</sprite>
-      <sprite>sprites\spr_record_List</sprite>
-      <sprite>sprites\spr_record_List2</sprite>
-      <sprite>sprites\spr_load_Game</sprite>
-      <sprite>sprites\spr_load_Game2</sprite>
-      <sprite>sprites\spr_new_Game</sprite>
-      <sprite>sprites\spr_new_Game2</sprite>
-      <sprite>sprites\spr_credits_Game</sprite>
-      <sprite>sprites\spr_credits_Game2</sprite>
+      <sprite>sprites\sp_exid_pass</sprite>
+      <sprite>sprites\spr_control</sprite>
+      <sprite>sprites\spr_control_pass</sprite>
       <sprite>sprites\spr_bask</sprite>
       <sprite>sprites\spr_bask_paused</sprite>
       <sprite>sprites\spr_how_to_play</sprite>
@@ -158,6 +152,7 @@
     <font>fonts\game_fond</font>
     <font>fonts\logo_font</font>
     <font>fonts\game_over_fond</font>
+    <font>fonts\local_fond</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_space_ship</object>

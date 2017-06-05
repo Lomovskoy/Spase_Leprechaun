@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>11</bbox_left>
-  <bbox_right>108</bbox_right>
-  <bbox_top>8</bbox_top>
-  <bbox_bottom>40</bbox_bottom>
+  <bbox_left>0</bbox_left>
+  <bbox_right>121</bbox_right>
+  <bbox_top>7</bbox_top>
+  <bbox_bottom>79</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,8 +18,8 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>122</width>
-  <height>52</height>
+  <height>85</height>
   <frames>
-    <frame index="0">images\sp_exid2_0.png</frame>
+    <frame index="0">images\spr_control_pass_0.png</frame>
   </frames>
 </sprite>
