@@ -51,6 +51,7 @@
       <sprite>sprites\spr_live</sprite>
       <sprite>sprites\spr_cat</sprite>
       <sprite>sprites\spr_lock</sprite>
+      <sprite>sprites\spr_space_ship_light</sprite>
     </sprites>
     <sprites name="basck">
       <sprite>sprites\spr_background1</sprite>

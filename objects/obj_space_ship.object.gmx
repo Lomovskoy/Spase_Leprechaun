@@ -171,7 +171,7 @@
 //Переменная пули
 global.bullet = true
 // Задаём собственную скорость анимации обьекта, независимо от скоростикомнаты
-image_speed = 13/room_speed;
+image_speed = 10/room_speed;
 
 global.frequent_shot = false;// Быстрый выстрел
 global.aimed_shot = false;// Прицел
@@ -185,6 +185,71 @@ global.lazerX = 0;
 
 //Переменные боссов
 global.Boss_1 = true
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>421</id>
+        <kind>3</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Задаём собственную скорость анимации обьекта, независимо от скоростикомнаты
+image_speed = 10/room_speed;
+
 </string>
           </argument>
         </arguments>
@@ -247,6 +312,11 @@ global.lazerX = x//отрисовка лазерного прицела
 if global.Boss_1 == false{
     x += 1
 }
+
+if (sprite_index == spr_space_ship_light){
+    if image_index == 7{
+        sprite_index = spr_space_ship
+}}
 </string>
           </argument>
         </arguments>
@@ -1805,62 +1875,76 @@ if global.frequent_shot == false {
     if global.bullet == true//Если предыдущая пуля уничтожилась
     {
         if global.one and global.red &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.red-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.red-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
         if global.two and global.orange &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.orange-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.orange-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
         if global.three and global.yellow &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.yellow-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.yellow-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
         if global.four and global.green &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.green-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.green-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
         if global.five and global.blue &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.blue-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.blue-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
         if global.six and global.darkBlue &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.darkBlue-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.darkBlue-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
         if global.seven and global.purple &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.purple-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.purple-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
     }
 }
 else{//Если частый вычтрел куплен
     if global.one and global.red &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.red-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.red-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
         if global.two and global.orange &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.orange-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.orange-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
         if global.three and global.yellow &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.yellow-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.yellow-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
         if global.four and global.green &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.green-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.green-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
         if global.five and global.blue &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.blue-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.blue-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
         if global.six and global.darkBlue &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.darkBlue-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.darkBlue-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
         if global.seven and global.purple &gt; 0//Если есть нужный цвет
-            {action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.purple-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
+            {sprite_index = spr_space_ship_light;image_index = 0;
+            action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,0);global.purple-=1;audio_play_sound(shot_1,0,false);global.bullet=false;//Создаём нужную пулю и отнимаем цвет
             if global.triple_shot == true{//Если пройной выстрел куплен
                 action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,10);action_create_object_motion(obj_bullet,xshot,yshot,speedbuul,-10)}}//Создаём ещё 2 выстрела
 }
