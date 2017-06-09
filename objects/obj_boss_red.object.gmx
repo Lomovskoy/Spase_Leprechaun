@@ -3,7 +3,7 @@
   <spriteName>spr_boss_red</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -771,7 +771,7 @@ if (shoot&gt;0) {
           </argument>
           <argument>
             <kind>0</kind>
-            <string>-100</string>
+            <string>-10</string>
           </argument>
         </arguments>
       </action>
