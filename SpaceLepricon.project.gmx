@@ -129,6 +129,12 @@
       <sprite>sprites\spr_laser_yel</sprite>
       <sprite>sprites\spr_laser_gre</sprite>
     </sprites>
+    <sprites name="boss_spr_2">
+      <sprite>sprites\spr_boss2</sprite>
+      <sprite>sprites\spr_boss2_anim_1</sprite>
+      <sprite>sprites\spr_boss2_anim_2</sprite>
+      <sprite>sprites\spr_boss2_logo</sprite>
+    </sprites>
     <sprites name="locale_spr">
       <sprite>sprites\spr_lang_false</sprite>
       <sprite>sprites\spr_lang_true</sprite>
@@ -140,6 +146,7 @@
   </backgrounds>
   <paths name="paths">
     <path>paths\path1</path>
+    <path>paths\path2</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\hs_submit.gml</script>
@@ -157,6 +164,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\obj_space_ship</object>
+    <object>objects\obj_dummy</object>
     <objects name="Botton">
       <object>objects\obj_New_Game</object>
       <object>objects\obj_Load_Game</object>
@@ -224,6 +232,9 @@
       <object>objects\obj_laser_red</object>
       <object>objects\obj_laser_yel</object>
       <object>objects\obj_laser_gre</object>
+    </objects>
+    <objects name="boss_2">
+      <object>objects\obj_boss2</object>
     </objects>
     <objects name="locale_obj">
       <object>objects\obj_En</object>

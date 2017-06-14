@@ -55,6 +55,7 @@
     <instance objName="background_start" x="2708" y="0" name="inst_6E8D7340" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_how_to_play" x="32" y="704" name="inst_F860AF98" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_instruction" x="320" y="44" name="inst_A2759BF6" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_dummy" x="96" y="320" name="inst_E3B43FD9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

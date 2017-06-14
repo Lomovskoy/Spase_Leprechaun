@@ -53,6 +53,8 @@ tmax2 = 360//Максимальное время генерации астеро
 time2 = irandom_range(tmin2,tmax2)
 alarm[0]=time1//Инициализация таймера шариков
 alarm[2]=time2//Инициализация таймера метиоритов
+
+meteorite = 'none'
 </string>
           </argument>
         </arguments>
@@ -213,7 +215,9 @@ alarm[0]= time1
 //draw_text(1050,25,"tmax1: " + string(tmax))
 //draw_set_color(c_aqua);
 //draw_text(30,40,"fps: " + string(fps))
-
+//if object_exists(meteorite){
+//    draw_text(30,40,string(object_get_name(meteorite)))
+//}
 </string>
           </argument>
         </arguments>

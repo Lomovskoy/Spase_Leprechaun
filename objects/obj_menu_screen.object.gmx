@@ -103,7 +103,7 @@ else if (credits == 1)
             draw_text(obj_menu_screen.x+20,obj_menu_screen.y+100, 'Designer')
             draw_text(obj_menu_screen.x+20,obj_menu_screen.y+130, 'Viktoria Lomovskoya')
             draw_text(obj_menu_screen.x+20,obj_menu_screen.y+160, 'Composer')
-            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+190, 'Dmitry Kapiti')
+            draw_text(obj_menu_screen.x+20,obj_menu_screen.y+190, 'Dmitry Kapety')
         }
         if (global.language == "Ru"){
             draw_text(obj_menu_screen.x+20,obj_menu_screen.y+10, 'Создатели:')

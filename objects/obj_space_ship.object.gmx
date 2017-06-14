@@ -314,7 +314,7 @@ if global.Boss_1 == false{
 }
 
 if (sprite_index == spr_space_ship_light){
-    if image_index == 7{
+    if image_index == 3{
         sprite_index = spr_space_ship
 }}
 </string>

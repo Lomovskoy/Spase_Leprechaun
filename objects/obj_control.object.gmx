@@ -100,6 +100,7 @@ if room == PlayRoom{maxtime = 5;}//750
 if room == PlayRoom2{maxtime = 5;}//800
 if room == PlayRoom3{maxtime = 5;}//850
 global.boss = 0
+
 if room == PlayRoom{
     //Отсчёт времени
     global.s = 0 ///  секунда (глобальная)
@@ -205,7 +206,7 @@ if global.boss == 1 and time == maxtime {
         instance_create(1300,450,obj_boss1)
     }
     if (room == PlayRoom2){
-        instance_create(1300,450,obj_boss1)
+        instance_create(1300,450,obj_boss2)
     }
     if (room == PlayRoom3){
         instance_create(1300,450,obj_boss1)
@@ -742,7 +743,7 @@ if global.purple &gt; 0
 if (room == PlayRoom) {
     draw_sprite(spr_boss1_logo,-1,1120,720)}
 if (room == PlayRoom2) {
-    draw_sprite(spr_boss1_logo,-1,1120,720)}
+    draw_sprite(spr_boss2_logo,-1,1110,725)}
 if (room == PlayRoom3) {
     draw_sprite(spr_boss1_logo,-1,1120,720)}
 </string>
