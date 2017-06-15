@@ -131,8 +131,6 @@
     </sprites>
     <sprites name="boss_spr_2">
       <sprite>sprites\spr_boss2</sprite>
-      <sprite>sprites\spr_boss2_anim_1</sprite>
-      <sprite>sprites\spr_boss2_anim_2</sprite>
       <sprite>sprites\spr_boss2_logo</sprite>
     </sprites>
     <sprites name="locale_spr">
