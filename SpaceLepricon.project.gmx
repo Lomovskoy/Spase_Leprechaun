@@ -131,6 +131,9 @@
     </sprites>
     <sprites name="boss_spr_2">
       <sprite>sprites\spr_boss2</sprite>
+      <sprite>sprites\spr_boss2_tesla</sprite>
+      <sprite>sprites\spr_boss2_tesla_bed</sprite>
+      <sprite>sprites\spr_boss2_tesla_anim</sprite>
       <sprite>sprites\spr_boss2_logo</sprite>
     </sprites>
     <sprites name="locale_spr">
@@ -151,6 +154,7 @@
     <script>scripts\shot.gml</script>
     <script>scripts\seconds_time.gml</script>
     <script>scripts\time_live_laser_red.gml</script>
+    <script>scripts\panda_time_shot.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\main_fond</font>
@@ -233,6 +237,7 @@
     </objects>
     <objects name="boss_2">
       <object>objects\obj_boss2</object>
+      <object>objects\obj_boss_tesla</object>
     </objects>
     <objects name="locale_obj">
       <object>objects\obj_En</object>

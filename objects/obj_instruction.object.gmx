@@ -184,26 +184,36 @@
             <string>if (global.language == "En"){
     draw_text_transformed(obj_instruction.x+10,obj_instruction.y+10,
     
-    'You have to start their difficult journey as a space leprechaun!
+    'Fantastic journey as a space leprechaun awaits you!
     
-    Your cartridges are the colors of the rainbow. In the beginning of the game you 
+    Your weapon is rainbow colors.
     
-    will have 2 bullets, case selected colors. In case of contact colored bead you 
+    You start the game with two randomly colored bullets.
     
-    will receive 2 points color ball and will spend 1 the current color. The ball 
+    As you land a shot on a color ball you gain two points of color you just spent and 
     
-    can knock down any color available. The color selection is done by pressing 1-7. 
+    lose one point of a current color.
     
-    Space - shot. Arrows Up, Down, Left, Right - move. To get to the store
+    A ball can be knocked down with any color you have.
     
-    you need to collect 10 pieces of all colors, press 0, after passing the store
+    Color selection is binded to keys "1 - 7"
     
-    you will only have 2 bullets, case matched colors.'
+    Fire - "space"
+    
+    Movement - "arrow keys"
+    
+    In order to get to the shop you need to collect 10 points of each color and press key 0.
+    
+    After spending your points in the shop you will be left with 2 randomly 
+    
+    colored bullets as at the start of the game'
     
     ,1.5,1.5,0)
 } 
 if (global.language == "Ru"){
-    draw_text_transformed(obj_instruction.x+10,obj_instruction.y+10,'Вам предстоит начать своё нелёгкое путешествие в роли космического лепрекона!
+    draw_text_transformed(obj_instruction.x+10,obj_instruction.y+10,
+    
+    'Вам предстоит начать своё нелёгкое путешествие в роли космического лепрекона!
     
     Ваши патроны это цвета радуги. В начале игры у вас будут 2 пули случано 
     
@@ -218,9 +228,32 @@ if (global.language == "Ru"){
     нужно набрать 10 единиц всех цветов, нажать 0, после прохождения магазина, 
     
     у вас останется только 2 пули случано подобранного цвета.'
+    
     ,1.5,1.5,0)
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>224</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_another_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>11</kind>
+            <room>StartRoom</room>
           </argument>
         </arguments>
       </action>
