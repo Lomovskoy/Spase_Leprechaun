@@ -30,6 +30,7 @@
       <sound>sound\sound_boss_move</sound>
       <sound>sound\sound_boss_move_end</sound>
       <sound>sound\sound_tesla</sound>
+      <sound>sound\sound_ball_lightning</sound>
     </sounds>
     <sounds name="Music">
       <sound>sound\Start_Musik</sound>
@@ -136,6 +137,7 @@
       <sprite>sprites\spr_boss2_tesla_bed</sprite>
       <sprite>sprites\spr_boss2_tesla_anim</sprite>
       <sprite>sprites\spr_boss2_logo</sprite>
+      <sprite>sprites\sprite82</sprite>
     </sprites>
     <sprites name="locale_spr">
       <sprite>sprites\spr_lang_false</sprite>
@@ -239,6 +241,7 @@
     <objects name="boss_2">
       <object>objects\obj_boss2</object>
       <object>objects\obj_boss_tesla</object>
+      <object>objects\obj_ball_lightning</object>
     </objects>
     <objects name="locale_obj">
       <object>objects\obj_En</object>

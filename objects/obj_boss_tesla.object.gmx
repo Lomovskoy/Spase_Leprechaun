@@ -29,8 +29,8 @@
 
 // Задаём собственную скорость анимации обьекта, независимо от скоростикомнаты
 image_speed = 10/room_speed;
-tmin1 = 60
-tmax1 = 300
+tmin1 = 30
+tmax1 = 150
 global.panda_shot = false//Выстрел панды
 
 time1 = irandom_range(tmin1,tmax1)//Рандомная генерация длительности таймера
@@ -59,23 +59,46 @@ time1 = irandom_range(tmin1,tmax1)//Рандомная генерация дли
             <string>obj_boss_tesla.x = obj_boss2.x
 obj_boss_tesla.y = obj_boss2.y
 
-if global.panda_shot == true{
+if global.panda_shot == true
+{
     sprite_index = (spr_boss2_tesla_anim)
-    if !audio_is_playing(sound_tesla)
-    {
-        audio_play_sound(sound_tesla,1,false);
-    }
-    if(sprite_index == spr_boss2_tesla_anim){
-        if image_index = 11
+    if image_index &lt; 1
         {
-            global.panda_shot = false//Выстрел панды
-            sprite_index = (spr_boss2_tesla)
-            time1 = irandom_range(tmin1,tmax1)//Рандомная генерация длительности таймера
-            
+            global.purposeX = obj_space_ship.x
+            global.purposeY = obj_space_ship.y
         }
-        time1 = irandom_range(tmin1,tmax1)//Рандомная генерация длительности таймера
+    if !audio_is_playing(sound_tesla)
+        {
+            audio_play_sound(sound_tesla,1,false);
+        }
+    if(sprite_index == spr_boss2_tesla_anim)
+        {
+            if image_index = 11
+                {
+                    global.panda_shot = false//Выстрел панды
+                    sprite_index = (spr_boss2_tesla)
+                    time1 = irandom_range(tmin1,tmax1)//Рандомная генерация длительности таймера
+                    audio_play_sound(sound_ball_lightning,1,true);
+                    action_create_object_motion(
+                        obj_ball_lightning,
+                        obj_boss_tesla.x,
+                        obj_boss_tesla.y,
+                        30,
+                        point_direction(
+                            obj_boss_tesla.x,
+                            obj_boss_tesla.y,
+                            global.purposeX,
+                            global.purposeY
+                        )
+                    )
+                }
+            time1 = irandom_range(tmin1,tmax1)//Рандомная генерация длительности таймера
+        }
+}
+else
+    {
+        panda_time_shot(time1,global.panda_shot)
     }
-}else{panda_time_shot(time1,global.panda_shot)}
 </string>
           </argument>
         </arguments>
