@@ -61,6 +61,10 @@ obj_boss_tesla.y = obj_boss2.y
 
 if global.panda_shot == true{
     sprite_index = (spr_boss2_tesla_anim)
+    if !audio_is_playing(sound_tesla)
+    {
+        audio_play_sound(sound_tesla,1,false);
+    }
     if(sprite_index == spr_boss2_tesla_anim){
         if image_index = 11
         {
