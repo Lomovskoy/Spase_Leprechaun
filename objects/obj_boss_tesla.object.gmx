@@ -58,50 +58,206 @@ time1 = irandom_range(tmin1,tmax1)//Рандомная генерация дли
             <kind>1</kind>
             <string>obj_boss_tesla.x = obj_boss2.x
 obj_boss_tesla.y = obj_boss2.y
-
-if global.panda_shot == true
-{
-    sprite_index = (spr_boss2_tesla_anim)
-    if image_index &lt; 1
-        {
-            global.purposeX = obj_space_ship.x
-            global.purposeY = obj_space_ship.y
-        }
-    if !audio_is_playing(sound_tesla)
-        {
-            audio_play_sound(sound_tesla,1,false);
-        }
-    if(sprite_index == spr_boss2_tesla_anim)
-        {
-            if image_index = 11
-                {
-                    global.panda_shot = false//Выстрел панды
-                    sprite_index = (spr_boss2_tesla)
-                    time1 = irandom_range(tmin1,tmax1)//Рандомная генерация длительности таймера
-                    audio_play_sound(sound_ball_lightning,1,true);
-                    action_create_object_motion(
-                        obj_ball_lightning,
-                        obj_boss_tesla.x,
-                        obj_boss_tesla.y,
-                        30,
-                        point_direction(
-                            obj_boss_tesla.x,
-                            obj_boss_tesla.y,
-                            global.purposeX,
-                            global.purposeY
+if global.live_tesla &gt; 0 {
+    if global.panda_shot == true
+    {
+        sprite_index = (spr_boss2_tesla_anim)
+        if image_index &lt; 1
+            {
+                global.purposeX = obj_space_ship.x
+                global.purposeY = obj_space_ship.y
+            }
+        if !audio_is_playing(sound_tesla)
+            {
+                audio_play_sound(sound_tesla,1,false);
+            }
+        if(sprite_index == spr_boss2_tesla_anim)
+            {
+                if image_index = 11
+                    {
+                        global.panda_shot = false//Выстрел панды
+                        sprite_index = (spr_boss2_tesla)
+                        time1 = irandom_range(tmin1,tmax1)//Рандомная генерация длительности таймера
+                        audio_play_sound(sound_ball_lightning,1,true);
+                        action_create_object_motion(
+                            obj_ball_lightning,
+                            obj_boss_tesla.x+192,
+                            obj_boss_tesla.y+10,
+                            30,
+                            point_direction(
+                                obj_boss_tesla.x,
+                                obj_boss_tesla.y,
+                                global.purposeX,
+                                global.purposeY
+                            )
                         )
-                    )
-                }
-            time1 = irandom_range(tmin1,tmax1)//Рандомная генерация длительности таймера
+                    }
+                time1 = irandom_range(tmin1,tmax1)//Рандомная генерация длительности таймера
+            }
+    }
+    else
+        {
+            panda_time_shot(time1,global.panda_shot)
         }
 }
-else
-    {
-        panda_time_shot(time1,global.panda_shot)
-    }
+else{
+    sprite_index = (spr_boss2_tesla_bed)
+}
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_bullet">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.live_tesla -= 50
+global.bullet = true
+if (global.red + global.orange + global.yellow + global.green + global.blue + global.darkBlue + global.purple &lt; 4){
+    //Выбор цвета шарика рандомно
+    collor = choose(obj_red,obj_orange,obj_yellow,obj_green,obj_blue,obj_dark_blue,obj_purple)
+    //Скорость
+    global.Speed1 = irandom_range(1,10)
+    //Генерация обьекта
+    instance_create(obj_boss_tesla.x+192,obj_boss_tesla.y+10,collor)
+    audio_play_sound(appearance_ball, 0, false);
+}
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>532</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_effect</functionname>
+        <codestring></codestring>
+        <whoName>obj_bullet</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>4</kind>
+            <string>3</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>2</string>
+          </argument>
+          <argument>
+            <kind>13</kind>
+            <string>16777088</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>obj_bullet</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="7" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>408</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>global.live_tesla &lt;= 0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

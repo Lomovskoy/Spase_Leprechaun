@@ -1518,6 +1518,7 @@ else{
 }if (room == PlayRoom2){
     room_goto(PlayRoom3)
     global.Boss_1 = true
+    audio_stop_sound(nlo_2)
 }if (room == PlayRoom3){
     room_goto(GameOverRoom)
     global.Boss_1 = true

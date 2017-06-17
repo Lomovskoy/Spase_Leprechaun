@@ -31,6 +31,8 @@
       <sound>sound\sound_boss_move_end</sound>
       <sound>sound\sound_tesla</sound>
       <sound>sound\sound_ball_lightning</sound>
+      <sound>sound\nlo_1</sound>
+      <sound>sound\nlo_2</sound>
     </sounds>
     <sounds name="Music">
       <sound>sound\Start_Musik</sound>
