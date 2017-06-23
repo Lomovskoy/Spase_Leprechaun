@@ -48,13 +48,13 @@
             <string>if room == PlayRoom{
     //Переменные всех пуль обнуляем
     
-    global.red = 10
-    global.orange = 10
-    global.yellow = 10
-    global.green = 10
-    global.blue = 10
-    global.darkBlue = 10
-    global.purple = 10
+    global.red = 5
+    global.orange = 5
+    global.yellow = 5
+    global.green = 5
+    global.blue = 5
+    global.darkBlue = 5
+    global.purple = 5
     /*
     //Случайная генерация патрон от секунд
     ReOrYeGrBlDaPu = current_second
@@ -96,9 +96,9 @@ global.room_control = false;
 //таймер босса
 alarm[6] = 30;
 time = 0
-if room == PlayRoom{maxtime = 5;}//750
-if room == PlayRoom2{maxtime = 5;}//800
-if room == PlayRoom3{maxtime = 5;}//850
+if room == PlayRoom{maxtime = 750;}//750
+if room == PlayRoom2{maxtime = 800;}//800
+if room == PlayRoom3{maxtime = 850;}//850
 global.boss = 0
 
 if room == PlayRoom{
@@ -589,8 +589,217 @@ if global.zero == true and global.shop == true//Если начата кнока
             <string>y = global.lazerY-2;//Коректировка отображения лазера
 x = global.lazerX+17
 if global.aimed_shot = true {//Если куплен прицел
-    draw_line(x,y,1366,y)
+    if (instance_exists(obj_red) == 1){
+        if collision_line(x,y,1366,y, obj_red, 0, 0){
+            draw_line(x,y,obj_red.x,y)
+        }
+    }
 }
+//-----------------------Создан лазер кота, он меняет цвет в зависимости от того есть пересечение с метиоритом или нет на пути выстрела-----------------
+/*draw_set_color(c_green)
+if (global.gan_shot = true){
+    if (instance_exists(obj_red) == 1){
+        if collision_line(global.lazerX,global.lazerY - 110,obj_red.x,obj_red.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_red.x,obj_red.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_red.x,obj_red.y, obj_meteorite_2, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_red.x,obj_red.y)            
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_red.x,obj_red.y, obj_meteorite_3, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_red.x,obj_red.y)        
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_red.x,obj_red.y, obj_meteorite_4, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_red.x,obj_red.y)        
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_red.x,obj_red.y, obj_meteorite_5, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_red.x,obj_red.y)        
+        }
+        else{
+            draw_line(global.lazerX,global.lazerY - 110,obj_red.x,obj_red.y)
+        }
+    }
+    else if (instance_exists(obj_orange) == 1){
+        if collision_line(global.lazerX,global.lazerY - 110,obj_orange.x,obj_orange.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_orange.x,obj_orange.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_orange.x,obj_orange.y, obj_meteorite_2, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_orange.x,obj_orange.y)            
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_orange.x,obj_orange.y, obj_meteorite_3, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_orange.x,obj_orange.y)        
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_orange.x,obj_orange.y, obj_meteorite_4, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_orange.x,obj_orange.y)        
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_orange.x,obj_orange.y, obj_meteorite_5, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_orange.x,obj_orange.y)        
+        }
+        else{
+            draw_line(global.lazerX,global.lazerY - 110,obj_orange.x,obj_orange.y)
+        }
+    }
+    else if (instance_exists(obj_yellow) == 1){
+        if collision_line(global.lazerX,global.lazerY - 110,obj_yellow.x,obj_yellow.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_yellow.x,obj_yellow.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_yellow.x,obj_yellow.y, obj_meteorite_2, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_yellow.x,obj_yellow.y)            
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_yellow.x,obj_yellow.y, obj_meteorite_3, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_yellow.x,obj_yellow.y)        
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_yellow.x,obj_yellow.y, obj_meteorite_4, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_yellow.x,obj_yellow.y)        
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_yellow.x,obj_yellow.y, obj_meteorite_5, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_yellow.x,obj_yellow.y)        
+        }
+        else{
+            draw_line(global.lazerX,global.lazerY - 110,obj_yellow.x,obj_yellow.y)
+        }
+    }
+    else if (instance_exists(obj_green) == 1){
+        if collision_line(global.lazerX,global.lazerY - 110,obj_green.x,obj_green.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_green.x,obj_green.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_green.x,obj_green.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_green.x,obj_green.y)            
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_green.x,obj_green.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_green.x,obj_green.y)       
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_green.x,obj_green.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_green.x,obj_green.y)       
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_green.x,obj_green.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_green.x,obj_green.y)      
+        }
+        else{
+            draw_line(global.lazerX,global.lazerY - 110,obj_green.x,obj_green.y)
+        }
+    }
+    else if (instance_exists(obj_blue) == 1){
+        if collision_line(global.lazerX,global.lazerY - 110,obj_blue.x,obj_blue.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_blue.x,obj_blue.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_blue.x,obj_blue.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_blue.x,obj_blue.y)           
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_blue.x,obj_blue.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_blue.x,obj_blue.y)       
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_blue.x,obj_blue.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_blue.x,obj_blue.y)     
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_blue.x,obj_blue.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_blue.x,obj_blue.y)   
+        }
+        else{
+            draw_line(global.lazerX,global.lazerY - 110,obj_blue.x,obj_blue.y)
+        }
+    }
+    else if (instance_exists(obj_dark_blue) == 1){
+        if collision_line(global.lazerX,global.lazerY - 110,obj_dark_blue.x,obj_dark_blue.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_dark_blue.x,obj_dark_blue.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_dark_blue.x,obj_dark_blue.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_dark_blue.x,obj_dark_blue.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_dark_blue.x,obj_dark_blue.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_dark_blue.x,obj_dark_blue.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_dark_blue.x,obj_dark_blue.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_dark_blue.x,obj_dark_blue.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_dark_blue.x,obj_dark_blue.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_dark_blue.x,obj_dark_blue.y)
+        }
+        else{
+            draw_line(global.lazerX,global.lazerY - 110,obj_dark_blue.x,obj_dark_blue.y)
+        }
+    }
+    else if (instance_exists(obj_purple) == 1){
+        if collision_line(global.lazerX,global.lazerY - 110,obj_purple.x,obj_purple.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_purple.x,obj_purple.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_purple.x,obj_purple.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_purple.x,obj_purple.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_purple.x,obj_purple.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_purple.x,obj_purple.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_purple.x,obj_purple.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_purple.x,obj_purple.y)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,obj_purple.x,obj_purple.y, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,obj_purple.x,obj_purple.y)
+        }
+        else{
+            draw_line(global.lazerX,global.lazerY - 110,obj_purple.x,obj_purple.y)
+        }
+    }
+    else{
+        if collision_line(global.lazerX,global.lazerY - 110,1366,global.lazerY - 110, obj_meteorite_1, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,1366,global.lazerY - 110)
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,1366,global.lazerY - 110, obj_meteorite_2, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,1366,global.lazerY - 110)            
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,1366,global.lazerY - 110, obj_meteorite_3, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,1366,global.lazerY - 110)        
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,1366,global.lazerY - 110, obj_meteorite_4, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,1366,global.lazerY - 110)        
+        }
+        else if collision_line(global.lazerX,global.lazerY - 110,1366,global.lazerY - 110, obj_meteorite_5, 0, 0){
+            draw_set_color(c_red)
+            draw_line(global.lazerX,global.lazerY - 110,1366,global.lazerY - 110)        
+        }
+        else{
+            draw_line(global.lazerX,global.lazerY - 110,1366,global.lazerY - 110)
+        }
+    }
+}
+*/
 </string>
           </argument>
         </arguments>
