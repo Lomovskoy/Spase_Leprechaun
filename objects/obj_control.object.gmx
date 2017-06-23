@@ -454,7 +454,7 @@ audio_stop_sound(shop_bleep)}//Если нет то магазин ложь
 //Отрисока тестовой информации
 //if global.shop == false {draw_text(1261,700,"Shop - false")}
 //if global.shop == true {draw_text(1261,700,"Shop - true")}
-
+//draw_text(1261,700,global.laser_moution)
 </string>
           </argument>
         </arguments>
@@ -588,7 +588,9 @@ if global.zero == true and global.shop == true//Если начата кнока
             <kind>1</kind>
             <string>y = global.lazerY-2;//Коректировка отображения лазера
 x = global.lazerX+17
-collision = 0
+draw_line(x,y,1366,y)
+//collision = 0
+/*
 if global.aimed_shot = true {//Если куплен прицел
     if ((instance_exists(obj_red) == 1)or(instance_exists(obj_orange) == 1)or(instance_exists(obj_yellow) == 1)or
     (instance_exists(obj_green) == 1)or(instance_exists(obj_blue) == 1)or(instance_exists(obj_dark_blue) == 1)or
@@ -692,7 +694,7 @@ if global.aimed_shot = true {//Если куплен прицел
     else{
         draw_line(x,y,1366,y)
     }
-}
+}*/
 //-----------------------Создан лазер кота, он меняет цвет в зависимости от того есть пересечение с метиоритом или нет на пути выстрела-----------------
 /*draw_set_color(c_green)
 if (global.gan_shot = true){
