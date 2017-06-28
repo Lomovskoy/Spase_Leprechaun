@@ -48,13 +48,13 @@
             <string>if room == PlayRoom{
     //Переменные всех пуль обнуляем
     
-    global.red = 5
-    global.orange = 5
-    global.yellow = 5
-    global.green = 5
-    global.blue = 5
-    global.darkBlue = 5
-    global.purple = 5
+    global.red = 10
+    global.orange = 10
+    global.yellow = 10
+    global.green = 10
+    global.blue = 10
+    global.darkBlue = 10
+    global.purple = 10
     /*
     //Случайная генерация патрон от секунд
     ReOrYeGrBlDaPu = current_second
@@ -96,9 +96,10 @@ global.room_control = false;
 //таймер босса
 alarm[6] = 30;
 time = 0
-if room == PlayRoom{maxtime = 750;}//750
-if room == PlayRoom2{maxtime = 800;}//800
-if room == PlayRoom3{maxtime = 850;}//850
+if room == PlayRoom{maxtime = 5;}//750
+if room == PlayRoom2{maxtime = 5;}//800
+if room == PlayRoom3{maxtime = 5;}//850
+if room == PlayRoom4{maxtime = 5;}//900
 global.boss = 0
 
 if room == PlayRoom{
@@ -210,6 +211,9 @@ if global.boss == 1 and time == maxtime {
     }
     if (room == PlayRoom3){
         instance_create(1300,450,obj_boss1)
+    }
+    if (room == PlayRoom4){
+        instance_create(1300,450,obj_boss2)
     }
 }
 
@@ -588,7 +592,9 @@ if global.zero == true and global.shop == true//Если начата кнока
             <kind>1</kind>
             <string>y = global.lazerY-2;//Коректировка отображения лазера
 x = global.lazerX+17
-draw_line(x,y,1366,y)
+if global.aimed_shot = true {//Если куплен прицел
+    draw_line(x,y,1366,y)
+}
 //collision = 0
 /*
 if global.aimed_shot = true {//Если куплен прицел
@@ -1055,6 +1061,8 @@ if (room == PlayRoom2) {
     draw_sprite(spr_boss2_logo,-1,1110,725)}
 if (room == PlayRoom3) {
     draw_sprite(spr_boss1_logo,-1,1120,720)}
+if (room == PlayRoom4) {
+    draw_sprite(spr_boss2_logo,-1,1120,720)}
 </string>
           </argument>
         </arguments>

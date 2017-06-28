@@ -1542,9 +1542,13 @@ else{
     global.Boss_1 = true
     audio_stop_sound(nlo_2)
 }if (room == PlayRoom3){
+    room_goto(PlayRoom4)
+    global.Boss_1 = true
+}if (room == PlayRoom4){
     room_goto(GameOverRoom)
     global.Boss_1 = true
 }
+
 </string>
           </argument>
         </arguments>

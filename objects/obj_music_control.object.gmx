@@ -25,9 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Переменные воспроизведения музыки
-Music_Namber = 1;
-if room == PlayRoom {
+            <string>if room == PlayRoom {
     audio_play_sound(sountrack_music_1, 0, true);}
 if room == PlayRoom2 {
     audio_stop_sound(sountrack_music_1);
@@ -35,6 +33,9 @@ if room == PlayRoom2 {
 if room == PlayRoom3 {
     audio_stop_sound(sountrack_music_3);
     audio_play_sound(sountrack_music_2, 0, true);}
+if room == PlayRoom4 {
+    audio_stop_sound(sountrack_music_2);
+    audio_play_sound(sountrack_music_4, 0, true);}
 if room == GameOverRoom {
     audio_stop_sound(sountrack_music_1);
     audio_stop_sound(sountrack_music_2);
