@@ -73,7 +73,7 @@ if global.live_tesla &gt; 0 {
             }
         if(sprite_index == spr_boss2_tesla_anim)
             {
-                if image_index = 11
+                if image_index == 11
                     {
                         global.panda_shot = false//Выстрел панды
                         sprite_index = (spr_boss2_tesla)

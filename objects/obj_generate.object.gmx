@@ -51,6 +51,9 @@ time1 = irandom_range(tmin1,tmax1)//Рандомная генерация дли
 tmin2 = 60//Минимальное время генерации астеройда делимое на скорость комнаты
 tmax2 = 360//Максимальное время генерации астеройда делимое на скорость комнаты
 time2 = irandom_range(tmin2,tmax2)
+
+nlotime = 50//(maxtime / 10) * 30
+global.nlo_create = false
 alarm[0]=time1//Инициализация таймера шариков
 alarm[2]=time2//Инициализация таймера метиоритов
 
@@ -192,6 +195,39 @@ alarm[0]= time1
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (global.nlo_create == false){
+    nlo_create_time(nlotime,global.nlo_create)
+}else{
+    //if (object_exists(obj_nlo_1) != 1){
+        nlotime = (maxtime / 10) * 30
+        global.nlo_create = false
+        //Генерация обьекта
+        height = (random_range(101,660))
+        instance_create(1360,height,obj_nlo_1)
+    //}
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -218,6 +254,9 @@ alarm[0]= time1
 //if object_exists(meteorite){
 //    draw_text(30,40,string(object_get_name(meteorite)))
 //}
+draw_text(30,40,string(object_exists(obj_nlo_1)))
+draw_text(50,40,string(object_get_name(obj_nlo_1)))
+draw_text(30,70,string((nlotime/30)/60))
 </string>
           </argument>
         </arguments>

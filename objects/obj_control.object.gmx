@@ -90,13 +90,16 @@ collor = c_white;
 iter = 1;
 alarm[4] = 4;
 
+
 //Определение комнаты
 global.room_control = false;
 
 //таймер босса
 alarm[6] = 30;
 time = 0
-if room == PlayRoom{maxtime = 5;}//750
+
+globalvar maxtime
+if room == PlayRoom{maxtime = 750;}//750
 if room == PlayRoom2{maxtime = 5;}//800
 if room == PlayRoom3{maxtime = 5;}//850
 if room == PlayRoom4{maxtime = 5;}//900

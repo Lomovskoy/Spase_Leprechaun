@@ -8,31 +8,44 @@
   </NewExtensions>
   <sounds name="sound">
     <sounds name="noise">
-      <sound>sound\shot_1</sound>
-      <sound>sound\bool_shot</sound>
-      <sound>sound\click_menu</sound>
-      <sound>sound\sound_pause</sound>
-      <sound>sound\appearance_letters</sound>
-      <sound>sound\motion</sound>
-      <sound>sound\motion_end</sound>
-      <sound>sound\appearance_ball</sound>
-      <sound>sound\glass1</sound>
-      <sound>sound\glass2</sound>
-      <sound>sound\sound_menu_down</sound>
-      <sound>sound\boss_noise</sound>
-      <sound>sound\shop_noise</sound>
-      <sound>sound\shop_bleep</sound>
-      <sound>sound\explosion1</sound>
-      <sound>sound\explosion2</sound>
-      <sound>sound\shot_boss_1</sound>
-      <sound>sound\bleep_boss_1</sound>
-      <sound>sound\hit_the_player</sound>
-      <sound>sound\sound_boss_move</sound>
-      <sound>sound\sound_boss_move_end</sound>
-      <sound>sound\sound_tesla</sound>
-      <sound>sound\sound_ball_lightning</sound>
-      <sound>sound\nlo_1</sound>
-      <sound>sound\nlo_2</sound>
+      <sounds name="shot">
+        <sound>sound\shot_1</sound>
+        <sound>sound\bool_shot</sound>
+        <sound>sound\shot_boss_1</sound>
+        <sound>sound\nlo_shot_3</sound>
+      </sounds>
+      <sounds name="motion">
+        <sound>sound\motion</sound>
+        <sound>sound\motion_end</sound>
+        <sound>sound\boss_noise</sound>
+        <sound>sound\sound_boss_move</sound>
+        <sound>sound\sound_boss_move_end</sound>
+        <sound>sound\sound_ball_lightning</sound>
+        <sound>sound\nlo_1</sound>
+        <sound>sound\nlo_2</sound>
+        <sound>sound\sound_tesla</sound>
+        <sound>sound\onset_nlo</sound>
+        <sound>sound\motion_nlo</sound>
+      </sounds>
+      <sounds name="boom">
+        <sound>sound\explosion1</sound>
+        <sound>sound\explosion2</sound>
+        <sound>sound\hit_the_player</sound>
+        <sound>sound\hit_in_nlo</sound>
+        <sound>sound\hit_in_player_nlo</sound>
+      </sounds>
+      <sounds name="bleep">
+        <sound>sound\click_menu</sound>
+        <sound>sound\appearance_letters</sound>
+        <sound>sound\sound_pause</sound>
+        <sound>sound\glass1</sound>
+        <sound>sound\appearance_ball</sound>
+        <sound>sound\sound_menu_down</sound>
+        <sound>sound\glass2</sound>
+        <sound>sound\shop_noise</sound>
+        <sound>sound\shop_bleep</sound>
+        <sound>sound\bleep_boss_1</sound>
+      </sounds>
     </sounds>
     <sounds name="Music">
       <sound>sound\Start_Musik</sound>
@@ -148,6 +161,10 @@
       <sprite>sprites\spr_lang_false</sprite>
       <sprite>sprites\spr_lang_true</sprite>
     </sprites>
+    <sprites name="enemies_spr">
+      <sprite>sprites\spr_nlo1</sprite>
+      <sprite>sprites\spr_nlo_laser</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\back_stor</background>
@@ -163,6 +180,8 @@
     <script>scripts\seconds_time.gml</script>
     <script>scripts\time_live_laser_red.gml</script>
     <script>scripts\panda_time_shot.gml</script>
+    <script>scripts\nlo_time_shot.gml</script>
+    <script>scripts\nlo_create_time.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\main_fond</font>
@@ -254,6 +273,10 @@
     <objects name="locale_obj">
       <object>objects\obj_En</object>
       <object>objects\obj_Ru</object>
+    </objects>
+    <objects name="enemies_obj">
+      <object>objects\obj_nlo_1</object>
+      <object>objects\obj_nlo_laser</object>
     </objects>
   </objects>
   <rooms name="rooms">
