@@ -99,10 +99,11 @@ alarm[6] = 30;
 time = 0
 
 globalvar maxtime
-if room == PlayRoom{maxtime = 750;}//750
+if room == PlayRoom{maxtime = 5;}//750
 if room == PlayRoom2{maxtime = 5;}//800
 if room == PlayRoom3{maxtime = 5;}//850
 if room == PlayRoom4{maxtime = 5;}//900
+if room == PlayRoom4{maxtime = 50;}//950
 global.boss = 0
 
 if room == PlayRoom{
@@ -178,7 +179,7 @@ if room == PlayRoom{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Перезапуск таймера</string>
+            <string>Создание Босса Перезапуск таймера</string>
           </argument>
         </arguments>
       </action>
@@ -217,6 +218,9 @@ if global.boss == 1 and time == maxtime {
     }
     if (room == PlayRoom4){
         instance_create(1300,450,obj_boss2)
+    }
+    if (room == PlayRoom5){
+        instance_create(1300,450,obj_boss1)
     }
 }
 
@@ -1066,6 +1070,8 @@ if (room == PlayRoom3) {
     draw_sprite(spr_boss1_logo,-1,1120,720)}
 if (room == PlayRoom4) {
     draw_sprite(spr_boss2_logo,-1,1120,720)}
+if (room == PlayRoom5) {
+    draw_sprite(spr_boss1_logo,-1,1120,720)}
 </string>
           </argument>
         </arguments>

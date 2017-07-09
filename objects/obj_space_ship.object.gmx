@@ -1448,6 +1448,46 @@ else{
         <arguments>
           <argument>
             <kind>6</kind>
+            <sound>sountrack_music_3</sound>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>212</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_end_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>sountrack_music_2</sound>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>212</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_end_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
             <sound>sountrack_music_1</sound>
           </argument>
         </arguments>
@@ -1545,6 +1585,9 @@ else{
     room_goto(PlayRoom4)
     global.Boss_1 = true
 }if (room == PlayRoom4){
+    room_goto(PlayRoom5)
+    global.Boss_1 = true
+}if (room == PlayRoom5){
     room_goto(GameOverRoom)
     global.Boss_1 = true
 }
