@@ -103,7 +103,7 @@ if room == PlayRoom{maxtime = 5;}//750
 if room == PlayRoom2{maxtime = 5;}//800
 if room == PlayRoom3{maxtime = 5;}//850
 if room == PlayRoom4{maxtime = 5;}//900
-if room == PlayRoom4{maxtime = 50;}//950
+if room == PlayRoom5{maxtime = 5;}//950
 global.boss = 0
 
 if room == PlayRoom{

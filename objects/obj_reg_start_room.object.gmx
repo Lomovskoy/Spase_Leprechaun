@@ -30,7 +30,7 @@ global.new_reg = 0;
 
 length = 10; //Максимальная длина имени
 globalvar name; name = '';//Переменная, в которую будет записано имя игрока
-keyboard_string = '';//переменная для таблицы рекордов
+keyboard_lastchar = '';//переменная для одной буквы
 
 cur = '|';//это у нас будет "мигающий курсор", можно заменить на любой символ, например на "_"
 alarm[3] = 15; //включаем аларм, это для того чтобы курсор мигал каждые 15 шагов (0,5 секунды)
@@ -90,16 +90,30 @@ alarm[3] = 15;
           <argument>
             <kind>1</kind>
             <string>if newgame == 1{
-    if (string_length(keyboard_string)&gt;length)//если набираемый текст превышает заданную длину,
-        { 
-            keyboard_string = string_copy(keyboard_string, 1, length);//мы его обрезаем
-        }
-    if (name != keyboard_string)
+    if not keyboard_check(vk_enter)
     {
-        audio_play_sound(appearance_letters, 0, false);
+        if (string_length(name)&gt;length)//если набираемый текст превышает заданную длину,
+            { 
+                name = string_copy(name, 1, length);//мы его обрезаем
+                //audio_play_sound(appearance_letters, 0, false);
+            }
+        else
+            {
+                name += keyboard_lastchar//а потом записываем в переменную для отправки в таблицу рекордов
+                keyboard_lastchar = ''
+                //audio_play_sound(appearance_letters, 0, false);
+            }
     }
-    name = keyboard_string;//а потом записываем в переменную для отправки в таблицу рекордов
-}else{keyboard_string='';}
+    else
+    {
+        name = string_copy(name, 1, string_length(name)-1);//мы его обрезаем
+        keyboard_lastchar = ''
+    }
+}
+else
+{
+    keyboard_lastchar = ''
+}
 </string>
           </argument>
         </arguments>
@@ -347,6 +361,112 @@ if credits == 1
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="8">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>name = string_copy(name, 1, string_length(name)-1);//мы его обрезаем
+keyboard_lastchar = ''
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>newgame</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>appearance_letters</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>
