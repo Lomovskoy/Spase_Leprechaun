@@ -20,13 +20,13 @@
   <width>57</width>
   <height>57</height>
   <frames>
-    <frame index="0">images\sprite82_0.png</frame>
-    <frame index="1">images\sprite82_1.png</frame>
-    <frame index="2">images\sprite82_2.png</frame>
-    <frame index="3">images\sprite82_3.png</frame>
-    <frame index="4">images\sprite82_4.png</frame>
-    <frame index="5">images\sprite82_5.png</frame>
-    <frame index="6">images\sprite82_6.png</frame>
-    <frame index="7">images\sprite82_7.png</frame>
+    <frame index="0">images\spr_boss2_bullet_0.png</frame>
+    <frame index="1">images\spr_boss2_bullet_1.png</frame>
+    <frame index="2">images\spr_boss2_bullet_2.png</frame>
+    <frame index="3">images\spr_boss2_bullet_3.png</frame>
+    <frame index="4">images\spr_boss2_bullet_4.png</frame>
+    <frame index="5">images\spr_boss2_bullet_5.png</frame>
+    <frame index="6">images\spr_boss2_bullet_6.png</frame>
+    <frame index="7">images\spr_boss2_bullet_7.png</frame>
   </frames>
 </sprite>

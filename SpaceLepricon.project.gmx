@@ -158,7 +158,12 @@
       <sprite>sprites\spr_boss2_tesla_bed</sprite>
       <sprite>sprites\spr_boss2_tesla_anim</sprite>
       <sprite>sprites\spr_boss2_logo</sprite>
-      <sprite>sprites\sprite82</sprite>
+      <sprite>sprites\spr_boss2_bullet</sprite>
+    </sprites>
+    <sprites name="boss_spr_3">
+      <sprite>sprites\spr_boss3</sprite>
+      <sprite>sprites\spr_boss3_logo</sprite>
+      <sprite>sprites\spr_boss3_bullet</sprite>
     </sprites>
     <sprites name="locale_spr">
       <sprite>sprites\spr_lang_false</sprite>
@@ -176,6 +181,7 @@
   <paths name="paths">
     <path>paths\path1</path>
     <path>paths\path2</path>
+    <path>paths\path3</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\hs_submit.gml</script>
@@ -185,6 +191,7 @@
     <script>scripts\panda_time_shot.gml</script>
     <script>scripts\nlo_time_shot.gml</script>
     <script>scripts\nlo_create_time.gml</script>
+    <script>scripts\boss3_time_shot.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\main_fond</font>
@@ -275,6 +282,10 @@
       <object>objects\obj_boss2</object>
       <object>objects\obj_boss_tesla</object>
       <object>objects\obj_ball_lightning</object>
+    </objects>
+    <objects name="boss_3">
+      <object>objects\obj_boss3</object>
+      <object>objects\obj_boss3_bullet</object>
     </objects>
     <objects name="locale_obj">
       <object>objects\obj_En</object>
