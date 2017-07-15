@@ -35,6 +35,9 @@ global.time_shot3 = random_range(90,210)
 
 global.flag = 0
 global.time_destroy = 15
+
+shot_number = 0
+draw_shot = 0
 </string>
           </argument>
         </arguments>
@@ -789,6 +792,30 @@ global.time_destroy = 15
       </action>
       <action>
         <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>explosion2</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
         <id>203</id>
         <kind>0</kind>
         <userelative>0</userelative>
@@ -800,6 +827,30 @@ global.time_destroy = 15
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.Boss_1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+        </arguments>
       </action>
       <action>
         <libid>1</libid>
@@ -841,10 +892,32 @@ global.time_destroy = 15
         }
         else if (global.boss3_shot == true)
         {
-            //shot_number = 
-            action_create_object_motion(obj_boss3_bullet,obj_boss3.x,obj_boss3.y+159,14,180)
-            global.boss3_shot = false
-            global.time_shot3 = random_range(30,90)
+            if shot_number == 0{
+                shot_number = irandom_range(1,3)
+                draw_shot = shot_number
+            }
+            if shot_number == 1{ 
+                action_create_object_motion(obj_boss3_bullet,obj_boss3.x,obj_boss3.y+159,14,180)
+                global.boss3_shot = false
+                global.time_shot3 = irandom_range(30,90)
+                shot_number = 0
+            }
+            if shot_number == 2{
+                action_create_object_motion(obj_boss3_bullet,obj_boss3.x,obj_boss3.y+182,14,180)
+                action_create_object_motion(obj_boss3_bullet,obj_boss3.x,obj_boss3.y+159,14,180)
+                action_create_object_motion(obj_boss3_bullet,obj_boss3.x,obj_boss3.y+136,14,180)
+                global.boss3_shot = false
+                global.time_shot3 = irandom_range(30,90)
+                shot_number = 0
+            }
+            if shot_number == 3{
+                action_create_object_motion(obj_boss3_bullet,obj_boss3.x+23,obj_boss3.y+159,14,180)
+                action_create_object_motion(obj_boss3_bullet,obj_boss3.x,obj_boss3.y+159,14,180)
+                action_create_object_motion(obj_boss3_bullet,obj_boss3.x-23,obj_boss3.y+159,14,180)
+                global.boss3_shot = false
+                global.time_shot3 = irandom_range(30,90)
+                shot_number = 0
+            }
         }
     }
 else
@@ -962,7 +1035,7 @@ else
           </argument>
           <argument>
             <kind>0</kind>
-            <string>-10</string>
+            <string>-5</string>
           </argument>
         </arguments>
       </action>
@@ -1076,11 +1149,11 @@ else if hp &gt;= 10
     {
         draw_sprite(spr_boss3_9,-1,obj_boss3.x,obj_boss3.y)
     }
-else if hp &gt;= 0
+else if hp &gt;= -5
     {
         draw_sprite(spr_boss3_10,-1,obj_boss3.x,obj_boss3.y)
     }
-else if hp &lt; 0
+else if hp &lt; -5
     {
         draw_sprite(spr_boss3_11,-1,obj_boss3.x,obj_boss3.y)
     }

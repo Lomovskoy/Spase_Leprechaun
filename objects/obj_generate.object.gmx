@@ -279,13 +279,15 @@ alarm[0]= time1
 //draw_text(30,40,string(object_exists(obj_nlo_1)))
 //draw_text(50,40,string(object_get_name(obj_nlo_1)))
 //draw_text(30,70,string(nlotime))
-if(instance_exists(obj_boss3)){
-    draw_text(30,70,'time_shot3: '+string(global.time_shot3))
-    draw_text(30,95,'boss3_shot: '+string(global.boss3_shot))
-    draw_text(30,120,'flag: '+string(global.flag))
-    draw_text(30,145,'time_destroy: '+string(global.time_destroy))
-    draw_text(30,170,'hp: '+string(obj_boss3.hp))
-}
+//Информация о боссе зуб
+//if(instance_exists(obj_boss3)){
+//    draw_text(30,70,'time_shot3: '+string(global.time_shot3))
+//    draw_text(30,95,'boss3_shot: '+string(global.boss3_shot))
+//    draw_text(30,120,'flag: '+string(global.flag))
+//    draw_text(30,145,'time_destroy: '+string(global.time_destroy))
+//    draw_text(30,170,'hp: '+string(obj_boss3.hp))
+//    draw_text(30,195,'shot_number: '+string(obj_boss3.draw_shot))
+//}
 </string>
           </argument>
         </arguments>

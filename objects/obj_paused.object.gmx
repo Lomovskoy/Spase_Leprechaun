@@ -110,7 +110,8 @@ draw_sprite(spr_paused,-1,400,250)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if audio_is_paused(sountrack_music_1)
+            <string>room_goto(global.Name_Room)
+if audio_is_paused(sountrack_music_1)
     {
         audio_resume_sound(sountrack_music_1);
     }
@@ -127,6 +128,30 @@ if audio_is_paused(sountrack_music_4)
         audio_resume_sound(sountrack_music_4);
     }
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>801</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_cursor</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>5</kind>
+            <sprite>-1</sprite>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
