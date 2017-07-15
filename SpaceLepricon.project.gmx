@@ -163,6 +163,16 @@
     <sprites name="boss_spr_3">
       <sprite>sprites\spr_boss3</sprite>
       <sprite>sprites\spr_boss3_logo</sprite>
+      <sprite>sprites\spr_boss3_2</sprite>
+      <sprite>sprites\spr_boss3_3</sprite>
+      <sprite>sprites\spr_boss3_4</sprite>
+      <sprite>sprites\spr_boss3_5</sprite>
+      <sprite>sprites\spr_boss3_6</sprite>
+      <sprite>sprites\spr_boss3_7</sprite>
+      <sprite>sprites\spr_boss3_8</sprite>
+      <sprite>sprites\spr_boss3_9</sprite>
+      <sprite>sprites\spr_boss3_10</sprite>
+      <sprite>sprites\spr_boss3_11</sprite>
       <sprite>sprites\spr_boss3_bullet</sprite>
     </sprites>
     <sprites name="locale_spr">
@@ -192,6 +202,7 @@
     <script>scripts\nlo_time_shot.gml</script>
     <script>scripts\nlo_create_time.gml</script>
     <script>scripts\boss3_time_shot.gml</script>
+    <script>scripts\boss3_destroy.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\main_fond</font>
