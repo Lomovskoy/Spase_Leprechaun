@@ -40,6 +40,12 @@ shot_number = 0
 draw_shot = 0
 
 noiz = 0
+
+//global.draw_mustache = false
+//global.time_mustache = 30
+//flag2 = 'true'
+
+instance_create(obj_boss3.x,obj_boss3.y,obj_moustache)
 </string>
           </argument>
         </arguments>
@@ -1182,6 +1188,41 @@ else if hp &lt; -5
     {
         draw_sprite(spr_boss3_11,-1,obj_boss3.x,obj_boss3.y)
     }
+
+//if (hp &lt;= 100 and hp &gt;= -5)
+//    {
+//        draw_sprite(spr_boss3_12,-1,obj_boss3.x,obj_boss3.y)
+//    }
+        /*if (global.draw_mustache == false)
+            {
+                draw_sprite(spr_boss3_12,-1,obj_boss3.x,obj_boss3.y)
+                mustache_time(global.draw_mustache,global.time_mustache)
+                
+            }
+        if (global.draw_mustache == true)
+            {
+                if (flag2 == 'true')
+                    {
+                        flag2 = 'false'
+                        draw_text(30,70,'flag2: '+string(flag2))
+                        draw_text(30,95,'time_mustache: '+string(global.time_mustache))
+                        draw_sprite(spr_boss3_12,-1,obj_boss3.x,obj_boss3.y-10)
+                        global.time_mustache = 60
+                        global.draw_mustache = false
+                        mustache_time(global.draw_mustache,global.time_mustache)
+                    }
+                if (flag2 == 'false')
+                    {
+                        flag2 = 'true'
+                        draw_text(30,120,'flag2: '+string(flag2))
+                        draw_text(30,145,'time_mustache: '+string(global.time_mustache))
+                        draw_sprite(spr_boss3_12,-1,obj_boss3.x,obj_boss3.y-10)
+                        global.time_mustache = 15
+                        global.draw_mustache = false
+                        mustache_time(global.draw_mustache,global.time_mustache)
+                    }
+            }
+    }*/
 </string>
           </argument>
         </arguments>

@@ -287,6 +287,11 @@ alarm[0]= time1
 //    draw_text(30,145,'time_destroy: '+string(global.time_destroy))
 //    draw_text(30,170,'hp: '+string(obj_boss3.hp))
 //    draw_text(30,195,'shot_number: '+string(obj_boss3.draw_shot))
+//    draw_text(30,70,'flag2: '+string(obj_boss3.flag2))
+//    draw_text(30,95,'time_mustache: '+string(global.time_mustache))
+//}
+//if(instance_exists(obj_moustache)){
+//    draw_text(30,70,'image_index: '+string(obj_moustache.image_index))
 //}
 </string>
           </argument>
