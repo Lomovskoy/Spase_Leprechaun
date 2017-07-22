@@ -182,6 +182,11 @@
       <sprite>sprites\spr_boss3_12</sprite>
       <sprite>sprites\spr_boss3_bullet</sprite>
     </sprites>
+    <sprites name="boss_spr_4">
+      <sprite>sprites\spr_boss4</sprite>
+      <sprite>sprites\spr_boss4_2</sprite>
+      <sprite>sprites\spr_boss4_logo</sprite>
+    </sprites>
     <sprites name="locale_spr">
       <sprite>sprites\spr_lang_false</sprite>
       <sprite>sprites\spr_lang_true</sprite>
@@ -199,6 +204,7 @@
     <path>paths\path1</path>
     <path>paths\path2</path>
     <path>paths\path3</path>
+    <path>paths\path4</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\hs_submit.gml</script>
@@ -306,6 +312,10 @@
       <object>objects\obj_boss3</object>
       <object>objects\obj_boss3_bullet</object>
       <object>objects\obj_moustache</object>
+    </objects>
+    <objects name="boss_4">
+      <object>objects\obj_boss4</object>
+      <object>objects\obj_boss4_cristal</object>
     </objects>
     <objects name="locale_obj">
       <object>objects\obj_En</object>
