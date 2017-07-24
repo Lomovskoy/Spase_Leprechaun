@@ -185,6 +185,7 @@
     <sprites name="boss_spr_4">
       <sprite>sprites\spr_boss4</sprite>
       <sprite>sprites\spr_boss4_2</sprite>
+      <sprite>sprites\spr_boss4_3</sprite>
       <sprite>sprites\spr_boss4_logo</sprite>
     </sprites>
     <sprites name="locale_spr">
@@ -217,6 +218,7 @@
     <script>scripts\boss3_time_shot.gml</script>
     <script>scripts\boss3_destroy.gml</script>
     <script>scripts\mustache_time.gml</script>
+    <script>scripts\boss4_step.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\main_fond</font>
