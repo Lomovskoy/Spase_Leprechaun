@@ -1,8 +1,8 @@
-if(global.time_step<=0)
-{
-    global.step = true
-}
-else if(global.time_step>0)
-{
-    global.time_step -=1
-}
+if(global.tine_crystal<=0)
+    {
+        global.shining_crystal = false
+    }
+else if(global.tine_crystal>0)
+    {
+        global.tine_crystal -=1
+    }

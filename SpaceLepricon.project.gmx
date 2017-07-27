@@ -219,6 +219,7 @@
     <script>scripts\boss3_destroy.gml</script>
     <script>scripts\mustache_time.gml</script>
     <script>scripts\boss4_step.gml</script>
+    <script>scripts\script_boss4_bleep.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\main_fond</font>

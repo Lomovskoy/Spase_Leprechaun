@@ -293,6 +293,10 @@ alarm[0]= time1
 //if(instance_exists(obj_moustache)){
 //    draw_text(30,70,'image_index: '+string(obj_moustache.image_index))
 //}
+//if(instance_exists(obj_boss4_cristal)){
+//    draw_text(30,70,'time: '+string(global.tine_crystal))
+//    draw_text(30,95,'boss3_shot: '+string(global.shining_crystal))
+//}
 </string>
           </argument>
         </arguments>

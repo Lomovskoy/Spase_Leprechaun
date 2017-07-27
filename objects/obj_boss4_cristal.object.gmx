@@ -32,9 +32,13 @@ PHI = 360 / 18// Угол фи
 RAD = 15//Радиус новых окружностей
 
 i = 0
+global.tine_crystal = irandom_range(30,90)
+global.time_step = 7
+global.shining_crystal = true
 
-global.time_step = 3
-global.step = false
+global.time_bleep_boss4 = 6
+global.time_bleep_crystal = true
+global.flag_boss4 = 0
 </string>
           </argument>
         </arguments>
@@ -71,6 +75,58 @@ if (i &gt; 18){
 }
     
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (global.shining_crystal == true)
+    {
+        draw_sprite(spr_boss4_2,-1,x,y)
+        boss4_step(global.tine_crystal,global.shining_crystal)
+    }
+else if (global.shining_crystal == false)
+    {
+        if (global.flag_boss4 &lt; 5)
+            {
+                if (global.time_bleep_crystal == true)
+                    {
+                        draw_sprite(spr_boss4_3,-1,x,y)
+                        script_boss4_bleep(global.time_bleep_boss4,global.time_bleep_crystal,global.flag_boss4)
+                        audio_play_sound(bleep_boss_1,1,false)
+                    }
+                else if (global.time_bleep_crystal == false)
+                    {
+                        draw_sprite(spr_boss4_2,-1,x,y)
+                        script_boss4_bleep(global.time_bleep_boss4,global.time_bleep_crystal,global.flag_boss4)
+                    }
+            }
+        else if (global.flag_boss4 &gt;= 5)
+            {
+                global.tine_crystal = irandom_range(30,90)
+                global.shining_crystal = true
+                global.flag_boss4 = 0
+                global.time_bleep_crystal = true
+            }
+    }
+    
 </string>
           </argument>
         </arguments>
