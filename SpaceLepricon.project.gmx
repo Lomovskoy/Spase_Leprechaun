@@ -187,6 +187,7 @@
       <sprite>sprites\spr_boss4_2</sprite>
       <sprite>sprites\spr_boss4_3</sprite>
       <sprite>sprites\spr_boss4_logo</sprite>
+      <sprite>sprites\sp_laser_boss4</sprite>
     </sprites>
     <sprites name="locale_spr">
       <sprite>sprites\spr_lang_false</sprite>
@@ -319,6 +320,7 @@
     <objects name="boss_4">
       <object>objects\obj_boss4</object>
       <object>objects\obj_boss4_cristal</object>
+      <object>objects\obj_laser_boss4</object>
     </objects>
     <objects name="locale_obj">
       <object>objects\obj_En</object>
