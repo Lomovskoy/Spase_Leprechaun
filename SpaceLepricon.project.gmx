@@ -189,6 +189,10 @@
       <sprite>sprites\spr_boss4_logo</sprite>
       <sprite>sprites\sp_laser_boss4</sprite>
     </sprites>
+    <sprites name="boss_spr_5">
+      <sprite>sprites\spr_boss5</sprite>
+      <sprite>sprites\spr_boss5_2</sprite>
+    </sprites>
     <sprites name="locale_spr">
       <sprite>sprites\spr_lang_false</sprite>
       <sprite>sprites\spr_lang_true</sprite>
@@ -207,6 +211,7 @@
     <path>paths\path2</path>
     <path>paths\path3</path>
     <path>paths\path4</path>
+    <path>paths\path5</path>
   </paths>
   <scripts name="scripts">
     <script>scripts\hs_submit.gml</script>
@@ -321,6 +326,9 @@
       <object>objects\obj_boss4</object>
       <object>objects\obj_boss4_cristal</object>
       <object>objects\obj_laser_boss4</object>
+    </objects>
+    <objects name="boss_5">
+      <object>objects\obj_boss5</object>
     </objects>
     <objects name="locale_obj">
       <object>objects\obj_En</object>
