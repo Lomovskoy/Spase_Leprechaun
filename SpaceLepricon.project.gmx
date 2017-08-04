@@ -191,6 +191,7 @@
     </sprites>
     <sprites name="boss_spr_5">
       <sprite>sprites\spr_boss5</sprite>
+      <sprite>sprites\spr_boss5_logo</sprite>
       <sprite>sprites\spr_boss5_2</sprite>
     </sprites>
     <sprites name="locale_spr">
@@ -226,6 +227,7 @@
     <script>scripts\mustache_time.gml</script>
     <script>scripts\boss4_step.gml</script>
     <script>scripts\script_boss4_bleep.gml</script>
+    <script>scripts\script_boss5_ded.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\main_fond</font>
