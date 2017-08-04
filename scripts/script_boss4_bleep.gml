@@ -1,4 +1,4 @@
-if(global.time_bleep_boss4<=0)
+if(global.time_bleep_boss4 <= 0)
     {
         if (global.time_bleep_crystal == false)
             {
@@ -11,7 +11,7 @@ if(global.time_bleep_boss4<=0)
         global.time_bleep_boss4 = 6
         global.flag_boss4 += 1
     }
-else if(global.time_bleep_boss4>0)
+else if(global.time_bleep_boss4 > 0)
     {
-        global.time_bleep_boss4 -=1
+        global.time_bleep_boss4 -= 1
     }

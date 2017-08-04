@@ -272,7 +272,7 @@ alarm[0]= time1
 //draw_text(1050,10,"tmin1: " + string(tmin))
 //draw_text(1050,25,"tmax1: " + string(tmax))
 //draw_set_color(c_aqua);
-draw_text(30,40,"fps: " + string(fps))
+draw_text(1000,10,"fps: " + string(fps))
 //if object_exists(meteorite){
 //    draw_text(30,40,string(object_get_name(meteorite)))
 //}
