@@ -191,6 +191,7 @@
     </sprites>
     <sprites name="boss_spr_5">
       <sprite>sprites\spr_boss5</sprite>
+      <sprite>sprites\spr_boss5_bullet</sprite>
       <sprite>sprites\spr_boss5_logo</sprite>
       <sprite>sprites\spr_boss5_2</sprite>
     </sprites>
@@ -228,6 +229,7 @@
     <script>scripts\boss4_step.gml</script>
     <script>scripts\script_boss4_bleep.gml</script>
     <script>scripts\script_boss5_ded.gml</script>
+    <script>scripts\script_boss5_fire.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\main_fond</font>
@@ -331,6 +333,7 @@
     </objects>
     <objects name="boss_5">
       <object>objects\obj_boss5</object>
+      <object>objects\obj_sting</object>
     </objects>
     <objects name="locale_obj">
       <object>objects\obj_En</object>
