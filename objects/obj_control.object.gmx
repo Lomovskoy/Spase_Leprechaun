@@ -113,6 +113,9 @@ if room == PlayRoom{
     global.h = 0 ///  час (глобальная)
     global.d = 0 /// день (глобальная)
 }
+
+//Переменная для разового воспроизведения звука +1 жизни
+global.musik_app = false
 </string>
           </argument>
         </arguments>
@@ -1072,6 +1075,12 @@ if (room == PlayRoom4) {//Зуб
     draw_sprite(spr_boss2_logo,-1,1120,720)}
 if (room == PlayRoom5) {//Светафор
     draw_sprite(spr_boss1_logo,-1,1120,720)}
+//Отрисовка всплывающегго чердечка
+//if (global.Boss_1 == false)
+//    {
+//        draw_sprite(spr_hard,-1,obj_space_ship.x-22,obj_space_ship.y-95)
+//        audio_play_sound(shop_noise,0,false)
+//    }
 </string>
           </argument>
         </arguments>
@@ -1130,6 +1139,167 @@ if (room == PlayRoom5) {//Светафор
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>+1 жизнь анимация</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Отрисовка всплывающегго чердечка
+//if (global.Boss_1 == false)
+//    {
+//        draw_sprite(spr_hard,-1,obj_space_ship.x-22,obj_space_ship.y-95)
+//        audio_play_sound(shop_noise,0,false)
+//    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>612</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_if_variable</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>0</kind>
+            <string>global.Boss_1</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>422</id>
+        <kind>1</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>501</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_draw_sprite</functionname>
+        <codestring></codestring>
+        <whoName>obj_space_ship</whoName>
+        <relative>-1</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>5</kind>
+            <sprite>spr_hard</sprite>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>-22</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>-95</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>-1</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if global.musik_app == false
+    {
+        if (not(audio_is_playing(sound_bleep_hard)))
+            {
+                audio_play_sound(sound_bleep_hard,0,false)
+            }
+    }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>424</id>
+        <kind>2</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
     <event eventtype="9" enumb="55">
@@ -1371,7 +1541,78 @@ global.zero = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>Обнуление остальных переменных обводки</string>
+            <string>if room == PlayRoom{
+    //Переменные всех пуль обнуляем
+    
+    global.red = 0
+    global.orange = 0
+    global.yellow = 0
+    global.green = 0
+    global.blue = 0
+    global.darkBlue = 0
+    global.purple = 0
+    
+    //Случайная генерация патрон от секунд
+    ReOrYeGrBlDaPu = current_second
+    ReOrYeGrBlDaPu %= 7
+    if ReOrYeGrBlDaPu == 0
+        {global.red = 2}
+    if ReOrYeGrBlDaPu == 1
+        {global.orange = 2}
+    if ReOrYeGrBlDaPu == 2
+        {global.yellow = 2}
+    if ReOrYeGrBlDaPu == 3
+        {global.green = 2}
+    if ReOrYeGrBlDaPu == 4
+        {global.blue = 2}
+    if ReOrYeGrBlDaPu == 5
+        {global.darkBlue = 2}
+    if ReOrYeGrBlDaPu == 6
+        {global.purple = 2}
+}
+//Определяем положеине иконки выбора цвета
+global.one = true
+global.two = false
+global.three = false
+global.four = false
+global.five = false
+global.six = false
+global.seven = false
+global.zero = false
+
+//глобальные магазины ложь
+global.shop = false
+collor = c_white;
+iter = 1;
+alarm[4] = 4;
+
+
+//Определение комнаты
+global.room_control = false;
+
+//таймер босса
+alarm[6] = 30;
+time = 0
+
+globalvar maxtime
+if room == PlayRoom{maxtime = 5;}//750
+if room == PlayRoom2{maxtime = 800;}//800
+if room == PlayRoom3{maxtime = 855;}//850
+if room == PlayRoom4{maxtime = 900;}//900
+if room == PlayRoom5{maxtime = 950;}//950
+global.boss = 0
+
+if room == PlayRoom{
+    //Отсчёт времени
+    global.s = 0 ///  секунда (глобальная)
+    global.m = 0 /// минута(глобальная)
+    global.h = 0 ///  час (глобальная)
+    global.d = 0 /// день (глобальная)
+}
+
+//Переменная для разового воспроизведения звука +1 жизни
+global.musik_app = false
+</string>
           </argument>
         </arguments>
       </action>

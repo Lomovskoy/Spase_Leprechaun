@@ -46,6 +46,7 @@
         <sound>sound\shop_noise</sound>
         <sound>sound\shop_bleep</sound>
         <sound>sound\bleep_boss_1</sound>
+        <sound>sound\sound_bleep_hard</sound>
       </sounds>
       <sounds name="crack">
         <sound>sound\boss3_crack_1</sound>
@@ -76,6 +77,7 @@
       <sprite>sprites\spr_live</sprite>
       <sprite>sprites\spr_cat</sprite>
       <sprite>sprites\spr_lock</sprite>
+      <sprite>sprites\spr_hard</sprite>
       <sprite>sprites\spr_space_ship_light</sprite>
     </sprites>
     <sprites name="basck">
