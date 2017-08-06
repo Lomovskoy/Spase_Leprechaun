@@ -125,7 +125,7 @@ else{
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.live_tesla -= 50
+            <string>global.live_tesla -= 10
 global.bullet = true
 if (global.red + global.orange + global.yellow + global.green + global.blue + global.darkBlue + global.purple &lt; 4){
     //Выбор цвета шарика рандомно

@@ -314,7 +314,7 @@ if (i &gt; 18){
           </argument>
           <argument>
             <kind>0</kind>
-            <string>-50</string>
+            <string>-10</string>
           </argument>
         </arguments>
       </action>

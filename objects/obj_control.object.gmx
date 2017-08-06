@@ -48,14 +48,14 @@
             <string>if room == PlayRoom{
     //Переменные всех пуль обнуляем
     
-    global.red = 10
-    global.orange = 10
-    global.yellow = 10
-    global.green = 10
-    global.blue = 10
-    global.darkBlue = 10
-    global.purple = 10
-    /*
+    global.red = 0
+    global.orange = 0
+    global.yellow = 0
+    global.green = 0
+    global.blue = 0
+    global.darkBlue = 0
+    global.purple = 0
+    
     //Случайная генерация патрон от секунд
     ReOrYeGrBlDaPu = current_second
     ReOrYeGrBlDaPu %= 7
@@ -72,7 +72,7 @@
     if ReOrYeGrBlDaPu == 5
         {global.darkBlue = 2}
     if ReOrYeGrBlDaPu == 6
-        {global.purple = 2}*/
+        {global.purple = 2}
 }
 //Определяем положеине иконки выбора цвета
 global.one = true
@@ -99,11 +99,11 @@ alarm[6] = 30;
 time = 0
 
 globalvar maxtime
-if room == PlayRoom{maxtime = 5;}//750
-if room == PlayRoom2{maxtime = 5;}//800
-if room == PlayRoom3{maxtime = 5;}//850
-if room == PlayRoom4{maxtime = 5;}//900
-if room == PlayRoom5{maxtime = 5;}//950
+if room == PlayRoom{maxtime = 750;}//750
+if room == PlayRoom2{maxtime = 800;}//800
+if room == PlayRoom3{maxtime = 855;}//850
+if room == PlayRoom4{maxtime = 900;}//900
+if room == PlayRoom5{maxtime = 950;}//950
 global.boss = 0
 
 if room == PlayRoom{
@@ -1062,15 +1062,15 @@ if global.purple &gt; 0
 //draw_text(850,710,string(lives))
 //-------------------------------------------------------------------------------
 //Отрисовка логотипа Босса
-if (room == PlayRoom) {
+if (room == PlayRoom) {//Дино
     draw_sprite(spr_boss4_logo,-1,1110,700)}
-if (room == PlayRoom2) {
+if (room == PlayRoom2) {//Панда
     draw_sprite(spr_boss2_logo,-1,1110,725)}
-if (room == PlayRoom3) {
-    draw_sprite(spr_boss3_logo,-1,1120,720)}
-if (room == PlayRoom4) {
+if (room == PlayRoom3) {//Оса
+    draw_sprite(spr_boss5_logo,-1,1120,720)}
+if (room == PlayRoom4) {//Зуб
     draw_sprite(spr_boss2_logo,-1,1120,720)}
-if (room == PlayRoom5) {
+if (room == PlayRoom5) {//Светафор
     draw_sprite(spr_boss1_logo,-1,1120,720)}
 </string>
           </argument>
@@ -1112,7 +1112,7 @@ if (room == PlayRoom5) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if instance_exists(obj_boss_tesla){
+            <string>/*if instance_exists(obj_boss_tesla){
     if global.live_tesla &gt; 0 {
         draw_healthbar(
             obj_boss_tesla.x+150,
@@ -1126,7 +1126,7 @@ if (room == PlayRoom5) {
             0,1,1);
         
     }
-}
+}*/
 </string>
           </argument>
         </arguments>
