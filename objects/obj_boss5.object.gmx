@@ -93,34 +93,37 @@ global.boss5_shot_tyme = irandom_range(30,90)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (global.boss5_shot == false)
+            <string>if (hp &gt; 0)
     {
-        script_boss5_fire(global.boss5_shot,global.boss5_shot_tyme)
-    }
-else if (global.boss5_shot == true)
-    {
-        if (not(direction == 0 or direction == 180))
+        if (global.boss5_shot == false)
             {
-                action_create_object_motion(
-                                    obj_sting,
-                                    obj_boss5.x+120,
-                                    obj_boss5.y+110,
-                                    30,
-                                    point_direction(
-                                        obj_boss5.x+120,
-                                        obj_boss5.y+110,
-                                        obj_space_ship.x,
-                                        obj_space_ship.y
-                                    )
-                                )
-                global.boss5_shot = false
-                global.boss5_shot_tyme = irandom_range(30,90)
-                audio_play_sound(bleep_boss_1,0,false)
+                script_boss5_fire(global.boss5_shot,global.boss5_shot_tyme)
             }
-        else
+        else if (global.boss5_shot == true)
             {
-                global.boss5_shot = false
-                global.boss5_shot_tyme = irandom_range(30,90)
+                if (not(direction == 0 or direction == 180))
+                    {
+                        action_create_object_motion(
+                                            obj_sting,
+                                            obj_boss5.x+120,
+                                            obj_boss5.y+110,
+                                            30,
+                                            point_direction(
+                                                obj_boss5.x+120,
+                                                obj_boss5.y+110,
+                                                obj_space_ship.x,
+                                                obj_space_ship.y
+                                            )
+                                        )
+                        global.boss5_shot = false
+                        global.boss5_shot_tyme = irandom_range(30,90)
+                        audio_play_sound(bleep_boss_1,0,false)
+                    }
+                else
+                    {
+                        global.boss5_shot = false
+                        global.boss5_shot_tyme = irandom_range(30,90)
+                    }
             }
     }
 </string>
@@ -495,7 +498,7 @@ global.Boss_1 = false
           </argument>
           <argument>
             <kind>0</kind>
-            <string>-10</string>
+            <string>-50</string>
           </argument>
         </arguments>
       </action>

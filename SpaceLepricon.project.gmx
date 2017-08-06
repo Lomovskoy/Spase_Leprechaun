@@ -13,6 +13,7 @@
         <sound>sound\bool_shot</sound>
         <sound>sound\shot_boss_1</sound>
         <sound>sound\nlo_shot_3</sound>
+        <sound>sound\shot_gan_boss3</sound>
       </sounds>
       <sounds name="motion">
         <sound>sound\motion</sound>
@@ -59,6 +60,7 @@
       <sound>sound\sountrack_music_2</sound>
       <sound>sound\sountrack_music_3</sound>
       <sound>sound\sountrack_music_4</sound>
+      <sound>sound\sountrack_music_5</sound>
       <sound>sound\Game_Over_Music</sound>
     </sounds>
   </sounds>

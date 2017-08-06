@@ -52,7 +52,7 @@ tmin2 = 60//Минимальное время генерации астерой�
 tmax2 = 360//Максимальное время генерации астеройда делимое на скорость комнаты
 time2 = irandom_range(tmin2,tmax2)
 
-nlotime = 60000//(maxtime / 10) * 30
+nlotime = 60000//(maxtime / 10) * 30 //6000
 global.nlo_create = false
 alarm[0]=time1//Инициализация таймера шариков
 alarm[2]=time2//Инициализация таймера метиоритов
@@ -272,7 +272,7 @@ alarm[0]= time1
 //draw_text(1050,10,"tmin1: " + string(tmin))
 //draw_text(1050,25,"tmax1: " + string(tmax))
 //draw_set_color(c_aqua);
-draw_text(1000,10,"fps: " + string(fps))
+//draw_text(1000,10,"fps: " + string(fps))
 //if object_exists(meteorite){
 //    draw_text(30,40,string(object_get_name(meteorite)))
 //}

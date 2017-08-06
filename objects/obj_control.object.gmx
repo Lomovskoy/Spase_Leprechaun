@@ -208,13 +208,13 @@ if time == maxtime and global.boss == 0 {
 //Условие запуска босса   
 if global.boss == 1 and time == maxtime {
     if (room == PlayRoom){//Горы
-        instance_create(1300,450,obj_boss5)
+        instance_create(1300,450,obj_boss4)
     }
     if (room == PlayRoom2){//Деревья
         instance_create(1300,450,obj_boss2)
     }
     if (room == PlayRoom3){//Грибы
-        instance_create(1300,450,obj_boss1)
+        instance_create(1300,450,obj_boss5)
     }
     if (room == PlayRoom4){//Конфеты
         instance_create(1300,450,obj_boss3)
