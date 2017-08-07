@@ -432,9 +432,17 @@ if (100-(global.missed/(score/100)) &lt; 0){
 else if (100-(global.missed/(score/100)) &gt; 100){
     draw_text(1250,10,"100%")}
 else{
-    draw_text(1250,10,string(100-(global.missed/(score/100))) + "%")}//Процент точности
+    if (global.triple_shot = false){//Если тройной выстрел не куплен
+        draw_text(1250,10,string(100-(global.missed/(score/100))) + "%")}//Процент точности
+    else{
+        if (global.missed &gt; global.missed_triple_shot){
+            
+            //residual = (global.missed - global.missed_triple_shot)-1
+            //global.missed -= residual
+        }
+        draw_text(1250,10,string(100-(global.missed/(score/100))) + "%")}//Процент точности}
 //draw_text(1250,10,string(((score*100)/global.missed) + "%"));//Исправленный процент
-
+}
 //Отрисовка патрон цвета
 draw_set_color(c_red);
 draw_text(16,722,"1 ");
@@ -453,18 +461,31 @@ draw_text(700,722,"7 ");
 
 //Если каждого цвета собранно 10 то можно отрисовать магазин
 if (global.red&gt;=10 and global.orange&gt;=10 and global.yellow&gt;=10 and global.green&gt;=10 and global.blue&gt;=10 and global.darkBlue&gt;=10 and global.purple&gt;=10)
-{draw_set_color(c_white);
-if (global.language == "En"){
-    draw_text(1263,665," Shop ")}
-if (global.language == "Ru"){
-    draw_text(1230,665,"Магазин")}
-draw_text(1255,725,"0")
-//Звук активации магазина
-if !audio_is_playing(shop_bleep){
-    audio_play_sound(shop_bleep,0,true)}
-draw_sprite(spr_shope,-1,1280,700);global.shop = true}
-else{global.shop = false;
-audio_stop_sound(shop_bleep)}//Если нет то магазин ложь
+{
+    draw_set_color(c_white);
+    
+    if (global.language == "En"){
+        draw_text(1263,665," Shop ")
+    }
+    
+    if (global.language == "Ru"){
+        draw_text(1230,665,"Магазин")
+    }
+    
+    draw_text(1255,725,"0")
+    
+    //Звук активации магазина
+    if !audio_is_playing(shop_bleep){
+        audio_play_sound(shop_bleep,0,true)
+    }
+    
+    draw_sprite(spr_shope,-1,1280,700)
+    global.shop = true
+}
+else{
+    global.shop = false;
+    audio_stop_sound(shop_bleep)
+}//Если нет то магазин ложь
 //Отрисока тестовой информации
 //if global.shop == false {draw_text(1261,700,"Shop - false")}
 //if global.shop == true {draw_text(1261,700,"Shop - true")}
@@ -1070,9 +1091,9 @@ if (room == PlayRoom) {//Дино
 if (room == PlayRoom2) {//Панда
     draw_sprite(spr_boss2_logo,-1,1110,725)}
 if (room == PlayRoom3) {//Оса
-    draw_sprite(spr_boss5_logo,-1,1120,720)}
+    draw_sprite(spr_boss5_logo,-1,1050,900)}
 if (room == PlayRoom4) {//Зуб
-    draw_sprite(spr_boss2_logo,-1,1120,720)}
+    draw_sprite(spr_boss3_logo,-1,1120,720)}
 if (room == PlayRoom5) {//Светафор
     draw_sprite(spr_boss1_logo,-1,1120,720)}
 //Отрисовка всплывающегго чердечка

@@ -57,7 +57,16 @@ hp=100
 global.nlo_shot = false
 
 direct = choose('Up','Down')
-time = 90// длительности таймера
+if (room == PlayRoom)
+    {time = 90}// длительности таймера
+if (room == PlayRoom2)
+    {time = 85}
+if (room == PlayRoom3)
+    {time = 80}
+if (room == PlayRoom4)
+    {time = 75}
+if (room == PlayRoom5)
+    {time = 70}
 </string>
           </argument>
         </arguments>
@@ -236,7 +245,16 @@ if hp &gt;0 {
     else{
         action_create_object_motion(obj_nlo_laser,x,y,30,180)
         global.nlo_shot = false
-        time = 90
+        if (room == PlayRoom)
+            {time = 90}// длительности таймера
+        if (room == PlayRoom2)
+            {time = 85}
+        if (room == PlayRoom3)
+            {time = 80}
+        if (room == PlayRoom4)
+            {time = 75}
+        if (room == PlayRoom5)
+            {time = 70}
         audio_play_sound(nlo_shot_3,1,false)
     }
 }

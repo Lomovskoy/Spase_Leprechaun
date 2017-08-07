@@ -93,8 +93,10 @@
 global.WIDTH = display_get_width()
 global.HEIGHT = display_get_height()
 //Без этого не убдет сохраняться пропрции в комнате
+
 //Переменная промохов
 global.missed = 0
+global.missed_triple_shot = global.missed
 //Попытка создания 2мерног7о массива для рекордов
 global.RecordList["none","none"]= 0
 //Переменные меню
