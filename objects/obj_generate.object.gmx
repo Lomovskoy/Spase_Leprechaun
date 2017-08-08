@@ -297,6 +297,12 @@ alarm[0]= time1
 //    draw_text(30,70,'time: '+string(global.tine_crystal))
 //    draw_text(30,95,'boss3_shot: '+string(global.shining_crystal))
 //}
+draw_text(30,50,"missed: "+string(global.missed))
+draw_text(30,80,"missed_triple_shot: "+string(global.missed_triple_shot))
+draw_text(30,110,"residual: "+string(global.residual))
+//draw_text(30,140,"instance_count: "+string(instance_count))
+draw_text(30,140,"instance_number: "+string(instance_number(obj_bullet)))
+draw_text(30,170,"number_shots: "+string(global.number_shots))
 </string>
           </argument>
         </arguments>

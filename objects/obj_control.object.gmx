@@ -116,6 +116,8 @@ if room == PlayRoom{
 
 //Переменная для разового воспроизведения звука +1 жизни
 global.musik_app = false
+
+global.residual = 0
 </string>
           </argument>
         </arguments>
@@ -427,21 +429,166 @@ if (global.language == "En"){
     draw_set_color(c_fuchsia)
     draw_text(1100,10,"Точность:");// + string(global.missed));//Попадание
 }
-if (100-(global.missed/(score/100)) &lt; 0){
-    draw_text(1250,10,"0%")}
-else if (100-(global.missed/(score/100)) &gt; 100){
-    draw_text(1250,10,"100%")}
-else{
-    if (global.triple_shot = false){//Если тройной выстрел не куплен
-        draw_text(1250,10,string(100-(global.missed/(score/100))) + "%")}//Процент точности
-    else{
-        if (global.missed &gt; global.missed_triple_shot){
+//Если куплен тройной выстрел, коректировка процентов точности
+if (global.triple_shot = true){
+    if (global.missed &gt; global.missed_triple_shot){ 
+    
+        if(not(instance_exists(obj_bullet))){
+        
+            residual = (global.missed - global.missed_triple_shot)
             
-            //residual = (global.missed - global.missed_triple_shot)-1
-            //global.missed -= residual
+            if (residual == global.number_shots * 3)
+            {
+                global.missed -= (residual - global.number_shots)
+            }
+            else{
+                //Лерикон сдела 3 выстрела
+                r = global.number_shots 
+                //Получилось 3 * 3 = 9 партон
+                q = global.number_shots * 3
+                //2 из них попали в цель
+                w = q - (global.missed - global.missed_triple_shot)
+                // получается он промахнулся при 1м выстреле промах = 1
+                //вычисляем
+                
+            //  3 = 9 - 2 //* 3
+                e = q - w * 3
+            //  1 = 3 / 3
+                a = e / 3
+            /*
+            //  6 = 3 * 2
+                t = r * e 
+            //  1 = 7 - 6
+                a = e - t
+            */ 
+            
+            //Мы берём все выстрелы и умножаем их на 3 что ыб получить количество парон
+            //берём количество очков промаха в начале и отнимаем от них колчичество промахов в коне и полуцчаем сколько патрон попало
+            //потом умножаем количество попаданий на 3 что бы нивилировать тройной выстрел, то есть если он хоть 1н патрон попал из 3х то все 3 считаютсы попавшими
+            //потом отнимаем от всех патрон все попавшие патроны и остаютсфя только промахнувшиеся
+            //и потом делим это на 3 что бы нивилировать 3ной выстрел что если 3 патрона ушли с малака то челвоек промахнулся только 1н раз
+            
+            global.missed -= (global.missed - global.missed_triple_shot)
+            
+            global.missed += a
+                
+                //            9                      9                       
+                //global.number_shots * 3 - (global.number_shots * 3) - global.missed - global.missed_triple_shot
+            
+            
+            /*
+            Лерикон сдела 3 выстрела
+            Получилось 3 * 3 = 9 партон
+            2 из нех попали в цель
+            получается он промахнулся при 1м выстреле промах = 1
+            вычисляем
+            
+            
+            9 - 2 = 7
+            9 / 3 = 3
+            3 * 2 = 6
+            7 - 6 = 1
+            
+            
+            9 - 2 * 3 = 3
+            3 / 3 = 1
+            
+            
+            Лерикон сдела 2 выстрела
+            Получилось 2 * 3 = 6 партон
+            1 из нех попали в цель
+            получается он промахнулся при 1м выстреле промах = 1
+            
+            6 - 1 = 5
+            6 / 3 = 2
+            2 * 1 = 2
+            5 - 2 = 3
+            
+            6 - 1 * 3 = 3
+            3 / 3 = 1
+            
+            
+            Лерикон сдела 5 выстрела
+            Получилось 5 * 3 = 15 партон
+            3 из нех попали в цель
+            получается он промахнулся при 2ч выстреле промах = 2
+            
+            15 - 3 * 3 = 6
+            
+            6 / 3 = 2
+            
+            */
+            }
+            /*if (residual == 1){
+                global.missed -= 1
+                global.missed_triple_shot = global.missed
+            }
+            else if (residual == 2){
+                global.missed -= 2
+                global.missed_triple_shot = global.missed
+            }
+            else if (residual == 3){
+                global.missed -= 2
+                global.missed_triple_shot = global.missed
+            }
+            //--------------------------------------------
+            else if (residual == 4){
+                global.missed -= 4
+                global.missed_triple_shot = global.missed
+            }
+            else if (residual == 5){
+                global.missed -= 4
+                global.missed_triple_shot = global.missed
+            }
+            else if (residual == 6){
+                global.missed -= 4
+                global.missed_triple_shot = global.missed
+            }
+            //--------------------------------------------
+            else if (residual == 7){
+                global.missed -= 7
+                global.missed_triple_shot = global.missed
+            }
+            else if (residual == 8){
+                global.missed -= 4
+                global.missed_triple_shot = global.missed
+            }
+            else if (residual == 9){
+                global.missed -= 6
+                global.missed_triple_shot = global.missed
+            }*/
+            
+            global.number_shots = 0
         }
-        draw_text(1250,10,string(100-(global.missed/(score/100))) + "%")}//Процент точности}
-//draw_text(1250,10,string(((score*100)/global.missed) + "%"));//Исправленный процент
+    }
+    if (100-(global.missed/(score/100)) &lt; 0){
+        draw_text(1250,10,"0%")}
+    else if (100-(global.missed/(score/100)) &gt; 100){
+        draw_text(1250,10,"100%")}
+    else{
+        
+        draw_text(1250,10,string(100-(global.missed/(score/100))) + "%")//Исправленный процент
+    }
+}
+//Если не куплен то отрисовываем как обычно
+else {
+    if (100-(global.missed/(score/100)) &lt; 0){
+        draw_text(1250,10,"0%")}
+    else if (100-(global.missed/(score/100)) &gt; 100){
+        draw_text(1250,10,"100%")}
+    else{
+        draw_text(1250,10,string(100-(global.missed/(score/100))) + "%")//Процент точности
+        //if (global.triple_shot = false){//Если тройной выстрел не куплен
+        //    draw_text(1250,10,string(100-(global.missed/(score/100))) + "%")}//Процент точности
+        //else{
+        //    if (global.missed &gt; global.missed_triple_shot){
+                
+                //residual = (global.missed - global.missed_triple_shot)-1
+                //global.missed -= residual
+         //   }
+         //   draw_text(1250,10,string(100-(global.missed/(score/100))) + "%")}//Процент точности}
+    //draw_text(1250,10,string(((score*100)/global.missed) + "%"));//Исправленный процент
+    }
 }
 //Отрисовка патрон цвета
 draw_set_color(c_red);
