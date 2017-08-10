@@ -568,6 +568,7 @@ transparent = 10
 
 //collor = choose(c_red,c_orange,c_green,c_yellow,c_yellow,c_yellow,c_yellow)
 //effect_create_below(ef_smoke,obj_bullet.x,obj_bullet.y,1,collor)
+
 </string>
           </argument>
         </arguments>

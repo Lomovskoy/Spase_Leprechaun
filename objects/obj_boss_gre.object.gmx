@@ -1191,12 +1191,14 @@ if (shoot&gt;0) {
           <argument>
             <kind>1</kind>
             <string>//Скорость
+/*
 if global.green == 0{
     global.Speed1 = irandom_range(1,10)
     instance_create(obj_boss_gre.x,obj_boss_gre.y+20,obj_green)
     
     audio_play_sound(appearance_ball, 0, false);
 }
+*/
 </string>
           </argument>
         </arguments>

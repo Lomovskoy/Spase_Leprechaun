@@ -1109,7 +1109,7 @@ else
           <argument>
             <kind>1</kind>
             <string>global.bullet = true
-
+/*
 if (global.red + global.orange + global.yellow + global.green + global.blue + global.darkBlue + global.purple &lt; 4){
     //Выбор цвета шарика рандомно
     collor = choose(obj_red,obj_orange,obj_yellow,obj_green,obj_blue,obj_dark_blue,obj_purple)
@@ -1119,7 +1119,7 @@ if (global.red + global.orange + global.yellow + global.green + global.blue + gl
     instance_create(obj_boss3.x+192,obj_boss3.y+10,collor)
     audio_play_sound(appearance_ball, 0, false);
 }
-
+*/
 if hp == 85{
     audio_play_sound(glass2, 0, false);
 }if hp == 75{
