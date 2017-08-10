@@ -548,6 +548,23 @@ else{
     if (global.language == "Ru"){
         draw_text(600,540,"Купите прокачку")}
 }
+
+draw_set_font(user_fond)
+
+if (global.language == "En"){
+    draw_text(381,418,"Bullet`s")
+    draw_text(421,448,"speed")
+    
+    draw_text(627,418,"Leprechaun")
+    draw_text(681,448,"speed")
+}
+if (global.language == "Ru"){
+    draw_text(371,418,"Ускорение")
+    draw_text(451,448,"пули")
+    
+    draw_text(627,418,"Ускорение")
+    draw_text(630,448,"Лепрекона")
+}
 </string>
           </argument>
         </arguments>

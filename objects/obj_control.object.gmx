@@ -48,14 +48,14 @@
             <string>if room == PlayRoom{
     //Переменные всех пуль обнуляем
     
-    global.red = 0
-    global.orange = 0
-    global.yellow = 0
-    global.green = 0
-    global.blue = 0
-    global.darkBlue = 0
-    global.purple = 0
-    
+    global.red = 10
+    global.orange = 10
+    global.yellow = 10
+    global.green = 10
+    global.blue = 10
+    global.darkBlue = 10
+    global.purple = 10
+    /*
     //Случайная генерация патрон от секунд
     ReOrYeGrBlDaPu = current_second
     ReOrYeGrBlDaPu %= 7
@@ -72,7 +72,7 @@
     if ReOrYeGrBlDaPu == 5
         {global.darkBlue = 2}
     if ReOrYeGrBlDaPu == 6
-        {global.purple = 2}
+        {global.purple = 2}*/
 }
 //Определяем положеине иконки выбора цвета
 global.one = true
@@ -101,7 +101,7 @@ time = 0
 globalvar maxtime
 if room == PlayRoom{maxtime = 750;}//750
 if room == PlayRoom2{maxtime = 800;}//800
-if room == PlayRoom3{maxtime = 855;}//850
+if room == PlayRoom3{maxtime = 850;}//850
 if room == PlayRoom4{maxtime = 900;}//900
 if room == PlayRoom5{maxtime = 950;}//950
 global.boss = 0
@@ -3300,9 +3300,9 @@ audio_pause_all()
     {
         global.Name_Room = room
         room_goto(StoreRoom)//Перейти в магаз
-        game_save("savegame")//Сохранить игру
+        //game_save("savegame")//Сохранить игру
         audio_stop_sound(shop_bleep)
-        
+        /*
         user_name = file_text_open_write('user_name.txt')
         file_text_write_string(user_name,name)// Записывает имя игрока.
         file_text_writeln(user_name)// Начинает записывать данные с новой строчки).
@@ -3319,6 +3319,7 @@ audio_pause_all()
         s = string(global.s)//Секунды
         file_text_write_string(user_name,string(h+'h '+m+':'+s))
         file_text_close(user_name)//Сохраняет и закрывает документ
+        */
     }
 </string>
           </argument>
