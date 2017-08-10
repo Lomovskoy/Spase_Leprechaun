@@ -107,6 +107,8 @@
       <sprite>sprites\spr_load_beckground</sprite>
       <sprite>sprites\background</sprite>
       <sprite>sprites\spr_bask_paus</sprite>
+      <sprite>sprites\spr_background_inform</sprite>
+      <sprite>sprites\spr_background_inform2</sprite>
     </sprites>
     <sprites name="boll">
       <sprite>sprites\spr_red</sprite>
@@ -210,7 +212,6 @@
   </sprites>
   <backgrounds name="background">
     <background>background\back_stor</background>
-    <background>background\back_stor_draw</background>
     <background>background\background2</background>
   </backgrounds>
   <paths name="paths">

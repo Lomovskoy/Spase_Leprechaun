@@ -85,113 +85,33 @@
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
-        <id>524</id>
+        <id>501</id>
         <kind>0</kind>
-        <userelative>0</userelative>
+        <userelative>-1</userelative>
         <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
+        <useapplyto>-1</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_color</functionname>
+        <functionname>action_draw_sprite</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
-            <kind>13</kind>
-            <string>9048468</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>511</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_draw_rectangle</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
+            <kind>5</kind>
+            <sprite>spr_background_inform2</sprite>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>250</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>1000</string>
+            <string>-70</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>700</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>524</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_color</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>13</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>511</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_draw_rectangle</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>999</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>699</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
+            <string>-1</string>
           </argument>
         </arguments>
       </action>
@@ -235,7 +155,7 @@
         <arguments>
           <argument>
             <kind>13</kind>
-            <string>9048468</string>
+            <string>16777215</string>
           </argument>
         </arguments>
       </action>
@@ -264,7 +184,9 @@
     
     You start the game with two randomly colored bullets.
     
-    As you land a shot on a color ball you gain two points of color you just spent and 
+    As you land a shot on a color ball you gain two points 
+    
+    of color you just spent and 
     
     lose one point of a current color.
     
@@ -276,9 +198,13 @@
     
     Movement - "arrow keys"
     
-    In order to get to the shop you need to collect 10 points of each color and press key 0.
+    In order to get to the shop you need to collect 10 points 
     
-    After spending your points in the shop you will be left with 2 randomly 
+    of each color and press key 0.
+    
+    After spending your points in the shop you will be 
+    
+    left with 2 randomly 
     
     colored bullets as at the start of the game'
     
@@ -287,21 +213,35 @@
 if (global.language == "Ru"){
     draw_text_transformed(obj_instruction.x+10,obj_instruction.y+10,
     
-    'Вам предстоит начать своё нелёгкое путешествие в роли космического лепрекона!
+    'Вам предстоит начать своё нелёгкое путешествие в роли 
     
-    Ваши патроны это цвета радуги. В начале игры у вас будут 2 пули случано 
+    космического лепрекона! 
     
-    подобранного цвета. При попадании в цветной шарик вы получите 2 очка цвета 
+    Ваши патроны это цвета радуги. 
     
-    шарика и потратите 1 текущего цвета. Шарик можно сбить любым цветом 
+    В начале игры у вас будут 2 пули случано подобранного цвета. 
     
-    из имеющихся. Выбор цвета производится кнопками 1-7. Пробел - выстрел.
+    При попадании в цветной шарик вы получите 2 очка цвета 
     
-    Cтрелки Вверх, Вниз, Влево, Вправо - перемещение. Что бы попасть в магазин 
+    шарика и потратите 1 текущего цвета. 
     
-    нужно набрать 10 единиц всех цветов, нажать 0, после прохождения магазина, 
+    Шарик можно сбить любым цветом из имеющихся. 
     
-    у вас останется только 2 пули случано подобранного цвета.'
+    Выбор цвета производится кнопками 1-7. 
+    
+    Пробел - выстрел.
+    
+    Cтрелки Вверх, Вниз, Влево, Вправо - перемещение. 
+    
+    Что бы попасть в магазин нужно набрать 
+    
+    10 единиц всех цветов, 
+    
+    нажать 0, после прохождения магазина, 
+    
+    у вас останется только 
+    
+    2 пули случано подобранного цвета.'
     
     ,1.5,1.5,0)
 }
