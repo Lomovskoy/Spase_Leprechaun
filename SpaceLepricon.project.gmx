@@ -244,6 +244,7 @@
     <font>fonts\logo_font</font>
     <font>fonts\game_over_fond</font>
     <font>fonts\local_fond</font>
+    <font>fonts\work_font</font>
   </fonts>
   <objects name="objects">
     <object>objects\obj_space_ship</object>

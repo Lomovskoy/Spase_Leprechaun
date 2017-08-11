@@ -297,12 +297,53 @@ alarm[0]= time1
 //    draw_text(30,70,'time: '+string(global.tine_crystal))
 //    draw_text(30,95,'boss3_shot: '+string(global.shining_crystal))
 //}
-/*draw_text(30,50,"missed: "+string(global.missed))
-draw_text(30,80,"missed_triple_shot: "+string(global.missed_triple_shot))
+//draw_text(30,50,"missed: "+string(global.missed))
+/*draw_text(30,80,"missed_triple_shot: "+string(global.missed_triple_shot))
 draw_text(30,110,"residual: "+string(global.residual))
 //draw_text(30,140,"instance_count: "+string(instance_count))
 draw_text(30,140,"instance_number: "+string(instance_number(obj_bullet)))
 draw_text(30,170,"number_shots: "+string(global.number_shots))*/
+/*
+draw_set_color(c_black)
+draw_rectangle(30,50,250,250,false)
+draw_set_color(c_white)
+draw_set_font(work_font)
+draw_text(35,55,'if ( '+string(global.triple_shot)+' ):')
+draw_text(45,67,'if ( '+string(global.missed)+' &gt; '+string(global.missed_triple_shot)+' ):')
+draw_text(55,79,'if ( '+string(not(instance_exists(obj_bullet)))+' ):')
+draw_text(65,91, string(global.missed)+' - '+string(global.missed_triple_shot)+' = '+string(global.residual))
+draw_text(65,103,'if ( '+string(global.residual)+' == '+string(global.number_shots * 3)+' ):')
+draw_text(75,115,string(global.residual)+' - '+string(global.number_shots)+' = '+string(global.missed))
+draw_text(65,127,'else:')
+//Лерикон сдела 3 выстрела
+r = global.number_shots 
+//Получилось 3 * 3 = 9 партон
+q = global.number_shots * 3
+//2 из них попали в цель
+w = q - (global.missed - global.missed_triple_shot)
+// получается он промахнулся при 1м выстреле промах = 1
+//вычисляем
+//  3 = 9 - 2 //* 3
+e = q - w * 3
+//  1 = 3 / 3
+a = e / 3
+draw_text(75,139,string(q)+' - '+string(w)+' = '+string(e))
+draw_text(75,151,string(e)+' - '+string(3)+' = '+string(a))
+draw_text(75,163,'if ( '+string(a)+' &gt; '+string(0)+' ):')
+draw_text(85,175,string(global.missed)+' = '+string(global.missed_triple_shot))
+draw_text(85,187,string(global.missed)+' += '+string(a))
+draw_text(75,201,'else:')
+draw_text(85,213,string(global.missed)+' = '+string(global.missed_triple_shot))
+draw_text(75,225,string(a)+' = 0')
+draw_text(65,237,string(global.number_shots)+' = 0')
+
+*/
+
+
+
+
+
+
 </string>
           </argument>
         </arguments>
