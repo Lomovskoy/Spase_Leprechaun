@@ -237,6 +237,17 @@ alarm[0]= time1
         nlo_create_time(nlotime,global.nlo_create)
     }else{
         //if (object_exists(obj_nlo_1) != 1){
+            if (room == PlayRoom)
+                { nlotime = (maxtime / 11) * 30 }// количество тарелок
+            if (room == PlayRoom2)
+                { nlotime = (maxtime / 12) * 30 }
+            if (room == PlayRoom3)
+                { nlotime = (maxtime / 13) * 30 }
+            if (room == PlayRoom4)
+                { nlotime = (maxtime / 14) * 30 }
+            if (room == PlayRoom5)
+                { nlotime = (maxtime / 15) * 30 }
+            
             nlotime = (maxtime / 10) * 30
             global.nlo_create = false
             //Генерация обьекта

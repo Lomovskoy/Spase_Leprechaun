@@ -59,7 +59,7 @@
             <kind>1</kind>
             <string>moution_speed = false
 
-hp = 100
+hp = 300
 
 global.bodd_deth_time = 15
 global.bodd_deth_flag = false
@@ -1351,7 +1351,7 @@ transparent = 10
         <exetype>1</exetype>
         <functionname>action_kill_object</functionname>
         <codestring></codestring>
-        <whoName>obj_bullet</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
       </action>

@@ -236,7 +236,7 @@ if (global.red + global.orange + global.yellow + global.green + global.blue + gl
         <exetype>1</exetype>
         <functionname>action_kill_object</functionname>
         <codestring></codestring>
-        <whoName>obj_bullet</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
       </action>

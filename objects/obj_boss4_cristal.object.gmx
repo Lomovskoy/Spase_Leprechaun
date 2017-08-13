@@ -328,7 +328,7 @@ if (i &gt; 18){
         <exetype>1</exetype>
         <functionname>action_kill_object</functionname>
         <codestring></codestring>
-        <whoName>obj_bullet</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
       </action>

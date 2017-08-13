@@ -226,14 +226,32 @@ if (room == PlayRoom5)
             <string>
 if (direct == 'Up'){
     if (y &gt;= 100){
-        y -=8
+        if (room == PlayRoom)
+            { y-=8 }// скорость
+        if (room == PlayRoom2)
+            { y-=9 }
+        if (room == PlayRoom3)
+            { y-=10 }
+        if (room == PlayRoom4)
+            { y-=11 }
+        if (room == PlayRoom5)
+            { y-=12 }
     }else{
         direct = 'Down'
     }
 }
 if (direct == 'Down'){
     if (y &lt;= 660){
-        y +=8
+        if (room == PlayRoom)
+            { y+=8 }// скорость
+        if (room == PlayRoom2)
+            { y+=9 }
+        if (room == PlayRoom3)
+            { y+=10 }
+        if (room == PlayRoom4)
+            { y+=11 }
+        if (room == PlayRoom5)
+            { y+=12 }
     }else{
         direct = 'Up'
     }
@@ -520,7 +538,7 @@ global.bullet = true
         <exetype>1</exetype>
         <functionname>action_kill_object</functionname>
         <codestring></codestring>
-        <whoName>obj_bullet</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
       </action>
