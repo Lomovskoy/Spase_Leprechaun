@@ -261,7 +261,13 @@ if hp &gt;0 {
         nlo_time_shot(global.nlo_shot,time)
     }
     else{
-        action_create_object_motion(obj_nlo_laser,x,y,30,180)
+        if (obj_space_ship.x &lt;= obj_nlo_1.x){
+            action_create_object_motion(obj_nlo_laser,x,y,30,180)
+        }
+        if (obj_space_ship.x &gt; obj_nlo_1.x){
+            action_create_object_motion(obj_nlo_laser,x,y,30,0)
+        }
+        
         global.nlo_shot = false
         if (room == PlayRoom)
             {time = 90}// длительности таймера
