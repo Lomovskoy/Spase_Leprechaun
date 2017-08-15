@@ -207,6 +207,10 @@
     </sprites>
     <sprites name="enemies_spr">
       <sprite>sprites\spr_nlo1</sprite>
+      <sprite>sprites\spr_nlo2</sprite>
+      <sprite>sprites\spr_nlo3</sprite>
+      <sprite>sprites\spr_nlo4</sprite>
+      <sprite>sprites\spr_nlo5</sprite>
       <sprite>sprites\spr_nlo_laser</sprite>
     </sprites>
   </sprites>

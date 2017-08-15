@@ -58,15 +58,20 @@ global.nlo_shot = false
 
 direct = choose('Up','Down')
 if (room == PlayRoom)
-    {time = 90}// длительности таймера
+    {time = 90// длительности таймера
+    sprite_index = spr_nlo1}
 if (room == PlayRoom2)
-    {time = 85}
+    {time = 85
+    sprite_index = spr_nlo2}
 if (room == PlayRoom3)
-    {time = 80}
+    {time = 80
+    sprite_index = spr_nlo3}
 if (room == PlayRoom4)
-    {time = 75}
+    {time = 75
+    sprite_index = spr_nlo4}
 if (room == PlayRoom5)
-    {time = 70}
+    {time = 70
+    sprite_index = spr_nlo5}
 </string>
           </argument>
         </arguments>
