@@ -38,7 +38,7 @@ global.time_destroy = 15
 
 shot_number = 0
 draw_shot = 0
-
+play_sound = false
 noiz = 0
 
 //global.draw_mustache = false
@@ -46,6 +46,8 @@ noiz = 0
 //flag2 = 'true'
 
 instance_create(obj_boss3.x,obj_boss3.y,obj_moustache)
+
+
 </string>
           </argument>
         </arguments>
@@ -892,7 +894,7 @@ instance_create(obj_boss3.x,obj_boss3.y,obj_moustache)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (hp &gt; -20)
+            <string>if (hp &gt; -10)
     {
         if (global.boss3_shot == false)
         {
@@ -1120,25 +1122,65 @@ if (global.red + global.orange + global.yellow + global.green + global.blue + gl
     audio_play_sound(appearance_ball, 0, false);
 }
 */
-if hp == 85{
+/*if hp &lt; 270 and hp &gt; 255 {
     audio_play_sound(glass2, 0, false);
-}if hp == 75{
+}
+else if hp &lt; 240 and hp &gt; 225{
     audio_play_sound(boss3_crush, 0, false);
-}if hp == 65{
+}
+else if hp &gt; 210 and hp &gt; 195 {
     audio_play_sound(boss3_crack_1, 0, false);
-}if hp == 55{
+}
+else if hp &lt; 180 and hp &gt; 165 {
     audio_play_sound(boss3_crack_2, 0, false);
-}if hp == 45{
+}
+else if hp &lt; 150 and hp &gt; 135 {
     audio_play_sound(boss3_crack_1, 0, false);
-}if hp == 35{
+}
+else if hp &lt; 120 and hp &gt; 105 {
     audio_play_sound(boss3_crack_2, 0, false);
-}if hp == 25{
+}
+else if hp &lt; 90 and hp &gt; 75 {
     audio_play_sound(boss3_crack_1, 0, false);
-}if hp == 15{
+}
+else if hp &lt; 60 and hp &gt; 45 {
     audio_play_sound(boss3_crack_2, 0, false);
-}if hp == 5{
+}
+else if hp &lt; 30 and hp &gt; 15{
     audio_play_sound(boss3_crack_1, 0, false);
-}if hp == -5{
+}
+else if hp &lt;= 0{
+    audio_play_sound(boss3_crack_2, 0, false);
+}*/
+
+if hp == 265{
+    audio_play_sound(glass2, 0, false);
+}
+else if hp == 235 {
+    audio_play_sound(boss3_crush, 0, false);
+}
+else if hp == 205 {
+    audio_play_sound(boss3_crack_1, 0, false);
+}
+else if hp == 175{
+    audio_play_sound(boss3_crack_2, 0, false);
+}
+else if hp == 145{
+    audio_play_sound(boss3_crack_1, 0, false);
+}
+else if hp == 115{
+    audio_play_sound(boss3_crack_2, 0, false);
+}
+else if hp == 85{
+    audio_play_sound(boss3_crack_1, 0, false);
+}
+else if hp == 55{
+    audio_play_sound(boss3_crack_2, 0, false);
+}
+else if hp == 25{
+    audio_play_sound(boss3_crack_1, 0, false);
+}
+else if hp == -5{
     audio_play_sound(boss3_crack_2, 0, false);
 }
 </string>
@@ -1167,44 +1209,45 @@ if hp == 85{
     {
         draw_sprite(spr_boss3,-1,obj_boss3.x,obj_boss3.y)
         noiz = 1
+        
     }
-else if hp &gt;= 250
+else if hp &gt;= 240
     {
         draw_sprite(spr_boss3_2,-1,obj_boss3.x,obj_boss3.y)
     }
-else if hp &gt;= 220
+else if hp &gt;= 210
     {
         draw_sprite(spr_boss3_3,-1,obj_boss3.x,obj_boss3.y)
     }
-else if hp &gt;= 190
+else if hp &gt;= 180
     {
         draw_sprite(spr_boss3_4,-1,obj_boss3.x,obj_boss3.y)
     }
-else if hp &gt;= 160
+else if hp &gt;= 150
     {
         draw_sprite(spr_boss3_5,-1,obj_boss3.x,obj_boss3.y)
     }
-else if hp &gt;= 130
+else if hp &gt;= 120
     {
         draw_sprite(spr_boss3_6,-1,obj_boss3.x,obj_boss3.y)
     }
-else if hp &gt;= 100
+else if hp &gt;= 90
     {
         draw_sprite(spr_boss3_7,-1,obj_boss3.x,obj_boss3.y)
     }
-else if hp &gt;= 70
+else if hp &gt;= 60
     {
         draw_sprite(spr_boss3_8,-1,obj_boss3.x,obj_boss3.y)
     }
-else if hp &gt;= 40
+else if hp &gt;= 30
     {
         draw_sprite(spr_boss3_9,-1,obj_boss3.x,obj_boss3.y)
     }
-else if hp &gt;= -10
+else if hp &gt;= 0
     {
         draw_sprite(spr_boss3_10,-1,obj_boss3.x,obj_boss3.y)
     }
-else if hp &lt; -20
+else if hp &lt; -5
     {
         draw_sprite(spr_boss3_11,-1,obj_boss3.x,obj_boss3.y)
     }

@@ -248,7 +248,7 @@ alarm[0]= time1
             if (room == PlayRoom5)
                 { nlotime = (maxtime / 15) * 30 }
             
-            nlotime = (maxtime / 10) * 30
+            nlotime = 3000//(maxtime / 10) * 30
             global.nlo_create = false
             //Генерация обьекта
             height = (random_range(101,660))
