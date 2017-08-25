@@ -173,8 +173,8 @@ global.bullet = true
 // Задаём собственную скорость анимации обьекта, независимо от скоростикомнаты
 image_speed = 11/room_speed;//10
 
-global.frequent_shot = true;// Быстрый выстрел
-global.aimed_shot =  true;// Прицел
+global.frequent_shot = false;// Быстрый выстрел
+global.aimed_shot =  false;// Прицел
 global.triple_shot = false;// Тройной выстрел
 global.speed_shot = false;// Быстра скорость
 global.speed_lepricon = false;// Увеличенная скорость липрикона

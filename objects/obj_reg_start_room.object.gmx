@@ -266,13 +266,24 @@ else
         }
     if loadgame == 1
         {
-            if (global.language == "En"){
-                draw_set_font(main_fond);
-                draw_text(470,475, 'Press Enter to Load Game')}
-            if (global.language == "Ru"){
-                draw_set_font(main_fond);
-                draw_text(470,475, 'Нажмите Ввод для Загрузки Игры')}
-                
+            if (file_exists('savegame') == true)//Если файл существует
+            {
+                if (global.language == "En"){
+                    draw_set_font(main_fond);
+                    draw_text(470,475, 'Press Enter to Load Game')}
+                if (global.language == "Ru"){
+                    draw_set_font(main_fond);
+                    draw_text(470,475, 'Нажмите Ввод для Загрузки Игры')}
+            }
+            else
+            {
+                if (global.language == "En"){
+                    draw_set_font(main_fond);
+                    draw_text(470,475, 'You have no savegames')}
+                if (global.language == "Ru"){
+                    draw_set_font(main_fond);
+                    draw_text(470,475, 'У вас нет сохранений')}
+            } 
             if (file_exists('user_name.txt') == true)//Если файл существует
             {
                 user_name = file_text_open_read('user_name.txt')//Открывает для чтения
@@ -329,7 +340,7 @@ else
         globalvar credits; credits = 0;
         globalvar recordlist; recordlist = 0;
         globalvar exid; exid = 0;
-        audio_stop_sound(Start_Musik)
+        //audio_stop_sound(Start_Musik)
         global.new_reg = 0;
         room_goto(PlayRoom);
         game_save("savegame");

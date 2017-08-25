@@ -350,7 +350,7 @@ draw_text(65,237,string(global.number_shots)+' = 0')
 
 */
 
-draw_text(30,50,string(obj_space_ship.image_index))
+//draw_text(30,50,string(obj_space_ship.image_index))
 
 
 
