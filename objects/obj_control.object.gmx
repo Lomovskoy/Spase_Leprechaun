@@ -99,11 +99,11 @@ alarm[6] = 30;
 time = 0
 
 globalvar maxtime
-if room == PlayRoom{maxtime = 750;}//750
-if room == PlayRoom2{maxtime = 800;}//800
-if room == PlayRoom3{maxtime = 850;}//850
-if room == PlayRoom4{maxtime = 900;}//900
-if room == PlayRoom5{maxtime = 950;}//950
+if room == PlayRoom{maxtime = 800;}//800
+if room == PlayRoom2{maxtime = 850;}//850
+if room == PlayRoom3{maxtime = 900;}//900
+if room == PlayRoom4{maxtime = 950;}//950
+if room == PlayRoom5{maxtime = 1000;}//1000
 global.boss = 0
 
 if room == PlayRoom{

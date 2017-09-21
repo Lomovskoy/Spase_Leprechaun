@@ -118,7 +118,7 @@ if rot &gt;= 360{
         <functionname>action_effect</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
-        <relative>0</relative>
+        <relative>-1</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>

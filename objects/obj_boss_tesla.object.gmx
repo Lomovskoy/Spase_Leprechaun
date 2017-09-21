@@ -127,17 +127,7 @@ else{
             <kind>1</kind>
             <string>global.live_tesla -= 10
 global.bullet = true
-/*
-if (global.red + global.orange + global.yellow + global.green + global.blue + global.darkBlue + global.purple &lt; 4){
-    //Выбор цвета шарика рандомно
-    collor = choose(obj_red,obj_orange,obj_yellow,obj_green,obj_blue,obj_dark_blue,obj_purple)
-    //Скорость
-    global.Speed1 = irandom_range(1,10)
-    //Генерация обьекта
-    instance_create(obj_boss_tesla.x+192,obj_boss_tesla.y+10,collor)
-    audio_play_sound(appearance_ball, 0, false);
-}
-*/
+
 </string>
           </argument>
         </arguments>

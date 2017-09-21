@@ -1111,47 +1111,6 @@ else
           <argument>
             <kind>1</kind>
             <string>global.bullet = true
-/*
-if (global.red + global.orange + global.yellow + global.green + global.blue + global.darkBlue + global.purple &lt; 4){
-    //Выбор цвета шарика рандомно
-    collor = choose(obj_red,obj_orange,obj_yellow,obj_green,obj_blue,obj_dark_blue,obj_purple)
-    //Скорость
-    global.Speed1 = irandom_range(1,10)
-    //Генерация обьекта
-    instance_create(obj_boss3.x+192,obj_boss3.y+10,collor)
-    audio_play_sound(appearance_ball, 0, false);
-}
-*/
-/*if hp &lt; 270 and hp &gt; 255 {
-    audio_play_sound(glass2, 0, false);
-}
-else if hp &lt; 240 and hp &gt; 225{
-    audio_play_sound(boss3_crush, 0, false);
-}
-else if hp &gt; 210 and hp &gt; 195 {
-    audio_play_sound(boss3_crack_1, 0, false);
-}
-else if hp &lt; 180 and hp &gt; 165 {
-    audio_play_sound(boss3_crack_2, 0, false);
-}
-else if hp &lt; 150 and hp &gt; 135 {
-    audio_play_sound(boss3_crack_1, 0, false);
-}
-else if hp &lt; 120 and hp &gt; 105 {
-    audio_play_sound(boss3_crack_2, 0, false);
-}
-else if hp &lt; 90 and hp &gt; 75 {
-    audio_play_sound(boss3_crack_1, 0, false);
-}
-else if hp &lt; 60 and hp &gt; 45 {
-    audio_play_sound(boss3_crack_2, 0, false);
-}
-else if hp &lt; 30 and hp &gt; 15{
-    audio_play_sound(boss3_crack_1, 0, false);
-}
-else if hp &lt;= 0{
-    audio_play_sound(boss3_crack_2, 0, false);
-}*/
 
 if hp == 265{
     audio_play_sound(glass2, 0, false);
@@ -1243,7 +1202,7 @@ else if hp &gt;= 30
     {
         draw_sprite(spr_boss3_9,-1,obj_boss3.x,obj_boss3.y)
     }
-else if hp &gt;= 0
+else if hp &gt;= -5
     {
         draw_sprite(spr_boss3_10,-1,obj_boss3.x,obj_boss3.y)
     }
