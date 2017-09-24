@@ -58,6 +58,7 @@ alarm[0]=time1//Инициализация таймера шариков
 alarm[2]=time2//Инициализация таймера метиоритов
 
 meteorite = 'none'
+collor = 'null'
 </string>
           </argument>
         </arguments>
@@ -337,8 +338,14 @@ draw_text(65,237,string(global.number_shots)+' = 0')
 */
 
 //draw_text(30,50,string(obj_space_ship.image_index))
+//Проверка ложного звука появления шарика
+/*
+draw_text(30,50,string(time1))
 
+draw_text(30,80,string(object_get_name(collor)))
 
+draw_text(30,110,string(collor))
+*/
 
 
 </string>
