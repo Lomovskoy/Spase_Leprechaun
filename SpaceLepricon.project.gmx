@@ -107,7 +107,6 @@
       <sprite>sprites\spr_load_beckground</sprite>
       <sprite>sprites\background</sprite>
       <sprite>sprites\spr_bask_paus</sprite>
-      <sprite>sprites\spr_background_inform</sprite>
       <sprite>sprites\spr_background_inform2</sprite>
     </sprites>
     <sprites name="boll">
