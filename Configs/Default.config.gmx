@@ -430,14 +430,8 @@
     <option_textureGroup0_parent>TexPage1</option_textureGroup0_parent>
     <option_textureGroup0_scaled>0</option_textureGroup0_scaled>
     <option_textureGroup0_targets>9223372036854775807</option_textureGroup0_targets>
-    <option_textureGroup1_border>2</option_textureGroup1_border>
-    <option_textureGroup1_nocropping>0</option_textureGroup1_nocropping>
-    <option_textureGroup1_parent>TexPage1</option_textureGroup1_parent>
-    <option_textureGroup1_scaled>0</option_textureGroup1_scaled>
-    <option_textureGroup1_targets>9223372036854775807</option_textureGroup1_targets>
-    <option_textureGroup_count>2</option_textureGroup_count>
+    <option_textureGroup_count>1</option_textureGroup_count>
     <option_textureGroups0>Default</option_textureGroups0>
-    <option_textureGroups1>TexPage1</option_textureGroups1>
     <option_tizen_app_id>http://yourdomain/SpaceLepricon</option_tizen_app_id>
     <option_tizen_build_version>0</option_tizen_build_version>
     <option_tizen_display_name>SpaceLepricon</option_tizen_display_name>
@@ -559,7 +553,7 @@
     <option_windows_copyright_info>2017</option_windows_copyright_info>
     <option_windows_create_textures_on_demand>False</option_windows_create_textures_on_demand>
     <option_windows_description_info>game</option_windows_description_info>
-    <option_windows_enable_steam>-1</option_windows_enable_steam>
+    <option_windows_enable_steam>0</option_windows_enable_steam>
     <option_windows_game_icon>Configs\Default\windows\runner_icon.ico</option_windows_game_icon>
     <option_windows_license>Configs\Default\windows\License.txt</option_windows_license>
     <option_windows_mainor_version>5</option_windows_mainor_version>
@@ -573,7 +567,7 @@
     <option_windows_sleep_margin>1</option_windows_sleep_margin>
     <option_windows_splash_background_colour>#000000</option_windows_splash_background_colour>
     <option_windows_splash_screen>Configs\Default\windows\splash.png</option_windows_splash_screen>
-    <option_windows_steam_app_id>720630</option_windows_steam_app_id>
+    <option_windows_steam_app_id>0</option_windows_steam_app_id>
     <option_windows_texture_page>8192</option_windows_texture_page>
     <option_windows_use_splash>-1</option_windows_use_splash>
     <option_windows_vertex_buffer_method2>1</option_windows_vertex_buffer_method2>

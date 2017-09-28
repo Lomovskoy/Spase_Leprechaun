@@ -61,7 +61,7 @@
     <instance objName="obj_reg_start_room" x="1312" y="64" name="inst_5E0EA5C4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_menu_screen" x="445" y="278" name="inst_2CB422DA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="background_start" x="1344" y="0" name="inst_EC060830" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_logo" x="32" y="-54" name="inst_3198AECB" locked="0" code="" scaleX="0.720000028610229" scaleY="0.600000023841858" colour="4294967295" rotation="0"/>
+    <instance objName="obj_logo" x="32" y="-54" name="inst_3198AECB" locked="0" code="" scaleX="0.72000002861023" scaleY="0.600000023841858" colour="4294967295" rotation="0"/>
     <instance objName="background_start" x="2688" y="0" name="inst_0F62B1F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_how_to_play" x="32" y="700" name="inst_8FFFBD2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_En" x="1216" y="700" name="inst_EF1C51D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
