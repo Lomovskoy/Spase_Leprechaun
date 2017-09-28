@@ -479,7 +479,7 @@ image_speed = 11/room_speed;//10
         <arguments>
           <argument>
             <kind>5</kind>
-            <sprite>splash_screen_cat</sprite>
+            <sprite>splash_screen</sprite>
           </argument>
           <argument>
             <kind>0</kind>
@@ -553,7 +553,7 @@ image_speed = 11/room_speed;//10
         <arguments>
           <argument>
             <kind>5</kind>
-            <sprite>splash_screen_no_cat</sprite>
+            <sprite>&lt;undefined&gt;</sprite>
           </argument>
           <argument>
             <kind>0</kind>
