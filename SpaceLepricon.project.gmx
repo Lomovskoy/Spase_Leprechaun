@@ -214,8 +214,10 @@
     </sprites>
     <sprites name="splash_screen">
       <sprite>sprites\splash_screen</sprite>
+      <sprite>sprites\splash_screen_star</sprite>
+      <sprite>sprites\splash_screen_bush</sprite>
+      <sprite>sprites\splash_screen_lepr</sprite>
       <sprite>sprites\splash_screen_cloud</sprite>
-      <sprite>sprites\splash_screen_picturie</sprite>
       <sprite>sprites\splash_screen_cat</sprite>
     </sprites>
   </sprites>
@@ -280,6 +282,7 @@
       <object>objects\obj_timer</object>
       <object>objects\obj_game_over</object>
       <object>objects\obj_instruction</object>
+      <object>objects\obj_splash_screen</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_background1</object>
