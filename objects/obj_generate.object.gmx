@@ -59,6 +59,9 @@ alarm[2]=time2//Инициализация таймера метиоритов
 
 meteorite = 'none'
 collor = 'null'
+objekt = 0
+height = 'null'
+global.Speed1 = 'null'
 </string>
           </argument>
         </arguments>
@@ -131,7 +134,7 @@ collor = 'null'
     //Скорость
     global.Speed2 = irandom_range(1,10)
     //Генерация обьекта
-    instance_create(1350,height,meteorite)
+    objekt = instance_create(1350,height,meteorite)
 
 
 }
@@ -169,9 +172,10 @@ alarm[2]= time2
     //Скорость
     global.Speed1 = irandom_range(1,10)
     //Генерация обьекта
-    instance_create(1360,height,collor)
-    audio_play_sound(appearance_ball, 0, false);
-
+    objekt = instance_create(1360,height,collor)
+    if instance_exists(objekt){
+        audio_play_sound(appearance_ball, 0, false);
+    }
 }
 //Рекурсируем таймер
 alarm[0]= time1
@@ -239,7 +243,7 @@ alarm[0]= time1
             global.nlo_create = false
             //Генерация обьекта
             height = (random_range(101,660))
-            instance_create(1360,height,obj_nlo_1)
+            objekt = instance_create(1360,height,obj_nlo_1)
         //}
     }
 }
@@ -249,6 +253,46 @@ alarm[0]= time1
       </action>
     </event>
     <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>605</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>Все данные для тестирования игры</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>524</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_color</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>13</kind>
+            <string>16777215</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -339,15 +383,17 @@ draw_text(65,237,string(global.number_shots)+' = 0')
 
 //draw_text(30,50,string(obj_space_ship.image_index))
 //Проверка ложного звука появления шарика
-/*
-draw_text(30,50,string(time1))
+/*draw_set_font(work_font)
 
-draw_text(30,80,string(object_get_name(collor)))
-
-draw_text(30,110,string(collor))
+draw_text(1150,50,"Id экземпляра:  " + string(objekt - 100139))
+draw_text(1150,65,"Id обьекта:         " + string(collor))
+draw_text(1150,80,"Имя обьекта:     " + string(object_get_name(collor)))
+if instance_exists(objekt){
+draw_text(1150,95,"X обьекта:          " + string(objekt.x) + " | " + string(1360))
+draw_text(1150,110,"Y обьекта:          " + string(objekt.y) + " | " + string(height))
+draw_text(1150,125,"Скорость:           " + string(global.Speed1))
+}
 */
-
-
 </string>
           </argument>
         </arguments>
