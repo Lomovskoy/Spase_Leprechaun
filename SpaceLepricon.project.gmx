@@ -283,6 +283,7 @@
       <object>objects\obj_game_over</object>
       <object>objects\obj_instruction</object>
       <object>objects\obj_splash_screen</object>
+      <object>objects\obj_steem_achievement</object>
     </objects>
     <objects name="Background">
       <object>objects\obj_background1</object>
