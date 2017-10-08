@@ -72,6 +72,7 @@
     <instance objName="obj_background6_5" x="1350" y="0" name="inst_8CE8547C" locked="0" code="" scaleX="1.00999999046326" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_background7_5" x="1350" y="0" name="inst_9AA6A38F" locked="0" code="" scaleX="1.00999999046326" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_background7_5" x="2720" y="0" name="inst_8704CF47" locked="0" code="" scaleX="1.00999999046326" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_steem_achievement" x="0" y="0" name="inst_896B95FC" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

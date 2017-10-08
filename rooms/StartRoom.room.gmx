@@ -66,7 +66,6 @@
     <instance objName="obj_how_to_play" x="32" y="700" name="inst_8FFFBD2A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_En" x="1216" y="700" name="inst_EF1C51D1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_Ru" x="1248" y="700" name="inst_075A7673" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_steem_achievement" x="0" y="0" name="inst_22B1B66E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="&lt;undefined&gt;" x="0" y="0" w="384" h="356" xo="0" yo="0" id="10000074" name="inst_E162B761" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -71,6 +71,10 @@ if audio_is_paused(sountrack_music_4)
     {
         audio_resume_sound(sountrack_music_4);
     }
+if audio_is_paused(sountrack_music_5)
+    {
+        audio_resume_sound(sountrack_music_5);
+    }
 </string>
           </argument>
         </arguments>
@@ -162,6 +166,10 @@ if audio_is_paused(sountrack_music_3)
 if audio_is_paused(sountrack_music_4)
     {
         audio_resume_sound(sountrack_music_4);
+    }
+if audio_is_paused(sountrack_music_5)
+    {
+        audio_resume_sound(sountrack_music_5);
     }
 </string>
           </argument>

@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,21 +25,80 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>FirstShoot = false
-points100 = false
-points300 = false
-points500 = false
-points700 = false
-Sniper = false
-Tenacious = false
-Rich = false
-BestFriend = false
-FirstBlood = false
-DoubleKill = false
-TripleKill = false
-UltraKill = false
-Rampage = false
+            <string>if (room == PlayRoom){
+    global.FirstShoot = false
+    global.points100 = false
+    global.points300 = false
+    global.points500 = false
+    global.points700 = false
+    global.Sniper = false
+    global.Tenacious = false
+    global.Rich = false
+    global.BestFriend = false
+    global.FirstBlood = false
+    global.DoubleKill = false
+    global.TripleKill = false
+    global.UltraKill = false
+    global.Rampage = false
+}
+//====================Очищение всех достижений========================
+/*
+//Достижение первый выстрел
+if steam_get_achievement("NEW_ACHIEVEMENT_1_14")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_14")
 
+//Достижение 100 очков
+if steam_get_achievement("NEW_ACHIEVEMENT_1_0")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_0")
+    
+//Достижение 300 очков
+if steam_get_achievement("NEW_ACHIEVEMENT_1_2")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_2")
+
+//Достижение 500 очков
+if steam_get_achievement("NEW_ACHIEVEMENT_1_3")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_3")
+
+//Достижение 700 очков
+if steam_get_achievement("NEW_ACHIEVEMENT_1_4")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_4")
+
+//Достижение точность 99%
+if steam_get_achievement("NEW_ACHIEVEMENT_1_5")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_5")
+
+//Достижение 6 жизней под конец игры
+if steam_get_achievement("NEW_ACHIEVEMENT_1_6")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_6")
+
+//Достижение покупка 5 прокачек
+if steam_get_achievement("NEW_ACHIEVEMENT_1_7")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_7")
+
+//Достижение покупка котика
+if steam_get_achievement("NEW_ACHIEVEMENT_1_8")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_8")
+
+//Достижеине убийство первого босса
+if steam_get_achievement("NEW_ACHIEVEMENT_1_9")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_9")
+
+//Достижеине убийство второго босса
+if steam_get_achievement("NEW_ACHIEVEMENT_1_10")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_10")
+
+//Достижеине убийство второго босса
+if steam_get_achievement("NEW_ACHIEVEMENT_1_11")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_11")
+
+//Достижеине убийство третьего босса
+if steam_get_achievement("NEW_ACHIEVEMENT_1_12")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_12")
+
+//Достижеине убийство третьего босса
+if steam_get_achievement("NEW_ACHIEVEMENT_1_13")
+    steam_clear_achievement("NEW_ACHIEVEMENT_1_13")
+*/
 </string>
           </argument>
         </arguments>
@@ -62,151 +121,193 @@ Rampage = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(FirstShoot == false){
+            <string>if(global.FirstShoot == false){
 //Достижение первый выстрел
     // Это проверяет наличие объекта вообще: то есть как ресурс, а не как игровой объект 
     //if(object_exists(obj_bullet)){
     if(instance_number(obj_bullet)){
         if (!steam_get_achievement("NEW_ACHIEVEMENT_1_14")){
+            global.FirstShoot = true
             steam_set_achievement("NEW_ACHIEVEMENT_1_14");
-            FirstShoot = true
+        }
+        else {
+            global.FirstShoot = true
         }
     }
 }
-if(points100 == false){
+if(global.points100 == false){
 //Достижение 100 очков
     if(score &gt;= 100){
         if (!steam_get_achievement("NEW_ACHIEVEMENT_1_0")){
+            global.points100 = true
             steam_set_achievement("NEW_ACHIEVEMENT_1_0");
-            points100 = true
-        }     
+        }
+        else {
+            global.points100 = true
+        }    
     }
 }
-if(points300 == false){
+if(global.points300 == false){
 //Достижение 300 очков
     if(score &gt;= 300){
         if (!steam_get_achievement("NEW_ACHIEVEMENT_1_2")){
+            global.points300 = true
             steam_set_achievement("NEW_ACHIEVEMENT_1_2");
-            points300 = true
+        }
+        else {
+            global.points300 = true
         }     
     }
 }
-if(points500 == false){
+if(global.points500 == false){
 //Достижение 500 очков
     if(score &gt;= 500){
         if (!steam_get_achievement("NEW_ACHIEVEMENT_1_3")){
+            global.points500 = true
             steam_set_achievement("NEW_ACHIEVEMENT_1_3");
-            points500 = true
+        }
+        else {
+            global.points500 = true
         }     
     }
 }
-if(points700 == false){
+if(global.points700 == false){
 //Достижение 700 очков
     if(score &gt;= 700){
         if (!steam_get_achievement("NEW_ACHIEVEMENT_1_4")){
+            global.points700 = true
             steam_set_achievement("NEW_ACHIEVEMENT_1_4");
-            points700 = true
-        }     
+        }
+        else {
+            global.points700 = true
+        }    
     }
 }
-if(Sniper == false){
+if(global.Sniper == false){
 //Достижение точность 99%
     if(room == GameOverRoom){
         if(lives &gt; 0){
             if (100 - (global.missed / (score / 100)) &gt;= 99){
                 if (!steam_get_achievement("NEW_ACHIEVEMENT_1_5")){
+                    global.Sniper = true
                     steam_set_achievement("NEW_ACHIEVEMENT_1_5");
-                    Sniper = true
+                }
+                else {
+                    global.Sniper = true
                 }
             } 
         }
     }
 }
-if(Tenacious == false){
+if(global.Tenacious == false){
 //Достижение 6 жизней под конец игры
     if(room == GameOverRoom){
         if(lives &gt;= 6){
             if (!steam_get_achievement("NEW_ACHIEVEMENT_1_6")){
+                global.Tenacious = true
                 steam_set_achievement("NEW_ACHIEVEMENT_1_6");
-                Tenacious = true
             } 
+            else {
+                global.Tenacious = true
+            }
         }
     }
 }
-if(Rich == false){
+if(global.Rich == false){
 //Достижение покупка 5 прокачек
     if(room == StoreRoom){
         if(global.speed_lepricon == true){
             if (!steam_get_achievement("NEW_ACHIEVEMENT_1_7")){
+                global.Rich = true
                 steam_set_achievement("NEW_ACHIEVEMENT_1_7");
-                Rich = true
-            } 
+            }
+            else {
+                global.Rich = true
+            }             
         }
     }
 }
-if(BestFriend == false){
+if(global.BestFriend == false){
 //Достижение покупка котика
     if(room == StoreRoom){
         if(global.gan_shot == true){
             if (!steam_get_achievement("NEW_ACHIEVEMENT_1_8")){
+                global.BestFriend = true
                 steam_set_achievement("NEW_ACHIEVEMENT_1_8");
-                BestFriend = true
-            } 
+            }
+            else {
+                global.BestFriend = true
+            }             
         }
     }
 }
-if(FirstBlood == false){
+if(global.FirstBlood == false){
 //Достижеине убийство первого босса
     if(room == PlayRoom){
         if(global.Boss_1 == false){
             if (!steam_get_achievement("NEW_ACHIEVEMENT_1_9")){
+                global.FirstBlood = true
                 steam_set_achievement("NEW_ACHIEVEMENT_1_9");
-                FirstBlood = true
             }
+            else {
+                global.FirstBlood = true
+            }             
         }
     }
 }
-if(DoubleKill == false){
+if(global.DoubleKill == false){
 //Достижеине убийство второго босса
     if(room == PlayRoom2){
         if(global.Boss_1 == false){
             if (!steam_get_achievement("NEW_ACHIEVEMENT_1_10")){
+                global.DoubleKill = true
                 steam_set_achievement("NEW_ACHIEVEMENT_1_10");
-                DoubleKill = true
             }
+            else {
+                global.DoubleKill = true
+            }             
         }
     }
 }
-if(TripleKill == false){
+if(global.TripleKill == false){
 //Достижеине убийство второго босса
     if(room == PlayRoom3){
         if(global.Boss_1 == false){
             if (!steam_get_achievement("NEW_ACHIEVEMENT_1_11")){
+                global.TripleKill = true
                 steam_set_achievement("NEW_ACHIEVEMENT_1_11");
-                TripleKill = true
             }
+            else {
+                global.TripleKill = true
+            } 
         }
     }
 }
-if(UltraKill == false){
+if(global.UltraKill == false){
 //Достижеине убийство третьего босса
     if(room == PlayRoom4){
         if(global.Boss_1 == false){
             if (!steam_get_achievement("NEW_ACHIEVEMENT_1_12")){
+                global.UltraKill = true
                 steam_set_achievement("NEW_ACHIEVEMENT_1_12");
-                UltraKill = true
             }
+            else {
+                global.UltraKill = true
+            } 
         }
     }
 }
-if(Rampage == false){
+if(global.Rampage == false){
 //Достижеине убийство третьего босса
     if(room == PlayRoom5){
         if(global.Boss_1 == false){
             if (!steam_get_achievement("NEW_ACHIEVEMENT_1_13")){
+                global.Rampage = true
                 steam_set_achievement("NEW_ACHIEVEMENT_1_13");
-                Rampage = true
             }
+            else {
+                global.Rampage = true
+            } 
         }
     }
 }
@@ -276,20 +377,20 @@ if(Rampage == false){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(30,50,"FirstShoot: "+string(FirstShoot))
-draw_text(30,65,"Points 100: "+string(points100))
-draw_text(30,80,"Points 300: "+string(points300))
-draw_text(30,95,"Points 500: "+string(points500))
-draw_text(30,110,"Points 700: "+string(points700))
-draw_text(30,125,"Sniper: "+string(Sniper))
-draw_text(30,140,"Tenacious: "+string(Tenacious))
-draw_text(30,155,"Rich: "+string(Rich))
-draw_text(30,170,"BestFriend: "+string(BestFriend))
-draw_text(30,185,"FirstBlood: "+string(FirstBlood))
-draw_text(30,200,"DoubleKill: "+string(DoubleKill))
-draw_text(30,215,"TripleKill: "+string(TripleKill))
-draw_text(30,230,"UltraKill: "+string(UltraKill))
-draw_text(30,245,"Rampage: "+string(Rampage))
+            <string>draw_text(30,50,"FirstShoot: "+string(global.FirstShoot))
+draw_text(30,65,"Points 100: "+string(global.points100))
+draw_text(30,80,"Points 300: "+string(global.points300))
+draw_text(30,95,"Points 500: "+string(global.points500))
+draw_text(30,110,"Points 700: "+string(global.points700))
+draw_text(30,125,"Sniper: "+string(global.Sniper))
+draw_text(30,140,"Tenacious: "+string(global.Tenacious))
+draw_text(30,155,"Rich: "+string(global.Rich))
+draw_text(30,170,"BestFriend: "+string(global.BestFriend))
+draw_text(30,185,"FirstBlood: "+string(global.FirstBlood))
+draw_text(30,200,"DoubleKill: "+string(global.DoubleKill))
+draw_text(30,215,"TripleKill: "+string(global.TripleKill))
+draw_text(30,230,"UltraKill: "+string(global.UltraKill))
+draw_text(30,245,"Rampage: "+string(global.Rampage))
 </string>
           </argument>
         </arguments>

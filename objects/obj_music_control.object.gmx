@@ -71,13 +71,7 @@ if room == PlayRoom5 {
     audio_stop_sound(Game_Over_Music);
     audio_play_sound(sountrack_music_5, 0, true);}  
 if room == GameOverRoom {
-    audio_stop_sound(Start_Musik);
-    audio_stop_sound(sountrack_music_1);
-    audio_stop_sound(sountrack_music_2);
-    audio_stop_sound(sountrack_music_3);
-    audio_stop_sound(sountrack_music_4);
-    audio_stop_sound(sountrack_music_5);
-    audio_stop_sound(Game_Over_Music);
+    audio_stop_all()
     audio_play_sound(Game_Over_Music, 0, true);}   
 </string>
           </argument>

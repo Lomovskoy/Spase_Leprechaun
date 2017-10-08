@@ -173,7 +173,7 @@ alarm[2]= time2
     global.Speed1 = irandom_range(1,10)
     //Генерация обьекта
     objekt = instance_create(1360,height,collor)
-    if (instance_exists(objekt)){
+    /*if (instance_number(objekt)){
         audio_play_sound(appearance_ball, 0, false)
     }else{
         //Выбор цвета шарика рандомно
@@ -187,7 +187,7 @@ alarm[2]= time2
         //Генерация обьекта
         objekt = instance_create(1360,height,collor)
         audio_play_sound(appearance_ball, 0, false)
-    }
+    }*/
 }
 //Рекурсируем таймер
 alarm[0]= time1
