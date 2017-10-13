@@ -184,10 +184,10 @@ if(global.points700 == false){
     }
 }
 if(global.Sniper == false){
-//Достижение точность 99%
+//Достижение точность 98%
     if(room == GameOverRoom){
         if(lives &gt; 0){
-            if (100 - (global.missed / (score / 100)) &gt;= 99){
+            if (100 - (global.missed / (score / 100)) &gt;= 98.00){
                 if (!steam_get_achievement("NEW_ACHIEVEMENT_1_5")){
                     global.Sniper = true
                     steam_set_achievement("NEW_ACHIEVEMENT_1_5");
@@ -215,7 +215,7 @@ if(global.Tenacious == false){
 }
 if(global.Rich == false){
 //Достижение покупка 5 прокачек
-    if(room == StoreRoom){
+    if(room == StoreRoom or room == GameOverRoom){
         if(global.speed_lepricon == true){
             if (!steam_get_achievement("NEW_ACHIEVEMENT_1_7")){
                 global.Rich = true
@@ -229,7 +229,7 @@ if(global.Rich == false){
 }
 if(global.BestFriend == false){
 //Достижение покупка котика
-    if(room == StoreRoom){
+    if(room == StoreRoom or room == GameOverRoom){
         if(global.gan_shot == true){
             if (!steam_get_achievement("NEW_ACHIEVEMENT_1_8")){
                 global.BestFriend = true
@@ -377,7 +377,7 @@ if(global.Rampage == false){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(30,50,"FirstShoot: "+string(global.FirstShoot))
+            <string>/*draw_text(30,50,"FirstShoot: "+string(global.FirstShoot))
 draw_text(30,65,"Points 100: "+string(global.points100))
 draw_text(30,80,"Points 300: "+string(global.points300))
 draw_text(30,95,"Points 500: "+string(global.points500))
@@ -390,7 +390,7 @@ draw_text(30,185,"FirstBlood: "+string(global.FirstBlood))
 draw_text(30,200,"DoubleKill: "+string(global.DoubleKill))
 draw_text(30,215,"TripleKill: "+string(global.TripleKill))
 draw_text(30,230,"UltraKill: "+string(global.UltraKill))
-draw_text(30,245,"Rampage: "+string(global.Rampage))
+draw_text(30,245,"Rampage: "+string(global.Rampage))*/
 </string>
           </argument>
         </arguments>

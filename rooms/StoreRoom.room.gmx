@@ -55,6 +55,7 @@
     <instance objName="background_start" x="1360" y="0" name="inst_C9B325A5" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="background_start" x="2727" y="0" name="inst_9A9049F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_timer" x="32" y="6" name="inst_14442D35" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_steem_achievement" x="64" y="0" name="inst_3B8CBC34" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="back_stor" x="64" y="64" w="1290" h="654" xo="0" yo="0" id="10000118" name="inst_E574DD3C" depth="1999" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

@@ -326,6 +326,9 @@ if(sprite_index == spr_space_ship_light){
         sprite_index = spr_space_ship
     }
 }
+//Бессмертие
+//if lives &lt; 6
+//    lives += 1
 /*
 if (global.laser_moution &lt;= 2 and global.laser_direct == 'UP')
     {
